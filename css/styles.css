@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  margin-top: 0;
+  padding:0;
+}
+html {
+  margin: 0;
+  padding:0;
+}
+header {
+  position: relative;
+  width: 100%;
+  top: 0;
+}
+nav {
+  background: #000000;
+  overflow: hidden;
+}
+nav a {
+  text-align: center;
+  color: #FFFFFF;
+  background: #000000;
+  text-decoration: none;
+  padding: 25px;
+  float: left;
+}
+nav a:hover {
+  background: #333;
+}
+h1 {
+  font-size: 32pt;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+h2 {
+  font-size: 24pt;
+  font-family: 'Roboto', sans-serif;
+}
+p {
+  font-size: 12pt;
+  font-family: 'Raleway', sans-serif;
+}
