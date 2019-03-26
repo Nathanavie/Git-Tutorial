@@ -5,178 +5,211 @@
     <title></title>
   </head>
   <body>
-    Setup
-    Create a repository
-    Checkout a repository
-    Workflow
-    Adding and Committing
-    Pushing Changes
-    Branches
-    Updating and Merging
+    <header>
+      <nav>
+        <a href="">Setup</a>
+        <a href="">Create a repository</a>
+        <a href="">Checkout a repository</a>
+        <a href="">Workflow</a>
+        <a href="">Adding and Committing</a>
+        <a href="">Pushing Changes</a>
+        <a href="">Branches</a>
+        <a href="">Updating and Merging</a>
+        <a href="">Tagging</a>
+        <a href="">Finding your log</a>
+        <a href="">Undoing an error</a>
+      </nav>
+    </header>
+    <article>
+      <section>
+        How do I use Git?
 
-    How do I use Git?
+        Git is the most widely used modern version control system that is used in the world today!
+        Git is a distributed version control system, meaning your local copy of code is a complete version control repository. These local repositories make it easy to work offline or remotely. Work is commited locally, and then synced to the copy that is on the server, this differs from centralised version control as code does not need to be synced before being edited.
 
-    Git is the most widely used modern version control system that is used in the world today!
-    Git is a distributed version control system, meaning your local copy of code is a complete version control repository. These local repositories make it easy to work offline or remotely. Work is commited locally, and then synced to the copy that is on the server, this differs from centralised version control as code does not need to be synced before being edited.
+        Git's flexibility make it the perfect choice for any team in the tech industry, therefore it is important that many graduates know how to use this version control.
 
-    Git's flexibility make it the perfect choice for any team in the tech industry, therefore it is important that many graduates know how to use this version control.
+        Lets figure out how to use git, together!
+      </section>
+      <section>
+        Setup
+        The first thing that is needed to use Git is to install Git onto your operating system!
 
-    Lets figure out how to use git, together!
+        Download Git for Windows
 
-    The first thing that is needed to use Git is to install Git onto your operating system!
+        Download Git for Linux
 
-    Download Git for Windows
+        Download Git for OSX
+      </section>
+      <section>
+        Creating a Repository
+        Once installed, you will want to create a brand new repository, to do this use the command in the commandline of the folder that will contain all of the files in your project
 
-    Download Git for Linux
+        git init
 
-    Download Git for OSX
+        This will create a new local repository on your system
+      </section>
+      <section>
+        Checkout a Repository
+        If you have already created a repository using GitHub or similar run this command
 
-    Once installed, you will want to create a brand new repository, to do this use the command in the commandline of the folder that will contain all of the files in your project
+        git clone link/to/repository
 
-    git init
+        if you are using a remote repository, the command will be
 
-    This will create a new local repository on your system
+        git clone username@host:link/to/repository
+      </section>
+      <section>
+        The git workflow
 
-    If you have already created a repository using GitHub or similar run this command
+        the local repository consists of trees that git maintains, these are
 
-    git clone link/to/repository
+        The Working Directory
 
-    if you are using a remote repository, the command will be
+        This tree holds the actual files
 
-    git clone username@host:link/to/repository
+        The Index
 
-    The git workflow
+        This is the staging area for files
 
-    the local repository consists of trees that git maintains, these are
+        The Head
 
-    The Working Directory
+        This points to the latest commit that has been made
+      </section>
+      <section>
+        Adding and Committing files
 
-    This tree holds the actual files
+        The next thing you will need have an understand of is how to add and commit files
 
-    The Index
+        This means that you propose a change by adding it to the Index tree from the Working Directory tree, to do this use the command
 
-    This is the staging area for files
+        git add 'filename' to add a specific file
 
-    The Head
+        git add . to add all changes
 
-    This points to the latest commit that has been made
+        This is the first step in a basic git workflow, the next step is to commit these changes to the Head tree. To do this use
 
-    The next thing you will need have an understand of is how to add and commit files
+        git commit -m "commit message"
 
-    This means that you propose a change by adding it to the Index tree from the Working Directory tree, to do this use the command
+        A good commit message is no longer than 72 characters long, but includes all changes that are being committed.
+      </section>
+      <section>
+        Pushing your commits
+        Once a commit has been completed, it is good practice to push these changes from the Head to the remote repository, to do this run the command
 
-    git add 'filename' to add a specific file
+        git push origin master
 
-    git add . to add all changes
+        the branch is defined by the final word in this command, so ensure that if you are uploading to a different branch than master you choose the correct one in this command, for example if you are on the branch Feature1 the command would look
 
-    This is the first step in a basic git workflow, the next step is to commit these changes to the Head tree. To do this use
+        git push origin Feature1
 
-    git commit -m "commit message"
+        If the repository is not connected to a remote repository yet, you will need to add this using
 
-    A good commit message is no longer than 72 characters long, but includes all changes that are being committed.
+        git remote add origin "link to server"
 
-    Once a commit has been completed, it is good practice to push these changes from the Head to the remote repository, to do this run the command
+        This will then allow changes to be pushed from the Head tree to the remote repository
+      </section>
+      <section>
+        Branches
+        When developing different features within a project, it is important to ensure that branches are used correctly.
 
-    git push origin master
+        Branches are used to devlop different features that are isolated from each other, with the master branch being the default branch that is created when the repository is created. The main idea with branches is to use other branches to develop features and then merge all the branches together to the master branch for a complete project.
 
-    the branch is defined by the final word in this command, so ensure that if you are uploading to a different branch than master you choose the correct one in this command, for example if you are on the branch Feature1 the command would look
+        To create a new branch, use the code
 
-    git push origin Feature1
+        git checkout -b feature_x
 
-    If the repository is not connected to a remote repository yet, you will need to add this using
+        To switch to another branch that is already created, such as master
 
-    git remote add origin "link to server"
+        git checkout master
 
-    This will then allow changes to be pushed from the Head tree to the remote repository
+        To delete a branch
 
-    When developing different features within a project, it is important to ensure that branches are used correctly.
+        git branch -d feature_x
 
-    Branches are used to devlop different features that are isolated from each other, with the master branch being the default branch that is created when the repository is created. The main idea with branches is to use other branches to develop features and then merge all the branches together to the master branch for a complete project.
+        It is important to understand that a branch is not accessible by others unless the branch is pushed to the remote repository with
 
-    To create a new branch, use the code
+        git push origin 'branch'
+      </section>
+      <section>
+        Updating and Merging
+        If you are working on a different computer, or someone else has updated the remote repository, you need to be able to retrieve the latest commits that are available
 
-    git checkout -b feature_x
+        To update your local repository to the latest commit, in your Working Directory use the command
 
-    To switch to another branch that is already created, such as master
+        git pull
 
-    git checkout master
+        this fetches all remote changes and merges them into your Directory.
 
-    To delete a branch
+        If the development on a branch is complete and it is time to merge the branch the master branch, use the code
 
-    git branch -d feature_x
+        git merge "branch"
 
-    It is important to understand that a branch is not accessible by others unless the branch is pushed to the remote repository with
+        This merges whichever branch you specified into your active branch, so ensure that your active branch is the master branch if you are doing a final merge!
 
-    git push origin 'branch'
+        Git will usually try to auto merge changes when doing this, however sometimes it is not possible and there will be comflicts found. To fix this you will have to merge these specific files manually by editing the files that are shown in git.
 
-    If you are working on a different computer, or someone else has updated the remote repository, you need to be able to retrieve the latest commits that are available
+        After you have fixed any conflicts, add these files as merged by using
 
-    To update your local repository to the latest commit, in your Working Directory use the command
+        git add "filename"
 
-    git pull
+        If you are unsure on the differences between two branches, you can preview each branch by using
 
-    this fetches all remote changes and merges them into your Directory.
+        git diff "source-branch" "target-branch"
 
-    If the development on a branch is complete and it is time to merge the branch the master branch, use the code
+        This will allow you to understand what differences there are between two branches in your repository.
+      </section>
+      <section>
+        Tagging
+        You are able to create tags for software releases, this is known as a concept. You will add a tag to a specific commit that has been made, which would be used as a software relese. Add a tag by running
 
-    git merge "branch"
+        git tag 1.0.0 74865s12sf
 
-    This merges whichever branch you specified into your active branch, so ensure that your active branch is the master branch if you are doing a final merge!
+        this will add a tag called 1.0.0 to the commit with the id which starts with the first ten characters 74865s12sf.
 
-    Git will usually try to auto merge changes when doing this, however sometimes it is not possible and there will be comflicts found. To fix this you will have to merge these specific files manually by editing the files that are shown in git.
+        If you do not know where to find the commit id, you can find this in the log!
+      </section>
+      <section>
+        Finding the git Log
+        To simply view the repository log in a simple form, run the command
 
-    After you have fixed any conflicts, add these files as merged by using
+        git log
 
-    git add "filename"
+        There are many different ways to view a log
 
-    If you are unsure on the differences between two branches, you can preview each branch by using
+        To view commits from a specific person
 
-    git diff "source-branch" "target-branch"
+        git log --author=name
 
-    This will allow you to understand what differences there are between two branches in your repository
+        to see a compressed log where each commit is one line
 
-    You are able to create tags for software releases, this is known as a concept. You will add a tag to a specific commit that has been made, which would be used as a software relese. Add a tag by running
+        git log --pretty=oneline
 
-    git tag 1.0.0 74865s12sf
+        to see an ASCII art tree of all branches
 
-    this will add a tag called 1.0.0 to the commit with the id which starts with the first ten characters 74865s12sf.
+        git log --graph --oneline --decorate --all
 
-    If you do not know where to find the commit id, you can find this in the log!
+        to see what files have changed
 
-    To simply view the repository log in a simple form, run the command
+        git log --name-status
+      </section>
+      <section>
+        Undoing an error
 
-    git log
+        If you did something wrong (which will probably happen) it is easy to replace local changes using
 
-    There are many different ways to view a log
+        git checkout -- filename
 
-    To view commits from a specific person
+        This code will replace the changes in your working directory with the latest content from this file in the Head, anything that is in the index will be kept.
 
-    git log --author=name
+        If you want to start over from the latest commit again, simply fetch everything from the remote repository again using
 
-    to see a compressed log where each commit is one line
+        git fetch origin
 
-    git log --pretty=oneline
+        Then point your local master branch at it again with
 
-    to see an ASCII art tree of all branches
-
-    git log --graph --oneline --decorate --all
-
-    to see what files have changed
-
-    git log --name-status
-
-    If you did something wrong (which will probably happen) it is easy to replace local changes using
-
-    git checkout -- filename
-
-    This code will replace the changes in your working directory with the latest content from this file in the Head, anything that is in the index will be kept.
-
-    If you want to start over from the latest commit again, simply fetch everything from the remote repository again using
-
-    git fetch origin
-
-    Then point your local master branch at it again with
-
-    git reset --hard origin/master
+        git reset --hard origin/master
+      </section>
+    </article>
   </body>
 </html>
