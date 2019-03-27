@@ -1,0 +1,333 @@
+/*CSS Document */
+.hidden {
+	display: none !important
+}
+/* positioning for each class in CSS Grid */
+/*CSS Grid intro container*/
+.title { grid-area: title;}
+.intro1 { grid-area: para1;}
+.intro2 { grid-area: para2;}
+.tagline { grid-area: tagline; }
+.intro {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+    	'title'
+      'para1'
+      'para2'
+      'tagline';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+/*CSS Grid setup container*/
+.but1 { grid-area: but1; }
+.but2 { grid-area: but2; }
+.but3 { grid-area: but3; }
+.settitle { grid-area: settitle; }
+.setpar { grid-area: setpar; }
+
+#setup {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-areas:
+    	'settitle settitle settitle'
+      'setpar setpar setpar'
+      'but1 but2 but3';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+/*CSS Grid create container*/
+.ctitle { grid-area: ctitle; }
+.cpar { grid-area: cpar; }
+.cpar2 { grid-area: cpar2; }
+.init { grid-area: init; }
+
+#create {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+    	'ctitle'
+      'cpar'
+      'init'
+			'cpar2';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+/*CSS Grid checkout container*/
+.checktitle { grid-area: checktitle; }
+.checkpar { grid-area: checkpar; }
+.clone1 { grid-area: clone1; }
+.checkpar2 { grid-area: checkpar2; }
+.clone2 { grid-area: clone2; }
+
+#checkout {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+    	'checktitle'
+      'checkpar'
+      'clone1'
+			'checkpar2'
+			'clone2';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+/*CSS Grid workflow container*/
+.worktitle { grid-area: worktitle; }
+.workpar { grid-area: workpar; }
+.anim { grid-area: animation; }
+.workdir { grid-area: workdir; }
+.index { grid-area: index; }
+.head { grid-area: head; }
+.workdirtext { grid-area: workdirtext; }
+.indextext { grid-area: indextext; }
+.headtext { grid-area: headtext; }
+
+#workflow {
+	display: grid;
+	grid-template-columns: 33.3% 33.3% 33.3%;
+	grid-template-areas:
+    	'worktitle worktitle worktitle'
+      'workpar workpar workpar'
+      'animation animation animation'
+			'workdir index head'
+			'workdirtext indextext headtext';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+/*CSS Grid Add and Commit container*/
+.actitle { grid-area: actitle; }
+.acpar { grid-area: acpar; }
+.acpar1 { grid-area: acpar1; }
+.add1 { grid-area: add1; }
+.add2 { grid-area: add2; }
+.acpar2 { grid-area: acpar2; }
+.commit1 { grid-area: commit1; }
+.acpar3 { grid-area: acpar3; }
+
+#addcommit {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+    	'actitle'
+      'acpar'
+			'acpar1'
+      'add1'
+			'add2'
+			'acpar2'
+			'commit1'
+			'acpar3';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+/*CSS Grid Pushing container*/
+.pushtitle { grid-area: pushtitle; }
+.pushpar { grid-area: pushpar; }
+.pushpar1 { grid-area: pushpar1; }
+.push1 { grid-area: push1; }
+.push2 { grid-area: push2; }
+.pushpar2 { grid-area: pushpar2; }
+.push3 { grid-area: push3; }
+.pushpar3 { grid-area: pushpar3; }
+
+#pushcommit {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+    	'pushtitle'
+      'pushpar'
+			'push1'
+      'pushpar1'
+			'push2'
+			'pushpar2'
+			'push3'
+			'pushpar3';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+/*CSS Grid Branches container*/
+.brtitle { grid-area:brtitle; }
+.brpar { grid-area: brpar; }
+.brpar1 { grid-area: brpar1; }
+.brpar2 { grid-area: brpar2; }
+.branch1 { grid-area: branch1; }
+.brpar3 { grid-area: brpar3; }
+.branch2 { grid-area: branch2; }
+.brpar4 { grid-area: brpar4; }
+.branch3 { grid-area: branch3; }
+.brpar5 { grid-area: brpar5; }
+.branch4 { grid-area: branch4; }
+
+#branches {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+    	'brtitle'
+      'brpar'
+			'brpar1'
+      'brpar2'
+			'branch1'
+			'brpar3'
+			'branch2'
+			'brpar4'
+			'branch3'
+			'brpar5'
+			'branch4';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+/*CSS Grid Update and Merge container*/
+.uptitle { grid-area: uptitle; }
+.uppar { grid-area: uppar; }
+.uppar1 { grid-area: uppar1; }
+.pull1 { grid-area: pull1; }
+.uppar2 { grid-area: uppar2; }
+.uppar3 { grid-area: uppar3; }
+.pull2 { grid-area: pull2; }
+.uppar4 { grid-area: uppar4; }
+.uppar5 { grid-area: uppar5; }
+.uppar6 { grid-area: uppar6; }
+.pull3 { grid-area: pull3; }
+.uppar7 { grid-area: uppar7; }
+.pull4 { grid-area: pull4; }
+.uppar8 { grid-area: uppar8; }
+
+#updatemerge {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+    	'uptitle'
+      'uppar'
+			'uppar1'
+			'pull1'
+      'uppar2'
+			'uppar3'
+			'pull2'
+			'uppar4'
+			'uppar5'
+			'uppar6'
+			'pull3'
+			'uppar7'
+			'pull4'
+			'uppar8';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+/*CSS Grid Tagging container*/
+.tagtitle { grid-area: tagtitle; }
+.tagpar { grid-area: tagpar; }
+.tag1 { grid-area: tag1; }
+.tagpar1 { grid-area: tagpar1; }
+.tagpar2 { grid-area: tagpar2; }
+
+
+#tag {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+    	'tagtitle'
+      'tagpar'
+			'tag1'
+			'tagpar1'
+      'tagpar2';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+/*CSS Grid log container*/
+.logtitle { grid-area: logtitle; }
+.logpar { grid-area: logpar; }
+.log1 { grid-area: log1; }
+.logpar1 { grid-area: logpar1; }
+.logpar2 { grid-area: logpar2; }
+.log2 { grid-area: log2; }
+.logpar3 { grid-area: logpar3; }
+.log3 { grid-area: log3; }
+.logpar4 { grid-area: logpar4; }
+.log4 { grid-area: log4; }
+.logpar5 { grid-area: logpar5; }
+.log5 { grid-area: log5; }
+
+
+#log {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+    	'logtitle'
+      'logpar'
+			'log1'
+			'logpar1'
+      'logpar2'
+			'log2'
+			'logpar3'
+			'log3'
+			'logpar4'
+			'log4'
+			'logpar5'
+			'log5';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+/*CSS Grid error container*/
+.ertitle { grid-area: ertitle; }
+.erpar { grid-area: erpar; }
+.error1 { grid-area: error1; }
+.erpar1 { grid-area: erpar1; }
+.erpar2 { grid-area: erpar2; }
+.error2 { grid-area: error2; }
+.erpar3 { grid-area: erpar3; }
+.error3 { grid-area: error3; }
+
+
+#error {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+    	'ertitle'
+      'erpar'
+			'error1'
+			'erpar1'
+      'erpar2'
+			'error2'
+			'erpar3'
+			'error3';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
+.grid {
+	display: grid;
+	grid-template-columns: 33.3% 33.3% 33.3%;
+	grid-template-areas:
+		'title title title'
+		'par1 par1 par1'
+		'but1 but2 but3'
+		'tree1 tree2 tree3'
+		'par1inf '
+	grid-gap: 10px;
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+}
