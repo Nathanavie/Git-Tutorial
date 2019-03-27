@@ -6,6 +6,7 @@ body {
 html {
   margin: 0;
   padding:0;
+  scroll-behavior: smooth;
 }
 header {
   position: relative;
@@ -23,9 +24,12 @@ nav a {
   text-decoration: none;
   padding: 25px;
   float: left;
+  cursor: pointer;
+  transition: background-color 0.5s ease-out;
 }
 nav a:hover {
-  background: #333;
+  background: #808080;
+  transition: background-color 0.5s ease-out;
 }
 h1 {
   font-size: 32pt;
@@ -35,8 +39,43 @@ h1 {
 h2 {
   font-size: 24pt;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+h3 {
+  font-size: 18pt;
+  font-family: 'Roboto', sans-serif;
 }
 p {
   font-size: 12pt;
   font-family: 'Raleway', sans-serif;
+  line-height: 1.5;
+}
+div {
+  background-color: #000000;
+  padding: 20px;
+  color: #FFFFFF;
+  border-style: solid;
+  border-radius: 40px;
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}
+button {
+  background-color: #000000;
+  padding: 25px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease-out;
+}
+button a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+/* @keyframes button {
+  0% {background-color: #000000;}
+  50% {background-color: red; left: 50%;}
+  100% {background-color: red;}
+} */
+button:hover {
+  background-color: #808080;
+  transition: background-color 0.5s ease-out;
 }
