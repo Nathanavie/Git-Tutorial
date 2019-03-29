@@ -2,6 +2,44 @@
 .hidden {
 	display: none !important
 }
+/* Animation Grid */
+.remote {
+	grid-area: remote;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-right-style: solid;
+}
+.local {
+	grid-area: local;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+.stage {
+	grid-area: stage;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-left-style: solid;
+}
+.text {
+	background-color: #000000;
+	grid-area: text;
+	border-style: solid;
+}
+#next {grid-area: next;}
+#createfile {grid-area: next;}
+.animgrid {
+	display: grid;
+	grid-template-columns: 500px 200px 300px;
+	grid-auto-rows: 300px 300px 50px;
+	grid-template-areas:
+		'remote remote text'
+		'local stage text'
+		'. . next';
+		margin: 0 auto;
+		width: 1000px;
+		height: 650px;
+}
 /* positioning for each class in CSS Grid */
 /*CSS Grid intro container*/
 .title { grid-area: title;}
@@ -27,14 +65,15 @@
 .but3 { grid-area: but3; }
 .settitle { grid-area: settitle; }
 .setpar { grid-area: setpar; }
-
+#start { grid-area: next; }
 #setup {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	grid-template-areas:
     	'settitle settitle settitle'
       'setpar setpar setpar'
-      'but1 but2 but3';
+      'but1 but2 but3'
+			'. next .';
 	grid-gap: 10px;
 	padding: 10px;
 	width: 60%;
@@ -45,11 +84,14 @@
 .cpar { grid-area: cpar; }
 .cpar2 { grid-area: cpar2; }
 .init { grid-area: init; }
-
+.animation { grid-area: anim; }
 #create {
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
+			'anim'
+			'anim'
+			'anim'
     	'ctitle'
       'cpar'
       'init'
@@ -90,6 +132,7 @@
 .workdirtext { grid-area: workdirtext; }
 .indextext { grid-area: indextext; }
 .headtext { grid-area: headtext; }
+#coding { grid-area: coding; }
 
 #workflow {
 	display: grid;
@@ -99,7 +142,8 @@
       'workpar workpar workpar'
       'animation animation animation'
 			'workdir index head'
-			'workdirtext indextext headtext';
+			'workdirtext indextext headtext'
+			'. coding .';
 	grid-gap: 10px;
 	padding: 10px;
 	width: 60%;
