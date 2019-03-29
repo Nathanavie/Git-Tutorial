@@ -3,213 +3,248 @@
   <head>
     <meta charset="utf-8">
     <title>How to use Git Version Control</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
   </head>
   <body>
     <header>
-      <nav>
-        <a href="#setup">Setup</a>
-        <a href="#create">Create a repository</a>
-        <a href="#checkout">Checkout a repository</a>
-        <a href="#workflow">Workflow</a>
-        <a href="#addcommit">Adding and Committing</a>
-        <a href="#pushcommit">Pushing Changes</a>
-        <a href="#branches">Branches</a>
-        <a href="#updatemerge">Updating and Merging</a>
-        <a href="#tag">Tagging</a>
-        <a href="#log">Finding your log</a>
-        <a href="#error">Undoing an error</a>
+      <nav class="sidenav" id="sidenav">
+        <aside id="close">&#60;</aside>
+        <a>Home</a>
+        <!-- <a id="#setup">Setup</a> -->
+        <a id="#workflow">Git Workflow</a>
+        <a id="#create">Create a repository</a>
+        <a id="#addcommit">Adding and Committing</a>
+        <a id="#pushcommit">Pushing Changes</a>
+        <a id="#checkout">Checkout a repository</a>
+        <a id="#branches">Branches</a>
+        <a id="#updatemerge">Updating and Merging</a>
+        <a id="#error">Undoing an error</a>
+        <a id="#tag">Tagging</a>
+        <a id="#log">Finding your log</a>
       </nav>
+      <span id="open">&#9776;</span>
     </header>
     <article>
-      <section>
-        <h1>How do I use Git?</h1>
+      <section class="intro" id="home">
+        <h1 class="title">How do I use Git?</h1>
 
-        <p>Git is the most widely used modern version control system that is used in the world today!
-        Git is a distributed version control system, meaning your local copy of code is a complete version control repository. These local repositories make it easy to work offline or remotely. Work is commited locally, and then synced to the copy that is on the server, this differs from centralised version control as code does not need to be synced before being edited.</p>
+        <p class="intro1">Git is the most widely used modern version control system that is used in the world today!
+        Git is a distributed version control system, meaning your local copy of code is a complete version control repository. These local repositories make it easy to work offline or remotely. Work is committed locally, and then synced to the copy that is on the server, this differs from centralised version control as code does not need to be synced before being edited.</p>
 
-        <p>Git's flexibility make it the perfect choice for any team in the tech industry, therefore it is important that many graduates know how to use this version control.</p>
+        <p class="intro2">Git's flexibility make it the perfect choice for any team in the tech industry, therefore it is important that many graduates know how to use this version control.</p>
 
-        <h3>Lets figure out how to use git, together!</h3>
+        <h3 class="tagline">Lets figure out how to use git, together!</h3>
       </section>
       <section id="setup">
-        <h2>Setup</h2>
-        <p>The first thing that is needed to use Git is to install Git onto your operating system!</p>
+        <h2 class="settitle">Setup</h2>
+        <p class="setpar">The first thing that is needed to use Git is to install Git onto your operating system!</p>
+        <a href="https://gitforwindows.org/" target="_blank"><button class="but1">
+          <i class="fab fa-windows"></i> Download Git for Windows
+        </button></a>
 
-        <button><a href="">Download Git for Windows</a></button>
+        <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"><button class="but2">
+          <i class="fab fa-linux"></i> Download Git for Linux
+        </button></a>
 
-        <button><a href="">Download Git for Linux</a></button>
-
-        <button><a href="">Download Git for OSX</a></button>
+        <a href="https://git-scm.com/download/mac" target="_blank"><button class="but3">
+          <i class="fab fa-apple"></i> Download Git for OSX
+        </button></a>
+        <button id="start">Lets Go!</button>
       </section>
-      <section id="create">
+      <section class="hidden" id="create">
         <h2>Creating a Repository</h2>
-        <p>Once installed, you will want to create a brand new repository, to do this use the command in the commandline of the folder that will contain all of the files in your project</p>
+        <div class="animgrid">
+          <div class="remote">
+            <h4 class="hidden">Remote Repository</h4>
+          </div>
+          <div class="local">
+            <h4 class="hidden localrepo">Local Repository</h4>
+          </div>
+          <div class="stage"><h4 class="hidden staging">Staging</h4></div>
+          <div class="text">
+            <p class="animcode hidden">git init</p>
+            <p class="animtext hidden">This code initiates a local repository</p>
+          </div>
+          <button id="next" class="animbtn">
+            Next
+          </button>
+          <button id="createfile" class="animbtn hidden">
+            Create File
+          </button>
+        </div>
+        <p class="cpar">Once installed, you will want to create a brand new repository, to do this use the command in the commandline of the folder that will contain all of the files in your project</p>
 
-        <strong>git init</strong>
+        <code class="init">git init</code>
 
-        <p>This will create a new local repository on your system</p>
+        <p class="cpar2">This will create a new local repository on your system</p>
       </section>
-      <section id="checkout">
+      <section class="hidden" id="checkout">
         <h2>Checkout a Repository</h2>
-        <p>If you have already created a repository using GitHub or similar run this command</p>
+        <p class="checkpar">If you have already created a repository using GitHub or similar run this command</p>
 
-        <strong>git clone link/to/repository</strong>
+        <code class="clone1">git clone link/to/repository</code>
 
-        <p>If you are using a remote repository, the command will be</p>
+        <p class="checkpar2">If you are using a remote repository, the command will be</p>
 
-        <em>git clone username@host:link/to/repository</em>
+        <code class="clone2">git clone username@host:link/to/repository</code>
       </section>
-      <section id="workflow">
-        <h2>The git workflow</h2>
+      <section class="hidden" id="workflow">
+        <h2 class="worktitle">The git workflow</h2>
 
-        <p>The local repository consists of trees that git maintains, these are</p>
+        <p class="workpar">The local repository consists of trees that git maintains, these are</p>
+        <section class="anim">ANIMATION HERE</section>
 
-        <strong>The Working Directory</strong>
+        <code class="workdir">The Working Directory</code>
 
-        <p>This tree holds the actual files</p>
+        <p class="workdirtext">This tree holds the actual files</p>
 
-        <strong>The Index</strong>
+        <code class="index">The Index</code>
 
-        <p>This is the staging area for files</p>
+        <p class="indextext">This is the staging area for files</p>
 
-        <strong>The Head</strong>
+        <code class="head">The Head</code>
 
-        <p>This points to the latest commit that has been made</p>
+        <p class="headtext">This points to the latest commit that has been made</p>
+        <button id="coding">Lets Get Coding!</button>
       </section>
-      <section id="addcommit">
-        <h2>Adding and Committing files</h2>
+      <section class="hidden" id="addcommit">
+        <h2 calss="actitle">Adding and Committing files</h2>
 
-        <p>The next thing you will need have an understand of is how to add and commit files</p>
+        <p class="acpar">The next thing you will need have an understand of is how to add and commit files</p>
 
-        <p>This means that you propose a change by adding it to the Index tree from the Working Directory tree, to do this use the command</p>
+        <p class="acpar1">This means that you propose a change by adding it to the Index tree from the Working Directory tree, to do this use the command</p>
 
-        <strong>git add 'filename' to add a specific file</strong>
+        <code class="add1">git add 'filename' to add a specific file</code>
 
-        <strong>git add . to add all changes</strong>
+        <code class="add2">git add . to add all changes</code>
 
-        <p>This is the first step in a basic git workflow, the next step is to commit these changes to the Head tree. To do this use</p>
+        <p class="acpar2">This is the first step in a basic git workflow, the next step is to commit these changes to the Head tree. To do this use</p>
 
-        <strong>git commit -m "commit message"</strong>
+        <code class="commit1">git commit -m "commit message"</code>
 
-        <p>A good commit message is no longer than 72 characters long, but includes all changes that are being committed.</p>
+        <p class="acpar3">A good commit message is no longer than 72 characters long, but includes all changes that are being committed.</p>
       </section>
-      <section id="pushcommit">
-        <h2>Pushing your commits</h2>
-        <p>Once a commit has been completed, it is good practice to push these changes from the Head to the remote repository, to do this run the command</p>
+      <section class="hidden" id="pushcommit">
+        <h2 class="pushtitle">Pushing your commits</h2>
+        <p class="pushpar">Once a commit has been completed, it is good practice to push these changes from the Head to the remote repository, to do this run the command</p>
 
-        <strong>git push origin master</strong>
+        <code class="push1">git push origin master</code>
 
-        <p>the branch is defined by the final word in this command, so ensure that if you are uploading to a different branch than master you choose the correct one in this command, for example if you are on the branch Feature1 the command would look</p>
+        <p class="pushpar1">the branch is defined by the final word in this command, so ensure that if you are uploading to a different branch than master you choose the correct one in this command, for example if you are on the branch Feature1 the command would look</p>
 
-        <strong>git push origin Feature1</strong>
+        <code class="push2">git push origin Feature1</code>
 
-        <p>If the repository is not connected to a remote repository yet, you will need to add this using</p>
+        <p class="pushpar2">If the repository is not connected to a remote repository yet, you will need to add this using</p>
 
-        <strong>git remote add origin "link to server"</strong>
+        <code class="push3">git remote add origin "link to server"</code>
 
-        <p>This will then allow changes to be pushed from the Head tree to the remote repository</p>
+        <p class="pushpar3">This will then allow changes to be pushed from the Head tree to the remote repository</p>
       </section>
-      <section id="branches">
-        <h2>Branches</h2>
-        <p>When developing different features within a project, it is important to ensure that branches are used correctly.</p>
+      <section class="hidden" id="branches">
+        <h2 class="brtitle">Branches</h2>
+        <p class="brpar">When developing different features within a project, it is important to ensure that branches are used correctly.</p>
 
-        <p>Branches are used to devlop different features that are isolated from each other, with the master branch being the default branch that is created when the repository is created. The main idea with branches is to use other branches to develop features and then merge all the branches together to the master branch for a complete project.</p>
+        <p class="brpar1">Branches are used to devlop different features that are isolated from each other, with the master branch being the default branch that is created when the repository is created. The main idea with branches is to use other branches to develop features and then merge all the branches together to the master branch for a complete project.</p>
 
-        <p>To create a new branch, use the code</p>
+        <p class="brpar2">To create a new branch, use the code</p>
 
-        <strong>git checkout -b feature_x</strong>
+        <code class="branch1">git checkout -b feature_x</code>
 
-        <p>To switch to another branch that is already created, such as master</p>
+        <p class="brpar3">To switch to another branch that is already created, such as master</p>
 
-        <strong>git checkout master</strong>
+        <code class="branch2">git checkout master</code>
 
-        <p>To delete a branch</p>
+        <p class="brpar4">To delete a branch</p>
 
-        <strong>git branch -d feature_x</strong>
+        <code class="branch3">git branch -d feature_x</code>
 
-        <p>It is important to understand that a branch is not accessible by others unless the branch is pushed to the remote repository with</p>
+        <p class="brpar5">It is important to understand that a branch is not accessible by others unless the branch is pushed to the remote repository with</p>
 
-        <strong>git push origin 'branch'</strong>
+        <code class="branch4">git push origin 'branch'</code>
       </section>
-      <section id="updatemerge">
-        <h2>Updating and Merging</h2>
-        <p>If you are working on a different computer, or someone else has updated the remote repository, you need to be able to retrieve the latest commits that are available</p>
+      <section class="hidden" id="updatemerge">
+        <h2 class="uptitle">Updating and Merging</h2>
+        <p class="uppar">If you are working on a different computer, or someone else has updated the remote repository, you need to be able to retrieve the latest commits that are available</p>
 
-        <p>To update your local repository to the latest commit, in your Working Directory use the command</p>
+        <p class="uppar1">To update your local repository to the latest commit, in your Working Directory use the command</p>
 
-        <strong>git pull</strong>
+        <code class="pull1">git pull</code>
 
-        <p>this fetches all remote changes and merges them into your Directory.</p>
+        <p class="uppar2">this fetches all remote changes and merges them into your Directory.</p>
 
-        <p>If the development on a branch is complete and it is time to merge the branch the master branch, use the code</p>
+        <p class="uppar3">If the development on a branch is complete and it is time to merge the branch the master branch, use the code</p>
 
-        <strong>git merge "branch"</strong>
+        <code class="pull2">git merge "branch"</code>
 
-        <p>This merges whichever branch you specified into your active branch, so ensure that your active branch is the master branch if you are doing a final merge!</p>
+        <p class="uppar4">This merges whichever branch you specified into your active branch, so ensure that your active branch is the master branch if you are doing a final merge!</p>
 
-        <p>Git will usually try to auto merge changes when doing this, however sometimes it is not possible and there will be comflicts found. To fix this you will have to merge these specific files manually by editing the files that are shown in git.</p>
+        <p class="uppar5">Git will usually try to auto merge changes when doing this, however sometimes it is not possible and there will be comflicts found. To fix this you will have to merge these specific files manually by editing the files that are shown in git.</p>
 
-        <p>After you have fixed any conflicts, add these files as merged by using</p>
+        <p class="uppar6">After you have fixed any conflicts, add these files as merged by using</p>
 
-        <strong>git add "filename"</strong>
+        <code class="pull3">git add "filename"</code>
 
-        <p>If you are unsure on the differences between two branches, you can preview each branch by using</p>
+        <p class="uppar7">If you are unsure on the differences between two branches, you can preview each branch by using</p>
 
-        <strong>git diff "source-branch" "target-branch"</strong>
+        <code class="pull4">git diff "source-branch" "target-branch"</code>
 
-        <p>This will allow you to understand what differences there are between two branches in your repository.</p>
+        <p class="uppar8">This will allow you to understand what differences there are between two branches in your repository.</p>
       </section>
-      <section id="tag">
-        <h2>Tagging</h2>
-        <p>You are able to create tags for software releases, this is known as a concept. You will add a tag to a specific commit that has been made, which would be used as a software relese. Add a tag by running</p>
+      <section class="hidden" id="tag">
+        <h2 class="tagtitle">Tagging</h2>
+        <p class="tagpar">You are able to create tags for software releases, this is known as a concept. You will add a tag to a specific commit that has been made, which would be used as a software relese. Add a tag by running</p>
 
-        <strong>git tag 1.0.0 74865s12sf</strong>
+        <code class="tag1">git tag 1.0.0 74865s12sf</code>
 
-        <p>This will add a tag called 1.0.0 to the commit with the id which starts with the first ten characters 74865s12sf.</p>
+        <p class="tagpar1">This will add a tag called 1.0.0 to the commit with the id which starts with the first ten characters 74865s12sf.</p>
 
-        <p>If you do not know where to find the commit id, you can find this in the log!</p>
+        <p class="tagpar2">If you do not know where to find the commit id, you can find this in the log!</p>
       </section>
-      <section id="log">
-        <h2>Finding the git Log</h2>
-        <p>To simply view the repository log in a simple form, run the command</p>
+      <section class="hidden" id="log">
+        <h2 class="logtitle">Finding the git Log</h2>
+        <p class="logpar">To simply view the repository log in a simple form, run the command</p>
 
-        <strong>git log</strong>
+        <code class="log1">git log</code>
 
-        <p>There are many different ways to view a log</p>
+        <p class="logpar1">There are many different ways to view a log</p>
 
-        <p>To view commits from a specific person</p>
+        <p class="logpar2">To view commits from a specific person</p>
 
-        <strong>git log --author=name</strong>
+        <code class="log2">git log --author=name</code>
 
-        <p>To see a compressed log where each commit is one line</p>
+        <p class="logpar3">To see a compressed log where each commit is one line</p>
 
-        <strong>git log --pretty=oneline</strong>
+        <code class="log3">git log --pretty=oneline</code>
 
-        <p>To see an ASCII art tree of all branches</p>
+        <p class="logpar4">To see an ASCII art tree of all branches</p>
 
-        <strong>git log --graph --oneline --decorate --all</strong>
+        <code class="log4">git log --graph --oneline --decorate --all</code>
 
-        <p>To see what files have changed</p>
+        <p class="logpar5">To see what files have changed</p>
 
-        <strong>git log --name-status</strong>
+        <code class="log5">git log --name-status</code>
       </section>
-      <section id="error">
-        <h2>Undoing an error</h2>
+      <section class="hidden" id="error">
+        <h2 class="ertitle">Undoing an error</h2>
 
-        <p>If you did something wrong <span>which will probably happen</span> it is easy to replace local changes using</p>
+        <p class="erpar">If you did something wrong <span>which will probably happen</span> it is easy to replace local changes using</p>
 
-        <strong>git checkout -- filename</strong>
+        <code class="error1">git checkout -- filename</code>
 
-        <p>This code will replace the changes in your working directory with the latest content from this file in the Head, anything that is in the index will be kept.</p>
+        <p class="erpar1">This code will replace the changes in your working directory with the latest content from this file in the Head, anything that is in the index will be kept.</p>
 
-        <p>If you want to start over from the latest commit again, simply fetch everything from the remote repository again using</p>
+        <p class="erpar2">If you want to start over from the latest commit again, simply fetch everything from the remote repository again using</p>
 
-        <strong>git fetch origin</strong>
+        <code class="error2">git fetch origin</code>
 
-        <p>Then point your local master branch at it again with</p>
+        <p class="erpar3">Then point your local master branch at it again with</p>
 
-        <strong>git reset --hard origin/master</strong>
+        <code class="error3">git reset --hard origin/master</code>
       </section>
     </article>
   </body>
