@@ -60,21 +60,43 @@
         <h2>Creating a Repository</h2>
         <div class="animgrid">
           <div class="remote">
-            <h4 class="hidden">Remote Repository</h4>
+            <h4 class="hidden remoterepo">Remote Repository
+            <img class="profileicon hidden" src="img/SVG/prof-icon.svg" alt="profile icon"></h4>
           </div>
           <div class="local">
-            <h4 class="hidden localrepo">Local Repository</h4>
+            <h4 class="hidden localrepo">Local Repository
+              <img class="profileicon hidden" src="img/SVG/prof-icon.svg" alt="profile icon"></h4>
+            <img class="localreposvg hidden" src="img/SVG/file.svg" alt="file in local repository">
           </div>
           <div class="stage"><h4 class="hidden staging">Staging</h4></div>
           <div class="text">
-            <p class="animcode hidden">git init</p>
-            <p class="animtext hidden">This code initiates a local repository</p>
+            <p id="gitinit" class="animcode hidden">git init</p>
+            <p id="gitinitex" class="animtext hidden">This code initiates a local repository</p>
+            <p id="connectrepo" class="animcode hidden">git remote add origin REPOSITORY_URL</p>
+            <p id="connectrepotext" class="animtext hidden">This will link your local repository to your remote repository.</p>
+            <p id="connectrepotext2" class="animtext hidden">Your repository url can be found on the main page of the recently created repository. You can create a repository at <a href="bitbucket.org">bitbucket.org</a>
+            <p id="adduser1" class="animcode hidden">git config user.name "YOUR NAME"</p>
+            <p id="adduser2" class="animcode hidden">git config user.email "YOUR.EMAIL"</p>
+            <p id="addusertext" class="animtext hidden">Using these will add the user who will make commits to the repository.</p>
+            <p id="createfiletext" class="animcode hidden">Create File</p>
+            <p id="createfileex" class="animtext hidden">Create the file that will be used within your project.</p>
+            <p id="addfile" class="animcode hidden">git add .</p>
+            <p id="addfiletext" class="animtext hidden">This will add all modified and new files into the staging area.</p>
           </div>
           <button id="next" class="animbtn">
-            Next
+            Start
+          </button>
+          <button id="connectrepository" class="animbtn hidden">
+            Connect Repo
+          </button>
+          <button id="setuser" class="animbtn hidden">
+            Set User
           </button>
           <button id="createfile" class="animbtn hidden">
             Create File
+          </button>
+          <button id="addfile" class="animbtn hidden">
+            Add File
           </button>
         </div>
         <p class="cpar">Once installed, you will want to create a brand new repository, to do this use the command in the commandline of the folder that will contain all of the files in your project</p>
