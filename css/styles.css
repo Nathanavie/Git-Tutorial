@@ -104,11 +104,29 @@ div {
 }
 .animtext {
   color: #FFFFFF;
-  margin-left: 20px;
+  margin: 0px 20px 0px 20px;
   opacity: 0;
   animation: 1s 1s forwards;
 }
+.animtext a {
+  color: #FFFFFF;
+}
 .localrepo {
+  opacity: 0;
+  animation: 1s 2s forwards;
+}
+.remoterepo {
+  opacity: 0;
+  animation: 1s 2s forwards;
+}
+.localreposvg {
+  opacity: 0;
+  width: 100px;
+  margin: -10px 0px -130px 50px;
+  animation: 1s 1s forwards;
+}
+.profileicon {
+  height: 16pt;
   opacity: 0;
   animation: 1s 2s forwards;
 }
@@ -122,9 +140,10 @@ div {
 .animbtn {
   height: 50px;
   padding: 0;
-  margin-top: 5px;
-  width: 300px;
-  float: left;
+  margin-top: -50px;
+  text-align: center;
+  z-index: 1;
+  width: 225px;
 }
 button {
   background-color: #000000;
