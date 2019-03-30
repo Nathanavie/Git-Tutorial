@@ -28,15 +28,16 @@
 }
 #next {grid-area: next;}
 #createfile {grid-area: next;}
+#connectrepository {grid-area: next;}
+#setuser {grid-area: next;}
 .animgrid {
 	display: grid;
-	grid-template-columns: 500px 200px 300px;
-	grid-auto-rows: 300px 300px 50px;
+	grid-template-columns: 500px 250px 250px;
 	grid-template-areas:
 		'remote remote text'
 		'local stage text'
 		'. . next';
-		margin: 0 auto;
+		margin-bottom: -120px;
 		width: 1000px;
 		height: 650px;
 }
@@ -96,7 +97,6 @@
       'cpar'
       'init'
 			'cpar2';
-	grid-gap: 10px;
 	padding: 10px;
 	width: 60%;
 	margin: 0 auto;
