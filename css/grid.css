@@ -30,6 +30,9 @@
 #createfile {grid-area: next;}
 #connectrepository {grid-area: next;}
 #setuser {grid-area: next;}
+#addfile {grid-area: next;}
+#commitfile {grid-area: next;}
+#pushfile {grid-area: next;}
 .animgrid {
 	display: grid;
 	grid-template-columns: 500px 250px 250px;
@@ -85,42 +88,51 @@
 .cpar { grid-area: cpar; }
 .cpar2 { grid-area: cpar2; }
 .init { grid-area: init; }
-.animation { grid-area: anim; }
-#create {
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-areas:
-			'anim'
-			'anim'
-			'anim'
-    	'ctitle'
-      'cpar'
-      'init'
-			'cpar2';
-	padding: 10px;
-	width: 60%;
-	margin: 0 auto;
-}
-/*CSS Grid checkout container*/
-.checktitle { grid-area: checktitle; }
 .checkpar { grid-area: checkpar; }
 .clone1 { grid-area: clone1; }
 .checkpar2 { grid-area: checkpar2; }
 .clone2 { grid-area: clone2; }
 
-#checkout {
+#create {
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
-    	'checktitle'
-      'checkpar'
-      'clone1'
+    	'ctitle'
+      'cpar'
+      'init'
+			'cpar2'
+			'cpar3'
+			'init2'
+			'cpar4'
+			'checkpar'
+			'clone1'
 			'checkpar2'
 			'clone2';
-	grid-gap: 10px;
 	padding: 10px;
 	width: 60%;
 	margin: 0 auto;
+	animation: 1s forwards;
+}
+/*CSS Grid create container*/
+.usertitle { grid-area: usertitle; }
+.setuserpar { grid-area: userpar1; }
+.config1 { grid-area: config1; }
+.config2 { grid-area: config2; }
+.setuserpar1 { grid-area: userpar2; }
+#setuserinfo {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-areas:
+    	'usertitle'
+      'userpar1'
+      'config1'
+			'config2'
+			'userpar2';
+	padding: 10px;
+	width: 60%;
+	margin: 0 auto;
+	opacity: 0;
+	animation: 1s forwards;
 }
 /*CSS Grid workflow container*/
 .worktitle { grid-area: worktitle; }
@@ -175,6 +187,7 @@
 	padding: 10px;
 	width: 60%;
 	margin: 0 auto;
+	animation: 1s forwards;
 }
 /*CSS Grid Pushing container*/
 .pushtitle { grid-area: pushtitle; }
@@ -202,6 +215,7 @@
 	padding: 10px;
 	width: 60%;
 	margin: 0 auto;
+	animation: 1s forwards;
 }
 /*CSS Grid Branches container*/
 .brtitle { grid-area:brtitle; }
