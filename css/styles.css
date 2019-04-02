@@ -36,6 +36,7 @@ article {
   right:0;
   width: 30%;
   margin-left: 0px;
+  background: #D4D4D4;
   transition: margin-left 0.5s;
 }
 .sidenav {
@@ -111,15 +112,14 @@ h1 {
 h2 {
   font-size: 24pt;
   font-family: 'Roboto', sans-serif;
-  text-align: center;
-}
+  }
 h3 {
   font-size: 18pt;
   font-family: 'Roboto', sans-serif;
 }
 h4 {
   margin-top: 0;
-  margin-left: 5px;ddd
+  margin-left: 5px;
   font-size: 16pt;
   font-family: 'Roboto', sans-serif;
 }
