@@ -14,20 +14,25 @@
     <header>
       <nav class="sidenav" id="sidenav">
         <aside id="close">&#60;</aside>
-        <a>Home</a>
-        <!-- <a id="#setup">Setup</a> -->
-        <a id="#workflow">Git Workflow</a>
-        <a id="#create">Create a repository</a>
-        <a id="#addcommit">Adding and Committing</a>
-        <a id="#pushcommit">Pushing Changes</a>
-        <a id="#checkout">Checkout a repository</a>
-        <a id="#branches">Branches</a>
-        <a id="#updatemerge">Updating and Merging</a>
-        <a id="#error">Undoing an error</a>
-        <a id="#tag">Tagging</a>
-        <a id="#log">Finding your log</a>
+        <a id="home">Home</a>
+        <a class="start">Git Workflow</a>
+        <a class="coding">Create a repository</a>
+        <a class="connectrepository">Link Your repository</a>
+        <a class="setuser">Set User</a>
+        <a class="createfile">Create File</a>
+        <a class="addfile">Adding and Committing</a>
+        <a class="pushfile">Pushing Changes</a>
+        <a class="pullfile">Pulling your Repository</a>
+        <a class="checkoutbutton">Checkout a repository</a>
+        <a class="branchesbutton">Branches</a>
+        <a class="mergebutton">Merging Branches</a>
+        <a class="errorbutton">Undoing an error</a>
+        <a class="tagbutton">Tagging</a>
+        <a class="logbutton" >Finding your log</a>
       </nav>
-      <span id="open">&#9776;</span>
+      <nav>
+        <span id="open">&#9776;</span>
+      </nav>
     </header>
     <article>
       <section class="intro" id="home">
@@ -54,7 +59,7 @@
         <a href="https://git-scm.com/download/mac" target="_blank"><button class="but3">
           <i class="fab fa-apple"></i> Download Git for OSX
         </button></a>
-        <button id="start">Lets Go!</button>
+        <button class="start">Lets Go!</button>
       </section>
       <section class="hidden" id="workflow">
         <h2 class="worktitle">The git workflow</h2>
@@ -73,9 +78,9 @@
         <code class="head">The Head</code>
 
         <p class="headtext">This points to the latest commit that has been made</p>
-        <button id="coding">Lets Get Coding!</button>
+        <button class="coding">Lets Get Coding!</button>
       </section>
-      <div class="split left hidden">
+      <section class="split left hidden">
         <div class="animgrid">
         <div class="remote">
           <h4 class="hidden remoterepo">Remote Repository
@@ -100,42 +105,44 @@
             <p id="connectrepo" class="animcode hidden">git remote add origin REPOSITORY_URL</p>
             <p id="connectrepotext" class="animtext hidden">This will link your local repository to your remote repository.</p>
             <p id="connectrepotext2" class="animtext hidden">Your repository url can be found on the main page of the recently created repository. You can create a repository at <a href="http://bitbucket.org">bitbucket.org</a>
-              <p id="adduser1" class="animcode hidden">git config user.name "YOUR NAME"</p>
-              <p id="adduser2" class="animcode hidden">git config user.email "YOUR EMAIL"</p>
-              <p id="addusertext" class="animtext hidden">Using these will add the user who will make commits to the repository.</p>
-              <p id="createfiletext" class="animcode hidden">Create File</p>
-              <p id="createfileex" class="animtext hidden">Create the file that will be used within your project.</p>
-              <p id="addfiletext" class="animcode hidden">git add .</p>
-              <p id="addfileex" class="animtext hidden">This will add all modified and new files into the staging area.</p>
-              <p id="committext" class="animcode hidden">git commit -m "changed feature-x in file-x</p>
-              <p id="commitex" class="animtext hidden">This will add a message to your staged file.</p>
-              <p id="pushtext" class="animcode hidden">git push origin master</p>
-              <p id="pushex" class="animtext hidden">This will push all staged files to the remote repository. You can see </p>
-            </div>
-            <button id="next" class="animbtn">
-              Start
-            </button>
-            <button id="connectrepository" class="animbtn hidden">
-              Connect Repo
-            </button>
-            <button id="setuser" class="animbtn hidden">
-              Set User
-            </button>
-            <button id="createfile" class="animbtn hidden">
-              Create File
-            </button>
-            <button id="addfile" class="animbtn hidden">
-              Add File
-            </button>
-            <button id="commitfile" class="animbtn hidden">
-              Commit
-            </button>
-            <button id="pushfile" class="animbtn hidden">
-              Push
-            </button>
+            <p id="adduser1" class="animcode hidden">git config user.name "YOUR NAME"</p>
+            <p id="adduser2" class="animcode hidden">git config user.email "YOUR EMAIL"</p>
+            <p id="addusertext" class="animtext hidden">Using these will add the user who will make commits to the repository.</p>
+            <p id="createfiletext" class="animcode hidden">Create File</p>
+            <p id="createfileex" class="animtext hidden">Create the file that will be used within your project.</p>
+            <p id="addfiletext" class="animcode hidden">git add .</p>
+            <p id="addfileex" class="animtext hidden">This will add all modified and new files into the staging area.</p>
+            <p id="committext" class="animcode hidden">git commit -m "changed feature-x in file-x"</p>
+            <p id="commitex" class="animtext hidden">This will add a message to your staged file.</p>
+            <p id="pushtext" class="animcode hidden">git push origin master</p>
+            <p id="pushex" class="animtext hidden">This will push all staged files to the remote repository. You can see which branch the commit will go to by the final word in the command, in this instance the commit goes to the master branch. </p>
+            <p id="pulltext" class="animcode hidden">git pull</p>
+            <p id="pullex" class="animtext hidden">This fetches all remote changes and merges them into your Directory, meaning that your local repository is now upto date!</p>
           </div>
-      </div>
-      <div class="split right hidden">
+          <button id="next" class="next animbtn">
+              Start
+          </button>
+          <button id="connectrepository" class="connectrepository animbtn hidden">
+              Connect Repo
+          </button>
+          <button id="setuser" class="setuser animbtn hidden">
+              Set User
+          </button>
+          <button id="createfile" class="createfile animbtn hidden">
+              Create File
+          </button>
+          <button id="addfile" class="addfile animbtn hidden">
+              Add File
+          </button>
+          <button id="commitfile" class="commitfile animbtn hidden">
+              Commit
+          </button>
+          <button id="pushfile" class="pushfile animbtn hidden">
+              Push
+          </button>
+        </div>
+      </section>
+      <section class="split right hidden">
         <section class="hidden" id="create">
         <h2 class="ctitle">Creating a Repository</h2>
         <p class="cpar">Once installed, you will want to create a brand new repository, to do this use the command in the commandline of the folder that will contain all of the files in your project</p>
@@ -300,7 +307,7 @@
 
         <code class="error3">git reset --hard origin/master</code>
       </section>
-      </div>
+    </section>
     </article>
   </body>
 </html>
