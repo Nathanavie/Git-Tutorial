@@ -17,6 +17,22 @@ article {
   margin-left: 0px;
   transition: margin-left 0.5s;
 }
+.split {
+  width: 100%;
+  top: 0;
+  padding-top: 20px;
+  overflow-x: hidden;
+}
+.left {
+  position: fixed;
+  left: 0;
+  overflow: hidden;
+}
+.right {
+  position: fixed;
+  height: 40%;
+  top: 650px;
+}
 .sidenav {
   height: 100%;
   width: 0px;
@@ -42,11 +58,18 @@ article {
 .sidenav #close {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 10%;
   font-size: 24pt;
   padding-left: 32px;
   color: #FFFFFF;
   cursor: pointer;
+}
+#open {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 35pt;
+  z-index: 1;
+  position: absolute;
 }
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -83,7 +106,7 @@ h3 {
 }
 h4 {
   margin-top: 0;
-  margin-left: 5px;
+  margin-left: 5px;ddd
   font-size: 16pt;
   font-family: 'Roboto', sans-serif;
 }
@@ -111,6 +134,40 @@ div {
 .animtext a {
   color: #FFFFFF;
 }
+.staging {
+  opacity: 0;
+  animation: 1s forwards;
+}
+#localarrow {
+  position: fixed;
+  margin-top: 67px;
+  margin-left: -200px;
+  animation: 1s 1.2s forwards;
+}
+#staging {
+  width: 100px;
+  position: fixed;
+  margin-left: 50px;
+  animation: 1s forwards;
+}
+#commiticon {
+  width: 50px;
+  margin-left: 85px;
+  margin-top: -34px;
+  opacity: 0;
+  position: fixed;
+  animation: 1s forwards;
+}
+#stagingarrow {
+  transform: rotate(200deg);
+  width: 400px;
+  margin-left: -350px;
+  margin-top: -90px;
+  position: fixed;
+  opacity: 0;
+  animation: 1s forwards;
+
+}
 .localrepo {
   opacity: 0;
   animation: 1s 2s forwards;
@@ -122,20 +179,61 @@ div {
 .localreposvg {
   opacity: 0;
   width: 100px;
-  margin: -10px 0px -130px 50px;
+  margin-top: -10px;
+  margin-bottom: -130px;
+  margin-left: 50px;
   animation: 1s 1s forwards;
+  position: fixed;
 }
 .profileicon {
   height: 16pt;
   opacity: 0;
   animation: 1s 2s forwards;
 }
+@keyframes commitStagingtoRemote {
+  100% {
+    margin-left: -415px;
+    margin-top: -252px;
+    opacity: 1;
+  }
+}
+@keyframes fileStagingtoRemote {
+  0%{
+    position: fixed;
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  100% {
+    margin-left: -451px;
+    margin-top: -220px;
+    opacity: 1;
+    position: fixed;
+  }
+}
+@keyframes localArrowToStage {
+  100% {
+    width: 250px;
+    opacity: 1;
+    margin-left: 225px;
+  }
+}
+@keyframes localToStage {
+    100% {
+      margin-top: -1px;
+      margin-left: 550px;
+      opacity: 1;
+      position: fixed;
+    }
+}
 @keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
 @keyframes fadeOut {
-  100% {opacity: 0;}
+  0% {opacity: 1;}
+  100% {
+    opacity: 0;
+  }
 }
 .animbtn {
   height: 50px;
@@ -168,9 +266,4 @@ button a {
 button:hover {
   background-color: #808080;
   transition: background-color 0.5s ease-out;
-}
-#open {
-  cursor: pointer;
-  margin-left: 10px;
-  font-size: 35pt;
 }
