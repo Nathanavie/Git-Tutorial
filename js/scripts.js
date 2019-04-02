@@ -1,37 +1,127 @@
 //Function to start when the web page is loaded
 $(document).ready(function() {
-  $('nav a').on('click', function(event) {
+  $('#home').on('click', function(event) {
     event.preventDefault();
-    var id = $(this).attr("id");
-    if (id == undefined) {
-      location.reload()
-    }
-    $('section').addClass("hidden");
-    $(id).removeClass("hidden");
-    $('.animgrid').removeClass("hidden");
+      location.reload();
   });
+
   $('#open').on('click', function(event) {
     $('#sidenav').css("width", "250px");
-    $('article').css("margin-left", "250px");
   });
+
   $('#close').on('click', function(event) {
     $('#sidenav').css("width", "0px");
-    $('article').css("margin-left", "0");
   });
-  $('#start').click(function(ev) {
+
+  $('article').on('click', function(event) {
+    $('#sidenav').css("width", "0px");
+  });
+
+  $('.start').click(function(ev) {
     ev.preventDefault();
     $('section').addClass("hidden");
     $('#workflow').removeClass("hidden");
   });
-  $('#coding').click(function(ev) {
+
+  $('.coding').click(function(ev) {
     ev.preventDefault();
-    $('section').addClass("hidden");
-    $('#create').removeClass("hidden");
-    $('.top').removeClass("hidden");
-    $('.bottom').removeClass("hidden");
+    $.fn.hideAnimation();
+    $.fn.startanimation();
   });
-  $('#next').click(function(ev) {
+
+  $('.next').click(function(ev) {
     ev.preventDefault();
+    $.fn.hideAnimation();
+    $.fn.startanimation();
+    $.fn.gitInit();
+  });
+
+  $('.connectrepository').click(function(ev) {
+    ev.preventDefault();
+    $.fn.hideAnimation();
+    $.fn.startanimation();
+    $('.localrepo').css("opacity", "1");
+    $('.localrepo').removeClass("hidden");
+    $.fn.connectRepo();
+  });
+
+  $('.setuser').click(function(ev) {
+  ev.preventDefault();
+  $.fn.hideAnimation();
+  $.fn.startanimation();
+  $('.localrepo').css("opacity", "1");
+  $('.localrepo').removeClass("hidden");
+  $('.remoterepo').css("opacity", "1");
+  $('.remoterepo').removeClass("hidden");
+  $.fn.setUser();
+  });
+
+  $('.createfile').click(function(ev) {
+    ev.preventDefault();
+    $.fn.hideAnimation();
+    $.fn.startanimation();
+    $('.localrepo').css("opacity", "1");
+    $('.localrepo').removeClass("hidden");
+    $('.remoterepo').css("opacity", "1");
+    $('.remoterepo').removeClass('hidden');
+    $('.profileicon').css("opacity", "1");
+    $('.profileicon').removeClass('hidden');
+    $.fn.createFile();
+  });
+
+  $('.addfile').click(function(ev) {
+    ev.preventDefault();
+    $.fn.hideAnimation();
+    $.fn.startanimation();
+    $('.localrepo').css("opacity", "1");
+    $('.localrepo').removeClass("hidden");
+    $('.remoterepo').css("opacity", "1");
+    $('.remoterepo').removeClass('hidden');
+    $('.profileicon').css("opacity", "1");
+    $('.profileicon').removeClass("hidden");
+    $('#localreposvg').css("opacity", "1");
+    $('#localreposvg').removeClass("hidden");
+    $.fn.addFile();
+  });
+
+  $('.commitfile').click(function(ev) {
+    ev.preventDefault();
+    $.fn.commitFile();
+  });
+
+  $('.pushfile').click(function(ev) {
+    ev.preventDefault();
+    $.fn.hideAnimation();
+    $.fn.startanimation();
+    $('.localrepo').css("opacity", "1");
+    $('.localrepo').removeClass("hidden");
+    $('.remoterepo').css("opacity", "1");
+    $('.remoterepo').removeClass('hidden');
+    $('.profileicon').css("opacity", "1");
+    $('.profileicon').removeClass("hidden");
+    $('#localreposvg').css("opacity", "1");
+    $('#localreposvg').removeClass("hidden");
+    $('#commiticon').css("opacity", "1");
+    $('#commiticon').removeClass("hidden");
+    $('.staging').css("opacity", "1");
+    $('.staging').removeClass("hidden");
+    $.fn.pushFile();
+  });
+
+  $.fn.hideAnimation = function() {
+    $('.animgrid').children().find('h4').addClass("hidden");
+    $('.animgrid').children().find('img').addClass("hidden");
+    $('.animgrid').children().find('p').addClass("hidden");
+    $('.animgrid').find('button').addClass("hidden");
+  };
+  $.fn.startanimation = function() {
+      $('section').addClass("hidden");
+      $('#next').removeClass("hidden");
+      $('#create').removeClass("hidden");
+      $('.left').removeClass("hidden");
+      $('.right').removeClass("hidden");
+  };
+  $.fn.gitInit = function() {
     $('#gitinit').css("animation-name", "fadeIn");
     $('#gitinit').removeClass('hidden');
     $('#gitinitex').css("animation-name", "fadeIn");
@@ -40,9 +130,9 @@ $(document).ready(function() {
     $('.localrepo').removeClass('hidden');
     $('#next').addClass('hidden');
     $('#connectrepository').removeClass("hidden");
-  });
-  $('#connectrepository').click(function(ev) {
-    ev.preventDefault();
+  };
+
+  $.fn.connectRepo = function() {
     $('#gitinit').addClass("hidden");
     $('#gitinitex').addClass("hidden");
     $('#connectrepo').css("animation-name", "fadeIn");
@@ -57,11 +147,10 @@ $(document).ready(function() {
     $('#connectrepo1').removeClass('hidden');
     $('.remoterepo').css("animation-name", "fadeIn");
     $('.remoterepo').removeClass('hidden');
-    $('#connectrepository').addClass('hidden');
     $('#setuser').removeClass("hidden");
-  });
-  $('#setuser').click(function(ev) {
-    ev.preventDefault();
+  };
+
+  $.fn.setUser = function() {
     $('#connectrepo').addClass("hidden");
     $('#connectrepotext').addClass("hidden");
     $('#connectrepotext2').addClass("hidden");
@@ -75,13 +164,12 @@ $(document).ready(function() {
     $('.profileicon').removeClass('hidden');
     $('#setuser').addClass('hidden');
     $('#createfile').removeClass("hidden");
-    $('#create').css("animation-name", "fadeOut");
     $('#create').addClass("hidden");
     $('#setuserinfo').css("animation-name", "fadeIn");
     $('#setuserinfo').removeClass("hidden");
-  });
-  $('#createfile').click(function(ev) {
-    ev.preventDefault();
+  };
+
+  $.fn.createFile = function() {
     $('#adduser1').addClass("hidden");
     $('#adduser2').addClass("hidden");
     $('#addusertext').addClass("hidden");
@@ -91,11 +179,12 @@ $(document).ready(function() {
     $('#createfileex').removeClass("hidden");
     $('#localreposvg').css("animation-name", "fadeIn");
     $('#localreposvg').removeClass("hidden");
-    $('#createfile').addClass('hidden');
+    $('#create').addClass("hidden");
     $('#addfile').removeClass('hidden');
-  });
-  $('#addfile').click(function(ev) {
-    ev.preventDefault();
+  };
+
+ $.fn.addFile = function() {
+    $('#create').addClass("hidden");
     $('#createfiletext').addClass("hidden");
     $('#createfileex').addClass("hidden");
     $('#addfiletext').css("animation-name", "fadeIn");
@@ -108,15 +197,14 @@ $(document).ready(function() {
     $('#localtostaging').removeClass("hidden");
     $('#localarrow').css("animation-name", "localArrowToStage");
     $('#localarrow').removeClass("hidden");
-    $('#addfile').addClass('hidden');
     $('#commitfile').removeClass('hidden');
-    $('#setuserinfo').css("animation-name", "fadeOut");
     $('#setuserinfo').addClass("hidden");
     $('#addcommit').css("animation-name", "fadeIn");
     $('#addcommit').removeClass("hidden");
-  });
-  $('#commitfile').click(function(ev) {
-    ev.preventDefault();
+};
+
+  $.fn.commitFile = function() {
+    $('#create').addClass("hidden");
     $('#addfileex').addClass("hidden");
     $('#addfiletext').addClass("hidden");
     $('#localarrow').addClass("hidden");
@@ -126,11 +214,11 @@ $(document).ready(function() {
     $('#commitex').removeClass("hidden");
     $('#commiticon').css("animation-name", "fadeIn");
     $('#commiticon').removeClass("hidden");
-    $('#commitfile').addClass('hidden');
     $('#pushfile').removeClass('hidden');
-  });
-  $('#pushfile').click(function(ev) {
-    ev.preventDefault();
+  };
+
+  $.fn.pushFile = function() {
+    $('#create').addClass("hidden");
     $('#committext').addClass("hidden");
     $('#commitex').addClass("hidden");
     $('#pushtext').css("animation-name", "fadeIn");
@@ -143,11 +231,10 @@ $(document).ready(function() {
     $('#stagingarrow').css("animation-name", "fadeIn");
     $('#stagingarrow').removeClass("hidden");
     $('#staging').removeClass("hidden");
-    $('#pushfile').addClass('hidden');
     $('#next').removeClass('hidden');
     $('#addcommit').css("animation-name", "fadeOut");
     $('#addcommit').addClass("hidden");
     $('#pushcommit').css("animation-name", "fadeIn");
     $('#pushcommit').removeClass("hidden");
-  });
+  };
 });
