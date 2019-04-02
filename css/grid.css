@@ -26,13 +26,13 @@
 	grid-area: text;
 	border-style: solid;
 }
-#next {grid-area: next;}
-#createfile {grid-area: next;}
-#connectrepository {grid-area: next;}
-#setuser {grid-area: next;}
-#addfile {grid-area: next;}
-#commitfile {grid-area: next;}
-#pushfile {grid-area: next;}
+.next {grid-area: next;}
+.createfile {grid-area: next;}
+.connectrepository {grid-area: next;}
+.setuser {grid-area: next;}
+.addfile {grid-area: next;}
+.commitfile {grid-area: next;}
+.pushfile {grid-area: next;}
 .animgrid {
 	display: grid;
 	grid-template-columns: 500px 250px 250px;
@@ -144,7 +144,7 @@
 .workdirtext { grid-area: workdirtext; }
 .indextext { grid-area: indextext; }
 .headtext { grid-area: headtext; }
-#coding { grid-area: coding; }
+.coding { grid-area: coding; }
 
 #workflow {
 	display: grid;
