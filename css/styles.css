@@ -24,8 +24,8 @@ article {
 }
 .left {
   position: fixed;
-  /* left: 65px; */
-  width: 70%;
+  left: 30px;
+  width: 74%;
   overflow: hidden;
   border-right: solid;
   margin-left: 0px;
@@ -34,7 +34,7 @@ article {
 .right {
   position: fixed;
   right:0;
-  width: 30%;
+  width: 26%;
   margin-left: 0px;
   background: #D4D4D4;
   transition: margin-left 0.5s;
@@ -84,6 +84,12 @@ article {
    left: 0;
    background-color: #000000;
    z-index: 1;
+   transition: width 0.2s ease;
+ }
+ #closednav:hover {
+   width: 70px;
+   cursor: pointer;
+   transition: width 0.2s ease;
  }
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -123,6 +129,10 @@ h4 {
   font-size: 16pt;
   font-family: 'Roboto', sans-serif;
 }
+h5 {
+  font-size: 12pt;
+  font-family: 'Roboto', sans-serif;
+}
 p {
   font-size: 12pt;
   font-family: 'Raleway', sans-serif;
@@ -132,6 +142,16 @@ div {
   margin: 0 auto;
   width: 100%;
   height: 100%;
+}
+#start {
+  position: fixed;
+  margin-top: -20px;
+  margin-left: 20px;
+}
+#end {
+  position: fixed;
+  margin-top: -20px;
+  margin-left: 700px;
 }
 .animcode {
   color: #FFFFFF;
@@ -148,14 +168,15 @@ div {
   color: #FFFFFF;
 }
 .staging {
-  opacity: 0;
   animation: 1s forwards;
 }
 #localarrow {
   position: fixed;
   margin-top: 67px;
   margin-left: -200px;
-  animation: 1s 1.2s forwards;
+  animation: 1s forwards;
+  width: 100px;
+  opacity: 0;
 }
 #staging {
   width: 100px;
@@ -163,12 +184,45 @@ div {
   margin-left: 50px;
   animation: 1s forwards;
 }
+#branch1arrow {
+  position: fixed;
+  width: 90px;
+  transform: rotate(90deg);
+  margin-left: 55px;
+  margin-top: 182px;
+  animation: 1s forwards;
+}
+#branch1file {
+  margin-top: 7px;
+  margin-left: 50px;
+  animation: 1s forwards;
+}
+#branchedit1 {
+  margin-left: 240px;
+  margin-top: -15px;
+  animation: 1s forwards;
+}
+#mergedfile1{
+  margin-top: -19px;
+  margin-left: 240px;
+  animation: 1s forwards;
+}
+#b1arrow {
+  position: fixed;
+  width: 73px;
+  margin-top: 50px;
+  margin-left: 160px;
+  animation: 1s forwards;
+}
+#masterarrow {
+  position: fixed;
+  width: 75px;
+  margin-left: 160px;
+  margin-top: 50px;
+}
 #commiticon {
-  width: 50px;
   margin-left: 85px;
   margin-top: -34px;
-  opacity: 0;
-  position: fixed;
   animation: 1s forwards;
 }
 #stagingarrow {
@@ -179,29 +233,62 @@ div {
   position: fixed;
   opacity: 0;
   animation: 1s forwards;
-
+}
+#pulledremote {
+  animation: 1s 1.5s forwards;
+}
+#remotefile {
+  width: 100px;
+  position: fixed;
+  margin-left: 50px;
+  margin-top: 7px;
+}
+#remotecommit {
+  margin-left: 85px;
+  margin-top: -25px;
+}
+#branch2file {
+  margin-left: 20px;
+  animation: 1s forwards;
+}
+#brokenfile {
+  margin-left: 20px;
+  animation: 1s forwards;
+  opacity: 0;
+}
+.commitbubble {
+  width: 50px;
+  position: fixed;
 }
 .localrepo {
-  opacity: 0;
-  animation: 1s 2s forwards;
+  animation: 2s forwards;
 }
 .remoterepo {
-  opacity: 0;
-  animation: 1s 2s forwards;
+  animation: 2s forwards;
+}
+.remotereposvg {
+  position: fixed;
+  width: 100px;
+  margin-top: 7px;
+  margin-left: 170px;
 }
 .localreposvg {
-  opacity: 0;
   width: 100px;
   margin-top: -10px;
   margin-bottom: -130px;
   margin-left: 50px;
-  animation: 1s 1s forwards;
+  animation: 1s forwards;
   position: fixed;
+}
+.local {
+  animation: 1s forwards;
+}
+.stage {
+  animation: 1s 1.5s forwards;
 }
 .profileicon {
   height: 16pt;
-  opacity: 0;
-  animation: 1s 2s forwards;
+  animation: 2s forwards;
 }
 @keyframes commitStagingtoRemote {
   100% {
@@ -211,7 +298,7 @@ div {
   }
 }
 @keyframes fileStagingtoRemote {
-  0%{
+  0% {
     position: fixed;
     margin-left: 50px;
     margin-top: 0px;
@@ -221,6 +308,28 @@ div {
     margin-top: -220px;
     opacity: 1;
     position: fixed;
+  }
+}
+@keyframes pulledfile {
+  100% {
+    opacity: 1;
+    margin-top: 235px;
+  }
+}
+@keyframes mergefile {
+  100% {
+    margin-top: -239px;
+    opacity: 1;
+  }
+}
+@keyframes greyback {
+  100% {
+    background-color: rgba(128, 128, 128, 0.5);
+  }
+}
+@keyframes redback {
+  100% {
+    background-color: rgba(255, 0, 0, 0.5);
   }
 }
 @keyframes localArrowToStage {
@@ -237,6 +346,11 @@ div {
       opacity: 1;
       position: fixed;
     }
+}
+@keyframes delbranch {
+  100% {
+    opacity: 0.3;
+  }
 }
 @keyframes fadeIn {
   0% {opacity: 0;}
