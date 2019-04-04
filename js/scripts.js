@@ -9,6 +9,10 @@ $(document).ready(function() {
     $('#sidenav').css("width", "250px");
   });
 
+  $('#closednav').on('click', function(event) {
+    $('#sidenav').css("width", "250px");
+  });
+
   $('#close').on('click', function(event) {
     $('#sidenav').css("width", "0px");
   });
@@ -31,56 +35,58 @@ $(document).ready(function() {
 
   $('.next').click(function(ev) {
     ev.preventDefault();
-    $.fn.hideAnimation();
-    $.fn.startanimation();
     $.fn.gitInit();
   });
 
   $('.connectrepository').click(function(ev) {
     ev.preventDefault();
-    $.fn.hideAnimation();
-    $.fn.startanimation();
-    $('.localrepo').css("opacity", "1");
-    $('.localrepo').removeClass("hidden");
     $.fn.connectRepo();
+  });
+
+  $('#letsgo').click(function(ev) {
+    $(location).attr("href", "Workflow.html")
+  });
+
+  $('#coding').click(function(ev) {
+    $(location).attr("href", "CreateRepo.html")
+  });
+
+  $('#createend').click(function(ev) {
+    $(location).attr("href", "SetUser.html")
+  });
+
+  $('#setuserend').click(function(ev) {
+    $(location).attr("href", "AddCommit.html")
+  });
+
+  $('#addcommitend').click(function(ev) {
+    $(location).attr("href", "Push.html")
+  });
+
+  $('#pushend').click(function(ev) {
+    $(location).attr("href", "Pull.html")
+  });
+
+  $('#pullend').click(function(ev) {
+    $(location).attr("href", "Branches.html")
+  });
+
+  $('#nextstep').click(function(ev) {
+    $(location).attr("href", "Undo.html")
   });
 
   $('.setuser').click(function(ev) {
   ev.preventDefault();
-  $.fn.hideAnimation();
-  $.fn.startanimation();
-  $('.localrepo').css("opacity", "1");
-  $('.localrepo').removeClass("hidden");
-  $('.remoterepo').css("opacity", "1");
-  $('.remoterepo').removeClass("hidden");
   $.fn.setUser();
   });
 
   $('.createfile').click(function(ev) {
     ev.preventDefault();
-    $.fn.hideAnimation();
-    $.fn.startanimation();
-    $('.localrepo').css("opacity", "1");
-    $('.localrepo').removeClass("hidden");
-    $('.remoterepo').css("opacity", "1");
-    $('.remoterepo').removeClass('hidden');
-    $('.profileicon').css("opacity", "1");
-    $('.profileicon').removeClass('hidden');
     $.fn.createFile();
   });
 
   $('.addfile').click(function(ev) {
     ev.preventDefault();
-    $.fn.hideAnimation();
-    $.fn.startanimation();
-    $('.localrepo').css("opacity", "1");
-    $('.localrepo').removeClass("hidden");
-    $('.remoterepo').css("opacity", "1");
-    $('.remoterepo').removeClass('hidden');
-    $('.profileicon').css("opacity", "1");
-    $('.profileicon').removeClass("hidden");
-    $('#localreposvg').css("opacity", "1");
-    $('#localreposvg').removeClass("hidden");
     $.fn.addFile();
   });
 
@@ -91,27 +97,43 @@ $(document).ready(function() {
 
   $('.pushfile').click(function(ev) {
     ev.preventDefault();
-    $.fn.hideAnimation();
-    $.fn.startanimation();
-    $('.localrepo').css("opacity", "1");
-    $('.localrepo').removeClass("hidden");
-    $('.remoterepo').css("opacity", "1");
-    $('.remoterepo').removeClass('hidden');
-    $('.profileicon').css("opacity", "1");
-    $('.profileicon').removeClass("hidden");
-    $('#localreposvg').css("opacity", "1");
-    $('#localreposvg').removeClass("hidden");
-    $('#commiticon').css("opacity", "1");
-    $('#commiticon').removeClass("hidden");
-    $('.staging').css("opacity", "1");
-    $('.staging').removeClass("hidden");
     $.fn.pushFile();
   });
 
+  $('.pullfile').click(function(ev) {
+    ev.preventDefault();
+    $.fn.pullFile();
+  });
+
+  $('.branchesbtn').click(function(ev) {
+    ev.preventDefault();
+    $.fn.createBranch1();
+  });
+
+  $('.branchpush').click(function(ev) {
+    ev.preventDefault();
+    $.fn.branchPush();
+  });
+
+  $('#mergebranch').click(function(ev) {
+    ev.preventDefault();
+    $.fn.mergeBranch();
+  });
+
+  $('#addbranch2').click(function(ev) {
+    ev.preventDefault();
+    $.fn.branch2();
+  });
+
+  $('#delbranch').click(function(ev) {
+    ev.preventDefault();
+    $.fn.delbranch();
+  });
+
   $.fn.hideAnimation = function() {
-    $('.animgrid').children().find('h4').addClass("hidden");
-    $('.animgrid').children().find('img').addClass("hidden");
-    $('.animgrid').children().find('p').addClass("hidden");
+    $('.animgrid').find('h4').addClass("hidden");
+    $('.animgrid').find('img').addClass("hidden");
+    $('.animgrid').find('p').addClass("hidden");
     $('.animgrid').find('button').addClass("hidden");
   };
   $.fn.startanimation = function() {
@@ -122,6 +144,7 @@ $(document).ready(function() {
       $('.right').removeClass("hidden");
   };
   $.fn.gitInit = function() {
+
     $('#gitinit').css("animation-name", "fadeIn");
     $('#gitinit').removeClass('hidden');
     $('#gitinitex').css("animation-name", "fadeIn");
@@ -146,14 +169,12 @@ $(document).ready(function() {
     $('#connectrepo1').css("animation-name", "fadeIn");
     $('#connectrepo1').removeClass('hidden');
     $('.remoterepo').css("animation-name", "fadeIn");
-    $('.remoterepo').removeClass('hidden');
-    $('#setuser').removeClass("hidden");
+    $('.remoterepo').removeClass("hidden");
+    $('.connectrepository').addClass("hidden");
+    $('#createend').removeClass("hidden");
   };
 
   $.fn.setUser = function() {
-    $('#connectrepo').addClass("hidden");
-    $('#connectrepotext').addClass("hidden");
-    $('#connectrepotext2').addClass("hidden");
     $('#adduser1').css("animation-name", "fadeIn");
     $('#adduser1').removeClass('hidden');
     $('#adduser2').css("animation-name", "fadeIn");
@@ -163,16 +184,10 @@ $(document).ready(function() {
     $('.profileicon').css("animation-name", "fadeIn");
     $('.profileicon').removeClass('hidden');
     $('#setuser').addClass('hidden');
-    $('#createfile').removeClass("hidden");
-    $('#create').addClass("hidden");
-    $('#setuserinfo').css("animation-name", "fadeIn");
-    $('#setuserinfo').removeClass("hidden");
+    $('#setuserend').removeClass("hidden");
   };
 
   $.fn.createFile = function() {
-    $('#adduser1').addClass("hidden");
-    $('#adduser2').addClass("hidden");
-    $('#addusertext').addClass("hidden");
     $('#createfiletext').css("animation-name", "fadeIn");
     $('#createfiletext').removeClass("hidden");
     $('#createfileex').css("animation-name", "fadeIn");
@@ -184,7 +199,6 @@ $(document).ready(function() {
   };
 
  $.fn.addFile = function() {
-    $('#create').addClass("hidden");
     $('#createfiletext').addClass("hidden");
     $('#createfileex').addClass("hidden");
     $('#addfiletext').css("animation-name", "fadeIn");
@@ -197,14 +211,10 @@ $(document).ready(function() {
     $('#localtostaging').removeClass("hidden");
     $('#localarrow').css("animation-name", "localArrowToStage");
     $('#localarrow').removeClass("hidden");
-    $('#commitfile').removeClass('hidden');
-    $('#setuserinfo').addClass("hidden");
-    $('#addcommit').css("animation-name", "fadeIn");
-    $('#addcommit').removeClass("hidden");
+    $('#commitfile').removeClass("hidden");
 };
 
   $.fn.commitFile = function() {
-    $('#create').addClass("hidden");
     $('#addfileex').addClass("hidden");
     $('#addfiletext').addClass("hidden");
     $('#localarrow').addClass("hidden");
@@ -214,13 +224,10 @@ $(document).ready(function() {
     $('#commitex').removeClass("hidden");
     $('#commiticon').css("animation-name", "fadeIn");
     $('#commiticon').removeClass("hidden");
-    $('#pushfile').removeClass('hidden');
+    $('#addcommitend').removeClass('hidden');
   };
 
   $.fn.pushFile = function() {
-    $('#create').addClass("hidden");
-    $('#committext').addClass("hidden");
-    $('#commitex').addClass("hidden");
     $('#pushtext').css("animation-name", "fadeIn");
     $('#pushtext').removeClass("hidden");
     $('#pushex').css("animation-name", "fadeIn");
@@ -231,10 +238,100 @@ $(document).ready(function() {
     $('#stagingarrow').css("animation-name", "fadeIn");
     $('#stagingarrow').removeClass("hidden");
     $('#staging').removeClass("hidden");
-    $('#next').removeClass('hidden');
-    $('#addcommit').css("animation-name", "fadeOut");
-    $('#addcommit').addClass("hidden");
-    $('#pushcommit').css("animation-name", "fadeIn");
-    $('#pushcommit').removeClass("hidden");
+    $('#pushend').removeClass('hidden');
   };
+
+  $.fn.pullFile = function() {
+    $('#pulltext').css("animation-name", "fadeIn");
+    $('#pulltext').removeClass("hidden");
+    $('#pullex').css("animation-name", "fadeIn");
+    $('#pullex').removeClass("hidden");
+    $('#pulledremote').css("animation-name", "pulledfile");
+    $('#pulledremote').removeClass("hidden");
+    $('#pullfile').addClass("hidden");
+    $('#pullend').removeClass("hidden");
+  };
+
+  $.fn.createBranch1 = function() {
+    $('.localrepo').css("animation-name", "fadeIn");
+    $('.localrepo').removeClass("hidden");
+    $('#branch1file').css("animation-name", "pulledfile");
+    $('#branch1file').removeClass("hidden");
+    $('#branch1arrow').css("animation-name", "fadeIn");
+    $('#branch1arrow').removeClass("hidden");
+    $('#branchtext').css("animation-name", "fadeIn");
+    $('#branchtext').removeClass("hidden");
+    $('#branchex').css("animation-name", "fadeIn");
+    $('#branchex').removeClass("hidden");
+    $('.branchesbtn').addClass("hidden");
+    $('#branchpush').removeClass("hidden");
+  };
+
+  $.fn.branchPush = function() {
+    $('#branchtext').addClass("hidden");
+    $('#branchex').addClass("hidden");
+    $('#branch1arrow').addClass("hidden");
+    $('#pushbranchtext').css("animation-name", "fadeIn");
+    $('#pushbranchtext').removeClass("hidden");
+    $('#pushbranchex').css("animation-name", "fadeIn");
+    $('#pushbranchex').removeClass("hidden");
+    $('#b1arrow').css("animation-name", "fadeIn");
+    $('#b1arrow').removeClass("hidden");
+    $('#branchedit1').css("animation-name", "fadeIn");
+    $('#branchedit1').removeClass("hidden");
+    $('#branchpush').addClass("hidden");
+    $('#mergebranch').removeClass("hidden");
+  };
+
+  $.fn.mergeBranch = function() {
+    $('#pushbranchtext').addClass("hidden");
+    $('#pushbranchex').addClass("hidden");
+    $('#mergetext').css("animation-name", "fadeIn");
+    $('#mergetext').removeClass("hidden");
+    $('#mergeex').css("animation-name", "fadeIn");
+    $('#mergeex').removeClass("hidden");
+    $('#mergedfile1').css("animation-name", "mergefile");
+    $('#mergedfile1').removeClass("hidden");
+    $('#branches').addClass("hidden");
+    $('#updatemerge').css("animation-name", "fadeIn");
+    $('#updatemerge').removeClass("hidden");
+    $('#masterarrow').css("animation-name", "fadeIn");
+    $('#masterarrow').removeClass("hidden");
+    $('.local').css("animation-name", "greyback");
+    $('#remotefile').css("opacity", "0.5");
+    $('#mergebranch').addClass("hidden");
+    $('#addbranch2').removeClass("hidden");
+  };
+
+  $.fn.branch2 = function() {
+    $('#updatemerge').addClass("hidden");
+    $('#branches').removeClass("hidden");
+    $('#mergetext').addClass("hidden");
+    $('#mergeex').addClass("hidden");
+    $('#branch2text').css("animation-name", "fadeIn");
+    $('#branch2text').removeClass("hidden");
+    $('#branch2ex').css("animation-name", "fadeIn");
+    $('#branch2ex').removeClass("hidden");
+    $('.staging').css("animation-name", "fadeIn");
+    $('.staging').removeClass("hidden");
+    $('#branch2file').css("animation-name", "fadeIn");
+    $('#branch2file').removeClass("hidden");
+    $('#addbranch2').addClass("hidden");
+    $('#delbranch').removeClass("hidden");
+  };
+
+  $.fn.delbranch = function() {
+    $('#branch2text').addClass("hidden");
+    $('#branch2ex').addClass("hidden");
+    $('#deltext').css("animation-name", "fadeIn");
+    $('#deltext').removeClass("hidden");
+    $('#delex').css("animation-name", "fadeIn");
+    $('#delex').removeClass("hidden");
+    $('#brokenfile').css("animation-name", "delbranch");
+    $('#brokenfile').removeClass("hidden");
+    $('#branch2file').css("animation-name", "fadeOut");
+    $('.stage').css("animation-name", "redback");
+    $('#delbranch').addClass("hidden");
+    $('#nextstep').removeClass("hidden");
+  }
 });
