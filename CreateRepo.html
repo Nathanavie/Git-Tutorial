@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/grid.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <script src="js/scripts.js"></script>
   </head>
   <body>
@@ -26,7 +27,7 @@
         <a href="Tagging.html">Tagging</a>
         <a href="Log.html">Finding your log</a>
       </nav>
-      <nav id="closednav"
+      <nav id="closednav">
         <span id="open">&#9776;</span>
       </nav>
     </header>
@@ -53,7 +54,7 @@
             <p id="gitinitex" class="animtext hidden">This code initiates a local repository</p>
             <p id="connectrepo" class="animcode hidden">git remote add origin REPOSITORY_URL</p>
             <p id="connectrepotext" class="animtext hidden">This will link your local repository to your remote repository.</p>
-            <p id="connectrepotext2" class="animtext hidden">Your repository url can be found on the main page of the recently created repository. You can create a repository at <a href="http://bitbucket.org">bitbucket.org</a>
+            <p id="connectrepotext2" class="animtext hidden">Your repository url can be found on the main page of the recently created repository. You can create a repository at <a target="_blank" href="http://bitbucket.org">bitbucket.org</a>
           </div>
           <button id="next" class="next animbtn">
               Start
@@ -78,14 +79,14 @@
 
         <code class="init2">git remote add origin REPOSITORY_URL</code>
 
-        <p class="cpar4">You can create a remote repository at <a href="http://bitbucket.org">bitbucket.org</a></p>
+        <p class="cpar4">You can create a remote repository at <a target="_blank" href="http://bitbucket.org">bitbucket.org</a></p>
         <p class="checkpar">If you have a repository that has already been pushed to, you need to checkout a repository</p>
 
         <code class="clone1">git clone link/to/repository</code>
 
         <p class="checkpar2">If you are using a remote repository, the command will be</p>
 
-        <code class="clone2">git clone username@host:link/to/repository</code>
+        <code class="clone2 lastcode">git clone username@host:link/to/repository</code>
       </section>
     </section>
     </article>
