@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>How to use Git Version Control</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet"> 
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="sidenav" id="sidenav">
+        <aside id="close">&#60;</aside>
+        <a href="index.html">Home</a>
+        <a href="Workflow.html">Git Workflow</a>
+        <a href="CreateRepo.html">Create a repository</a>
+        <a href="SetUser.html">Set User</a>
+        <a href="AddCommit.html">Adding and Committing</a>
+        <a href="Push.html">Pushing Changes</a>
+        <a href="Pull.html">Pulling your Repository</a>
+        <a href="Branches.html">Branches</a>
+        <a href="Undo.html">Undoing an error</a>
+        <a href="Tagging.html">Tagging</a>
+        <a href="Log.html">Finding your log</a>
+      </nav>
+      <nav id="closednav">
+        <span id="open">&#9776;</span>
+      </nav>
+    </header>
+    <article>
+      <section class="split left">
+        <div class="animgrid">
+        <div class="remote">
+          <h4 class="remoterepo">
+            Remote Repository
+            <img class="profileicon" src="img/SVG/prof-icon.svg" alt="profile icon">
+          </h4>
+          </div>
+          <div class="local">
+            <h4 class="localrepo">
+              Local Repository
+              <img class="profileicon" src="img/SVG/prof-icon.svg" alt="profile icon">
+            </h4>
+            <img class="localreposvg" id="localreposvg" src="img/SVG/file.svg" alt="file in local repository"><img class="localreposvg" id="localtostaging" src="img/SVG/file.svg" alt="file moved to staging area">
+          </div>
+          <div class="stage">
+            <h4 class="staging">
+              Staging
+            </h4>
+            <img id="staging" src="img/SVG/file.svg" alt="file moved to staging area">
+            <img class="commitbubble" id="commiticon" src="img/SVG/bubble.svg" alt="commit message bubble">
+            <img class="" id="stagingarrow" src="img/SVG/arrow.svg" alt="arrow from staging to remote area">
+          </div>
+          <div class="text">
+            <p id="pushtext" class="animcode hidden">git push origin master</p>
+            <p id="pushex" class="animtext hidden">This will push all staged files to the remote repository. You can see which branch the commit will go to by the final word in the command, in this instance the commit goes to the master branch. </p>
+          </div>
+          <button id="pushfile" class="pushfile animbtn">
+              Push
+          </button>
+          <button id="pushend" class="pushendfile animbtn hidden">
+              Next Step
+          </button>
+        </div>
+      </section>
+      <section class="split right">
+          <section id="pushcommit">
+        <h2 class="pushtitle">Pushing your commits</h2>
+        <p class="pushpar">Once a commit has been completed, it is good practice to push these changes from the Head to the remote repository, to do this run the command</p>
+
+        <code class="push1">git push origin master</code>
+
+        <p class="pushpar1">the branch is defined by the final word in this command, so ensure that if you are uploading to a different branch than master you choose the correct one in this command, for example if you are on the branch Feature1 the command would look</p>
+
+        <code class="push2">git push origin Feature1</code>
+
+        <p class="pushpar2">If the repository is not connected to a remote repository yet, you will need to add this using</p>
+
+        <code class="push3">git remote add origin "link to server"</code>
+
+        <p class="pushpar3">This will then allow changes to be pushed from the Head tree to the remote repository</p>
+      </section>
+    </section>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>How to use Git Version Control</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="sidenav" id="sidenav">
+        <aside id="close">&#60;</aside>
+        <a href="index.html">Home</a>
+        <a href="Workflow.html">Git Workflow</a>
+        <a href="CreateRepo.html">Create a repository</a>
+        <a href="SetUser.html">Set User</a>
+        <a href="AddCommit.html">Adding and Committing</a>
+        <a href="Push.html">Pushing Changes</a>
+        <a href="Pull.html">Pulling your Repository</a>
+        <a href="Branches.html">Branches</a>
+        <a href="Undo.html">Undoing an error</a>
+        <a href="Tagging.html">Tagging</a>
+        <a href="Log.html">Finding your log</a>
+      </nav>
+      <nav id="closednav">
+        <span id="open">&#9776;</span>
+      </nav>
+    </header>
+    <article>
+      <section class="split left">
+        <div class="branchanim">
+        <div class="remote">
+          <h4 class="remoterepo">
+            Master
+          </h4>
+          <img class="remotereposvg" id="remotefile" src="img/SVG/file.svg" alt="file in master branch">
+          <img class="remotereposvg hidden" id="branch1file" src="img/SVG/file.svg" alt="file in branch1">
+          <img class="hidden" id="masterarrow" src="img/SVG/arrow.svg" alt="arrow to edited file in branch1">
+          <img class="hidden" id="branch1arrow" src="img/SVG/arrow.svg" alt="arrow to branch1">
+          <h5 id="start">Start</h5>
+          <h5 id="end">End</h5>
+          </div>
+          <div class="local">
+            <h4 class="localrepo hidden">
+              Branch1
+            </h4>
+            <img class="hidden" id="b1arrow" src="img/SVG/arrow.svg" alt="arrow to edited file in branch1">
+            <img class="remotereposvg hidden" id="branchedit1" src="img/SVG/greenbranch.svg" alt="edited file in branch1">
+            <img class="remotereposvg hidden" id="mergedfile1" src="img/SVG/greenbranch.svg" alt="edited file in branch1">
+          </div>
+          <div class="stage">
+            <h4 class="staging hidden">
+              Branch2
+            </h4>
+            <img class="remotereposvg hidden" id="branch2file" src="img/SVG/greenbranch.svg" alt="edited file in branch2">
+            <img class="remotereposvg hidden" id="brokenfile" src="img/SVG/redfile.svg" alt="broken file in branch2">
+          </div>
+          <div class="text">
+            <p id="branchtext" class="animcode hidden">git checkout -b branch1</p>
+            <p id="branchex" class="animtext hidden">This code creates a branch named 'branch1'. This branch will include everything that was in the branch that was originally in use, in this case, the master branch!</p>
+            <p id="pushbranchtext" class="animcode hidden">git push origin branch1</p>
+            <p id="pushbranchex" class="animtext hidden">This code is the same as before, however this time, the final word is 'branch1' indicating that the commit should be pushed to the branch named 'branch1'.</p>
+            <p id="mergetext" class="animcode hidden">git merge branch1</p>
+            <p id="mergeex" class="animtext hidden">This code will merge the contents of the specified branch, in this case branch1, with the branch that is active.</p>
+            <p id="branch2text" class="animcode hidden">git checkout -b branch2</p>
+            <p id="branch2ex" class="animtext hidden">This code creates another branch from the master branch (assuming this is the active branch</p>
+            <p id="deltext" class="animcode hidden">git branch -d branch2</p>
+            <p id="delex" class="animtext hidden">If the code is broken during development, the branch can be deleted, meaning that the main branch is not affected. Using this code allows you to revert back to the code that is working easily.</p>
+          </div>
+          <button id="branching" class="branchesbtn animbtn">
+              Create a Branch
+          </button>
+          <button id="branchpush" class="branchpush animbtn hidden">
+              Push a Change
+          </button>
+          <button id="mergebranch" class="animbtn hidden">
+              Merge branches
+          </button>
+          <button id="addbranch2" class="animbtn hidden">
+              Create Another Branch
+          </button>
+          <button id="delbranch" class="animbtn hidden">
+              Delete a Branch
+          </button>
+          <button id="nextstep" class="animbtn hidden">
+              Next Step
+          </button>
+        </div>
+      </section>
+      <section class="split right">
+        <section id="branches">
+        <h2 class="brtitle">Branches</h2>
+        <p class="brpar">When developing different features within a project, it is important to ensure that branches are used correctly.</p>
+
+        <p class="brpar1">Branches are used to devlop different features that are isolated from each other, with the master branch being the default branch that is created when the repository is created. The main idea with branches is to use other branches to develop features and then merge all the branches together to the master branch for a complete project.</p>
+
+        <p class="brpar2">To create a new branch, use the code</p>
+
+        <code class="branch1">git checkout -b feature_x</code>
+
+        <p class="brpar3">To switch to another branch that is already created, such as master</p>
+
+        <code class="branch2">git checkout master</code>
+
+        <p class="brpar4">To delete a branch</p>
+
+        <code class="branch3">git branch -d feature_x</code>
+
+        <p class="brpar5">It is important to understand that a branch is not accessible by others unless the branch is pushed to the remote repository with</p>
+
+        <code class="branch4 lastcode">git push origin 'branch'</code>
+      </section>
+      <section class="hidden" id="updatemerge">
+        <h2 class="uptitle">Merging Branches</h2>
+
+        <p class="uppar">If the development on a branch is complete and it is time to merge the branch the master branch, use the code</p>
+
+        <code class="marge1">git merge "branch"</code>
+
+        <p class="uppar1">This merges whichever branch you specified into your active branch, so ensure that your active branch is the master branch if you are doing a final merge!</p>
+
+        <p class="uppar2">Git will usually try to auto merge changes when doing this, however sometimes it is not possible and there will be comflicts found. To fix this you will have to merge these specific files manually by editing the files that are shown in git.</p>
+
+        <p class="uppar3">After you have fixed any conflicts, add these files as merged by using</p>
+
+        <code class="merge2">git add "filename"</code>
+
+        <p class="uppar4">If you are unsure on the differences between two branches, you can preview each branch by using</p>
+
+        <code class="merge3">git diff "source-branch" "target-branch"</code>
+
+        <p class="uppar5">This will allow you to understand what differences there are between two branches in your repository.</p>
+      </section>
+    </section>
+    </article>
+  </body>
+</html>

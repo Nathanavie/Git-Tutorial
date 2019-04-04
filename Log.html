@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>How to use Git Version Control</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet"> 
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="sidenav" id="sidenav">
+        <aside id="close">&#60;</aside>
+        <a href="index.html">Home</a>
+        <a href="Workflow.html">Git Workflow</a>
+        <a href="CreateRepo.html">Create a repository</a>
+        <a href="SetUser.html">Set User</a>
+        <a href="AddCommit.html">Adding and Committing</a>
+        <a href="Push.html">Pushing Changes</a>
+        <a href="Pull.html">Pulling your Repository</a>
+        <a href="Branches.html">Branches</a>
+        <a href="Undo.html">Undoing an error</a>
+        <a href="Tagging.html">Tagging</a>
+        <a href="Log.html">Finding your log</a>
+      </nav>
+      <nav id="closednav">
+        <span id="open">&#9776;</span>
+      </nav>
+    </header>
+    <article>
+      <section class="split left hidden">
+        <div class="animgrid">
+        <div class="remote">
+          <h4 class="hidden remoterepo">
+            Remote Repository
+            <img class="profileicon hidden" src="img/SVG/prof-icon.svg" alt="profile icon">
+          </h4>
+            <img class="commitbubble hidden" id="remotecommit" src="img/SVG/bubble.svg" alt="commit message bubble">
+            <img class="remotereposvg" id="remotefile" src="img/SVG/file.svg" alt="file in local repository">
+            <img class="remotereposvg" id="remotereposvg" src="img/SVG/greenfile.svg" alt="file in local repository">
+            <img class="remotereposvg" id="pulledremote" src="img/SVG/greenfile.svg" alt="file in local repository">
+          </div>
+          <div class="local">
+            <h4 class="hidden localrepo">
+              Local Repository
+              <img class="profileicon hidden" src="img/SVG/prof-icon.svg" alt="profile icon">
+            </h4>
+            <img class="localreposvg hidden" id="localreposvg" src="img/SVG/file.svg" alt="file in local repository"><img class="localreposvg hidden" id="localtostaging" src="img/SVG/file.svg" alt="file moved to staging area">
+            <img class="localreposvg hidden" id="localarrow" src="img/SVG/arrow.svg" alt="arrow from local to staging area">
+          </div>
+          <div class="stage">
+            <h4 class="hidden staging">
+              Staging
+            </h4>
+            <img class="hidden" id="staging" src="img/SVG/file.svg" alt="file moved to staging area">
+            <img class="commitbubble hidden" id="commiticon" src="img/SVG/bubble.svg" alt="commit message bubble">
+            <img class="" id="stagingarrow" src="img/SVG/arrow.svg" alt="arrow from staging to remote area">
+          </div>
+          <div class="text">
+            <p id="gitinit" class="animcode hidden">git log</p>
+            <p id="gitinitex" class="animtext hidden">This code shows you the log file </p>
+          </div>
+          <button id="next" class="next animbtn">
+              Find your Log
+          </button>
+        </div>
+      </section>
+      <section>
+        <section id="log">
+        <h2 class="logtitle">Finding the git Log</h2>
+        <p class="logpar">To simply view the repository log in a simple form, run the command</p>
+
+        <code class="log1">git log</code>
+
+        <p class="logpar1">There are many different ways to view a log</p>
+
+        <p class="logpar2">To view commits from a specific person</p>
+
+        <code class="log2">git log --author=name</code>
+
+        <p class="logpar3">To see a compressed log where each commit is one line</p>
+
+        <code class="log3">git log --pretty=oneline</code>
+
+        <p class="logpar4">To see an ASCII art tree of all branches</p>
+
+        <code class="log4">git log --graph --oneline --decorate --all</code>
+
+        <p class="logpar5">To see what files have changed</p>
+
+        <code class="log5">git log --name-status</code>
+      </section>
+    </section>
+    </article>
+  </body>
+</html>

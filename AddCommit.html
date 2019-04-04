@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>How to use Git Version Control</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="sidenav" id="sidenav">
+        <aside id="close">&#60;</aside>
+        <a href="index.html">Home</a>
+        <a href="Workflow.html">Git Workflow</a>
+        <a href="CreateRepo.html">Create a repository</a>
+        <a href="SetUser.html">Set User</a>
+        <a href="AddCommit.html">Adding and Committing</a>
+        <a href="Push.html">Pushing Changes</a>
+        <a href="Pull.html">Pulling your Repository</a>
+        <a href="Branches.html">Branches</a>
+        <a href="Undo.html">Undoing an error</a>
+        <a href="Tagging.html">Tagging</a>
+        <a href="Log.html">Finding your log</a>
+      </nav>
+      <nav id="closednav">
+        <span id="open">&#9776;</span>
+      </nav>
+    </header>
+    <article>
+      <section class="split left">
+        <div class="animgrid">
+        <div class="remote">
+          <h4 class="remoterepo">
+            Remote Repository
+            <img class="profileicon" src="img/SVG/prof-icon.svg" alt="profile icon">
+          </h4>
+          </div>
+          <div class="local">
+            <h4 class="localrepo">
+              Local Repository
+              <img class="profileicon" src="img/SVG/prof-icon.svg" alt="profile icon">
+            </h4>
+            <img class="localreposvg hidden" id="localreposvg" src="img/SVG/file.svg" alt="file in local repository"><img class="localreposvg hidden" id="localtostaging" src="img/SVG/file.svg" alt="file moved to staging area">
+            <img class="localreposvg hidden" id="localarrow" src="img/SVG/arrow.svg" alt="arrow from local to staging area">
+          </div>
+          <div class="stage">
+            <h4 class="hidden staging">
+              Staging
+            </h4>
+            <img class="commitbubble hidden" id="commiticon" src="img/SVG/bubble.svg" alt="commit message bubble">
+          </div>
+          <div class="text">
+            <p id="createfiletext" class="animcode hidden">Create File</p>
+            <p id="createfileex" class="animtext hidden">Create the file that will be used within your project.</p>
+            <p id="addfiletext" class="animcode hidden">git add .</p>
+            <p id="addfileex" class="animtext hidden">This will add all modified and new files into the staging area.</p>
+            <p id="committext" class="animcode hidden">git commit -m "changed feature-x in file-x"</p>
+            <p id="commitex" class="animtext hidden">This will add a message to your staged file.</p>
+          </div>
+          <button id="createfile" class="createfile animbtn">
+              Create File
+          </button>
+          <button id="addfile" class="addfile animbtn hidden">
+              Add File
+          </button>
+          <button id="commitfile" class="commitfile animbtn hidden">
+              Commit
+          </button>
+          <button id="addcommitend" class="animbtn hidden">
+              Next Step
+          </button>
+        </div>
+      </section>
+      <section class="split right">
+        <section  id="addcommit">
+        <h2 calss="actitle">Adding and Committing files</h2>
+
+        <p class="acpar">The next thing you will need have an understand of is how to add and commit files</p>
+
+        <p class="acpar1">This means that you propose a change by adding it to the Index tree from the Working Directory tree, to do this use the command</p>
+
+        <code class="add1">git add 'filename' to add a specific file</code>
+
+        <code class="add2">git add . to add all changes</code>
+
+        <p class="acpar2">This is the first step in a basic git workflow, the next step is to commit these changes to the Head tree. To do this use</p>
+
+        <code class="commit1">git commit -m "commit message"</code>
+
+        <p class="acpar3">A good commit message is no longer than 72 characters long, but includes all changes that are being committed.</p>
+      </section>
+    </section>
+    </article>
+  </body>
+</html>

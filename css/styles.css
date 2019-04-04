@@ -1,0 +1,451 @@
+body {
+  margin: 0;
+  margin-top: 0;
+  padding:0;
+}
+html {
+  margin: 0;
+  padding:0;
+  scroll-behavior: smooth;
+}
+header {
+  position: relative;
+  width: 100%;
+  top: 0;
+}
+article {
+
+}
+.split {
+  height: 100%;
+  top: 0;
+  padding-top: 20px;
+  overflow-x: hidden;
+}
+.left {
+  position: fixed;
+  left: 30px;
+  width: 74%;
+  overflow: hidden;
+  border-right: solid;
+  margin-left: 0px;
+  transition: margin-left 0.5s;
+}
+.right {
+  position: fixed;
+  right:0;
+  width: 26%;
+  margin-left: 0px;
+  background: #D4D4D4;
+  transition: margin-left 0.5s;
+}
+.sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: #000000;
+  overflow: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 14pt;
+  color: #FFFFFF;
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+  transition: background-color 0.5s ease-out;
+}
+.sidenav #close {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  font-size: 24pt;
+  padding-left: 32px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+#open {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 35pt;
+  color: #FFFFFF;
+}
+ nav {
+   height: 100%;
+   width: 65px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: #000000;
+   z-index: 1;
+   transition: width 0.2s ease;
+ }
+ #closednav:hover {
+   width: 70px;
+   cursor: pointer;
+   transition: width 0.2s ease;
+ }
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18pt;
+  }
+}
+/* nav a {
+  text-align: center;
+  background: #000000;
+  text-decoration: none;
+  padding: 25px;
+  float: left;
+} */
+.sidenav a:hover {
+  background: #808080;
+  transition: background-color 0.5s ease-out;
+}
+h1 {
+  font-size: 32pt;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+h2 {
+  font-size: 24pt;
+  font-family: 'Roboto', sans-serif;
+  }
+h3 {
+  font-size: 18pt;
+  font-family: 'Roboto', sans-serif;
+}
+h4 {
+  margin-top: 0;
+  margin-left: 5px;
+  font-size: 16pt;
+  font-family: 'Roboto', sans-serif;
+}
+h5 {
+  font-size: 12pt;
+  font-family: 'Roboto', sans-serif;
+}
+p {
+  font-size: 12pt;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5;
+}
+div {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+#start {
+  position: fixed;
+  margin-top: -20px;
+  margin-left: 20px;
+}
+#end {
+  position: fixed;
+  margin-top: -20px;
+  margin-left: 700px;
+}
+#workflow img {
+  width: 150px;
+}
+#workflow h4 {
+  text-align: center;
+}
+.WF-anim1 {
+  animation: fadeIn 1s forwards;
+  opacity: 0;
+}
+.WF-anim2 {
+  opacity: 0;
+  animation: fadeIn 1s 1s forwards;
+}
+.WF-anim3 {
+  opacity: 0;
+  animation: fadeIn 1s 2s forwards;
+}
+.WF-anim4 {
+  opacity: 0;
+  animation: fadeIn 1s 3s forwards;
+}
+.WF-anim5 {
+  opacity: 0;
+  animation: fadeIn 1s 4s forwards;
+}
+.WF-anim6 {
+  opacity: 0;
+  animation: fadeIn 1s 5s forwards;
+}
+.WF-anim7 {
+  opacity: 0;
+  animation: fadeIn 1s 6s forwards;
+}
+#workdir {
+  margin: 20px auto;
+}
+.workflowicons {
+  margin: 0 auto;
+}
+.workflowarrow{
+  margin: 40px auto;
+}
+.lastcode {
+  margin-bottom: 20px;
+}
+#nextlog {
+  margin-top: 0;
+}
+code {
+  padding: 10px;
+  background-color: #4f5054;
+  color: #bcd1ff;
+  font-family: 'Source Code Pro', monospace;
+}
+.animcode {
+  color: #FFFFFF;
+  text-align: center;
+  animation: 1s forwards;
+}
+.animtext {
+  color: #FFFFFF;
+  margin: 0px 20px 0px 20px;
+  opacity: 0;
+  animation: 1s 1s forwards;
+}
+.animtext a {
+  color: #FFFFFF;
+}
+.staging {
+  animation: 1s forwards;
+}
+#localarrow {
+  position: fixed;
+  margin-top: 67px;
+  margin-left: -200px;
+  animation: 1s forwards;
+  width: 100px;
+  opacity: 0;
+}
+#staging {
+  width: 100px;
+  position: fixed;
+  margin-left: 50px;
+  animation: 1s forwards;
+}
+#branch1arrow {
+  position: fixed;
+  width: 90px;
+  transform: rotate(90deg);
+  margin-left: 55px;
+  margin-top: 182px;
+  animation: 1s forwards;
+}
+#branch1file {
+  margin-top: 7px;
+  margin-left: 50px;
+  animation: 1s forwards;
+}
+#branchedit1 {
+  margin-left: 240px;
+  margin-top: -15px;
+  animation: 1s forwards;
+}
+#mergedfile1{
+  margin-top: -19px;
+  margin-left: 240px;
+  animation: 1s forwards;
+}
+#b1arrow {
+  position: fixed;
+  width: 73px;
+  margin-top: 50px;
+  margin-left: 160px;
+  animation: 1s forwards;
+}
+#masterarrow {
+  position: fixed;
+  width: 75px;
+  margin-left: 160px;
+  margin-top: 50px;
+}
+#commiticon {
+  margin-left: 85px;
+  margin-top: -34px;
+  animation: 1s forwards;
+}
+#stagingarrow {
+  transform: rotate(200deg);
+  width: 400px;
+  margin-left: -350px;
+  margin-top: -90px;
+  position: fixed;
+  opacity: 0;
+  animation: 1s forwards;
+}
+#pulledremote {
+  animation: 1s 1.5s forwards;
+}
+#remotefile {
+  width: 100px;
+  position: fixed;
+  margin-left: 50px;
+  margin-top: 7px;
+}
+#remotecommit {
+  margin-left: 85px;
+  margin-top: -25px;
+}
+#branch2file {
+  margin-left: 20px;
+  animation: 1s forwards;
+}
+#brokenfile {
+  margin-left: 20px;
+  animation: 1s forwards;
+  opacity: 0;
+}
+.commitbubble {
+  width: 50px;
+  position: fixed;
+}
+.localrepo {
+  animation: 2s forwards;
+}
+.remoterepo {
+  animation: 2s forwards;
+}
+.remotereposvg {
+  position: fixed;
+  width: 100px;
+  margin-top: 7px;
+  margin-left: 170px;
+}
+.localreposvg {
+  width: 100px;
+  margin-top: -10px;
+  margin-bottom: -130px;
+  margin-left: 50px;
+  animation: 1s forwards;
+  position: fixed;
+}
+.local {
+  animation: 1s forwards;
+}
+.stage {
+  animation: 1s 1.5s forwards;
+}
+.profileicon {
+  height: 16pt;
+  animation: 2s forwards;
+}
+@keyframes commitStagingtoRemote {
+  100% {
+    margin-left: -415px;
+    margin-top: -252px;
+    opacity: 1;
+  }
+}
+@keyframes fileStagingtoRemote {
+  0% {
+    position: fixed;
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  100% {
+    margin-left: -451px;
+    margin-top: -220px;
+    opacity: 1;
+    position: fixed;
+  }
+}
+@keyframes pulledfile {
+  100% {
+    opacity: 1;
+    margin-top: 235px;
+  }
+}
+@keyframes mergefile {
+  100% {
+    margin-top: -239px;
+    opacity: 1;
+  }
+}
+@keyframes greyback {
+  100% {
+    background-color: rgba(128, 128, 128, 0.5);
+  }
+}
+@keyframes redback {
+  100% {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+}
+@keyframes localArrowToStage {
+  100% {
+    width: 250px;
+    opacity: 1;
+    margin-left: 225px;
+  }
+}
+@keyframes localToStage {
+    100% {
+      margin-top: -1px;
+      margin-left: 550px;
+      opacity: 1;
+      position: fixed;
+    }
+}
+@keyframes delbranch {
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {
+    opacity: 0;
+  }
+}
+.animbtn {
+  height: 50px;
+  padding: 0;
+  margin-top: -50px;
+  text-align: center;
+  z-index: 1;
+  width: 225px;
+}
+button {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 16pt;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease-out;
+  cursor: pointer;
+}
+button a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+/* @keyframes button {
+  0% {background-color: #000000;}
+  50% {background-color: red; left: 50%;}
+  100% {background-color: red;}
+} */
+button:hover {
+  background-color: #808080;
+  transition: background-color 0.5s ease-out;
+}

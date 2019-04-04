@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>How to use Git Version Control</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="sidenav" id="sidenav">
+        <aside id="close">&#60;</aside>
+        <a href="index.html">Home</a>
+        <a href="Workflow.html">Git Workflow</a>
+        <a href="CreateRepo.html">Create a repository</a>
+        <a href="SetUser.html">Set User</a>
+        <a href="AddCommit.html">Adding and Committing</a>
+        <a href="Push.html">Pushing Changes</a>
+        <a href="Pull.html">Pulling your Repository</a>
+        <a href="Branches.html">Branches</a>
+        <a href="Undo.html">Undoing an error</a>
+        <a href="Tagging.html">Tagging</a>
+        <a href="Log.html">Finding your log</a>
+      </nav>
+      <nav id="closednav">
+        <span id="open">&#9776;</span>
+      </nav>
+    </header>
+    <article>
+      <section id="workflow">
+        <h2 class="WF-anim1 worktitle">The git workflow</h2>
+
+        <p class="workpar WF-anim1">The local repository consists of trees that git maintains, these are</p>
+
+        <h4 id="workdirt" class="WF-anim2">Working Directory</h4>
+        <img id="workdir" class="WF-anim2" src="img/SVG/WorkDir.svg" alt="Working Directory">
+
+        <img id="addarrow" class="WF-anim3 workflowarrow" src="img/SVG/AddArrow.svg" alt="Arrow showing push of files from Index to Head">
+
+        <p class="workdirtext WF-anim2">The Working Directory is a single checkout of one version of your project! This is where you will modify your files during your development process, these will be found on your own harddrive.</p>
+
+        <h4 id="indext" class="WF-anim4">Index</h4>
+
+        <img id="index" class="WF-anim4 workflowicons" src="img/SVG/Indexicon.svg" alt="Index Tree">
+
+        <img id="comarrow" class="WF-anim5 workflowarrow" src="img/SVG/CommitArrow.svg" alt="Arrow showing commit from Working Dir to Index">
+
+        <p id="indextext" class="WF-anim4">The Index stores information that will be in your next commit. This tree is also well known as the staging area.</p>
+
+        <h4 id="headt" class="WF-anim6">Head</h4>
+
+        <img id="head" class="WF-anim6 workflowicons" src="img/SVG/Headicon.svg" alt="Head Tree">
+
+        <p class="WF-anim6 headtext">This tree stores all the metadata and object database for your project, it is the most important part of Git. It is what is copied when a repository is cloned!</p>
+        <button class="WF-anim7" id="coding">Lets Get Coding!</button>
+      </section>
+    </article>
+  </body>
+</html>

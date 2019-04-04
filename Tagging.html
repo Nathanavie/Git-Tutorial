@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>How to use Git Version Control</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="sidenav" id="sidenav">
+        <aside id="close">&#60;</aside>
+        <a href="index.html">Home</a>
+        <a href="Workflow.html">Git Workflow</a>
+        <a href="CreateRepo.html">Create a repository</a>
+        <a href="SetUser.html">Set User</a>
+        <a href="AddCommit.html">Adding and Committing</a>
+        <a href="Push.html">Pushing Changes</a>
+        <a href="Pull.html">Pulling your Repository</a>
+        <a href="Branches.html">Branches</a>
+        <a href="Undo.html">Undoing an error</a>
+        <a href="Tagging.html">Tagging</a>
+        <a href="Log.html">Finding your log</a>
+      </nav>
+      <nav id="closednav">
+        <span id="open">&#9776;</span>
+      </nav>
+    </header>
+    <article>
+      <section class="split left hidden">
+        <div class="animgrid">
+        <div class="remote">
+          <h4 class="hidden remoterepo">
+            Remote Repository
+            <img class="profileicon hidden" src="img/SVG/prof-icon.svg" alt="profile icon">
+          </h4>
+            <img class="commitbubble hidden" id="remotecommit" src="img/SVG/bubble.svg" alt="commit message bubble">
+            <img class="remotereposvg" id="remotefile" src="img/SVG/file.svg" alt="file in local repository">
+            <img class="remotereposvg" id="remotereposvg" src="img/SVG/greenfile.svg" alt="file in local repository">
+            <img class="remotereposvg" id="pulledremote" src="img/SVG/greenfile.svg" alt="file in local repository">
+          </div>
+          <div class="local">
+            <h4 class="hidden localrepo">
+              Local Repository
+              <img class="profileicon hidden" src="img/SVG/prof-icon.svg" alt="profile icon">
+            </h4>
+            <img class="localreposvg hidden" id="localreposvg" src="img/SVG/file.svg" alt="file in local repository"><img class="localreposvg hidden" id="localtostaging" src="img/SVG/file.svg" alt="file moved to staging area">
+            <img class="localreposvg hidden" id="localarrow" src="img/SVG/arrow.svg" alt="arrow from local to staging area">
+          </div>
+          <div class="stage">
+            <h4 class="hidden staging">
+              Staging
+            </h4>
+            <img class="hidden" id="staging" src="img/SVG/file.svg" alt="file moved to staging area">
+            <img class="commitbubble hidden" id="commiticon" src="img/SVG/bubble.svg" alt="commit message bubble">
+            <img class="" id="stagingarrow" src="img/SVG/arrow.svg" alt="arrow from staging to remote area">
+          </div>
+          <div class="text">
+            <p id="gitinit" class="animcode hidden">git tag.....</p>
+            <p id="gitinitex" class="animtext hidden">This code tags!</p>
+          </div>
+          <button id="next" class="next animbtn">
+              Create a Tag
+          </button>
+        </div>
+      </section>
+      <section>
+        <section id="tag">
+        <h2 class="tagtitle">Tagging</h2>
+        <p class="tagpar">You are able to create tags for software releases, this is known as a concept. You will add a tag to a specific commit that has been made, which would be used as a software relese. Add a tag by running</p>
+
+        <code class="tag1">git tag 1.0.0 74865s12sf</code>
+
+        <p class="tagpar1">This will add a tag called 1.0.0 to the commit with the id which starts with the first ten characters 74865s12sf.</p>
+
+        <p class="tagpar2">If you do not know where to find the commit id, you can find this in the log!</p>
+        <button id="nextlog" class="animbtn">
+            Find your log
+        </button>
+      </section>
+    </section>
+    </article>
+  </body>
+</html>
