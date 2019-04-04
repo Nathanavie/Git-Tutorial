@@ -75,6 +75,11 @@ $(document).ready(function() {
     $(location).attr("href", "Undo.html")
   });
 
+  $('#nextlog').click(function(ev) {
+    $(location).attr("href", "Log.html")
+  });
+
+
   $('.setuser').click(function(ev) {
   ev.preventDefault();
   $.fn.setUser();
