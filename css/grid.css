@@ -70,25 +70,29 @@
 /*CSS Grid workflow container*/
 .worktitle { grid-area: worktitle; }
 .workpar { grid-area: workpar; }
-.anim { grid-area: animation; }
-.workdir { grid-area: workdir; }
-.index { grid-area: index; }
-.head { grid-area: head; }
+#workdir { grid-area: workdir; }
+#index { grid-area: index; }
+#head { grid-area: head; }
 .workdirtext { grid-area: workdirtext; }
-.indextext { grid-area: indextext; }
+#indextext { grid-area: indextext; }
 .headtext { grid-area: headtext; }
+#addarrow { grid-area: addarrow; }
+#comarrow { grid-area: comarrow;}
 #coding { grid-area: coding; }
+#workdirt { grid-area: workdirt; }
+#indext { grid-area: indext; }
+#headt { grid-area: headt; }
 
 #workflow {
 	display: grid;
-	grid-template-columns: 33.3% 33.3% 33.3%;
+	grid-template-columns: auto auto auto auto auto;
 	grid-template-areas:
-	'worktitle worktitle worktitle'
-	'workpar workpar workpar'
-	'animation animation animation'
-	'workdir index head'
-	'workdirtext indextext headtext'
-	'. coding .';
+	'worktitle worktitle worktitle worktitle worktitle'
+	'workpar workpar workpar workpar workpar'
+	'workdirt . indext . headt'
+	'workdir addarrow index comarrow head'
+	'workdirtext . indextext . headtext'
+	'. coding coding coding .';
 	grid-gap: 10px;
 	padding: 10px;
 	width: 60%;
