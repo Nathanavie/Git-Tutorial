@@ -153,6 +153,61 @@ div {
   margin-top: -20px;
   margin-left: 700px;
 }
+#workflow img {
+  width: 150px;
+}
+#workflow h4 {
+  text-align: center;
+}
+.WF-anim1 {
+  animation: fadeIn 1s forwards;
+  opacity: 0;
+}
+.WF-anim2 {
+  opacity: 0;
+  animation: fadeIn 1s 1s forwards;
+}
+.WF-anim3 {
+  opacity: 0;
+  animation: fadeIn 1s 2s forwards;
+}
+.WF-anim4 {
+  opacity: 0;
+  animation: fadeIn 1s 3s forwards;
+}
+.WF-anim5 {
+  opacity: 0;
+  animation: fadeIn 1s 4s forwards;
+}
+.WF-anim6 {
+  opacity: 0;
+  animation: fadeIn 1s 5s forwards;
+}
+.WF-anim7 {
+  opacity: 0;
+  animation: fadeIn 1s 6s forwards;
+}
+#workdir {
+  margin: 20px auto;
+}
+.workflowicons {
+  margin: 0 auto;
+}
+.workflowarrow{
+  margin: 40px auto;
+}
+.lastcode {
+  margin-bottom: 20px;
+}
+#nextlog {
+  margin-top: 0;
+}
+code {
+  padding: 10px;
+  background-color: #4f5054;
+  color: #bcd1ff;
+  font-family: 'Source Code Pro', monospace;
+}
 .animcode {
   color: #FFFFFF;
   text-align: center;
