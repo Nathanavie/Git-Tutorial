@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>How to use Git Version Control</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="sidenav" id="sidenav">
+        <aside id="close">&#60;</aside>
+        <a href="index.html">Home</a>
+        <a href="Workflow.html">Git Workflow</a>
+        <a href="CreateRepo.html">Create a repository</a>
+        <a href="SetUser.html">Set User</a>
+        <a href="AddCommit.html">Adding and Committing</a>
+        <a href="Push.html">Pushing Changes</a>
+        <a href="Pull.html">Pulling your Repository</a>
+        <a href="Branches.html">Branches</a>
+        <a href="Undo.html">Undoing an error</a>
+        <a href="Tagging.html">Tagging</a>
+        <a href="Log.html">Finding your log</a>
+      </nav>
+      <nav id="closednav">
+        <span id="open">&#9776;</span>
+      </nav>
+    </header>
+    <article>
+      <section class="split left hidden">
+        <div class="animgrid">
+        <div class="remote">
+          <h4 class="hidden remoterepo">
+            Remote Repository
+            <img class="profileicon hidden" src="img/SVG/prof-icon.svg" alt="profile icon">
+          </h4>
+            <img class="commitbubble hidden" id="remotecommit" src="img/SVG/bubble.svg" alt="commit message bubble">
+            <img class="remotereposvg" id="remotefile" src="img/SVG/file.svg" alt="file in local repository">
+            <img class="remotereposvg" id="remotereposvg" src="img/SVG/greenfile.svg" alt="file in local repository">
+            <img class="remotereposvg" id="pulledremote" src="img/SVG/greenfile.svg" alt="file in local repository">
+          </div>
+          <div class="local">
+            <h4 class="hidden localrepo">
+              Local Repository
+              <img class="profileicon hidden" src="img/SVG/prof-icon.svg" alt="profile icon">
+            </h4>
+            <img class="localreposvg hidden" id="localreposvg" src="img/SVG/file.svg" alt="file in local repository"><img class="localreposvg hidden" id="localtostaging" src="img/SVG/file.svg" alt="file moved to staging area">
+            <img class="localreposvg hidden" id="localarrow" src="img/SVG/arrow.svg" alt="arrow from local to staging area">
+          </div>
+          <div class="stage">
+            <h4 class="hidden staging">
+              Staging
+            </h4>
+            <img class="hidden" id="staging" src="img/SVG/file.svg" alt="file moved to staging area">
+            <img class="commitbubble hidden" id="commiticon" src="img/SVG/bubble.svg" alt="commit message bubble">
+            <img class="" id="stagingarrow" src="img/SVG/arrow.svg" alt="arrow from staging to remote area">
+          </div>
+          <div class="text">
+            <p id="gitinit" class="animcode hidden">git checkout...</p>
+            <p id="gitinitex" class="animtext hidden">This code gets a file back!</p>
+          </div>
+          <button id="next" class="next animbtn">
+              Undo an Error
+          </button>
+        </div>
+      </section>
+      <section class="split right">
+        <section id="error">
+        <h2 class="ertitle">Undoing an error</h2>
+
+        <p class="erpar">If you did something wrong <span>which will probably happen</span> it is easy to replace local changes using</p>
+
+        <code class="error1">git checkout -- filename</code>
+
+        <p class="erpar1">This code will replace the changes in your working directory with the latest content from this file in the Head, anything that is in the index will be kept.</p>
+
+        <p class="erpar2">If you want to start over from the latest commit again, simply fetch everything from the remote repository again using</p>
+
+        <code class="error2">git fetch origin</code>
+
+        <p class="erpar3">Then point your local master branch at it again with</p>
+
+        <code class="error3">git reset --hard origin/master</code>
+      </section>
+    </section>
+    </article>
+  </body>
+</html>

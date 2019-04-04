@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>How to use Git Version Control</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/grid.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="sidenav" id="sidenav">
+        <aside id="close">&#60;</aside>
+        <a href="index.html">Home</a>
+        <a href="Workflow.html">Git Workflow</a>
+        <a href="CreateRepo.html">Create a repository</a>
+        <a href="SetUser.html">Set User</a>
+        <a href="AddCommit.html">Adding and Committing</a>
+        <a href="Push.html">Pushing Changes</a>
+        <a href="Pull.html">Pulling your Repository</a>
+        <a href="Branches.html">Branches</a>
+        <a href="Undo.html">Undoing an error</a>
+        <a href="Tagging.html">Tagging</a>
+        <a href="Log.html">Finding your log</a>
+      </nav>
+      <nav id="closednav"
+        <span id="open">&#9776;</span>
+      </nav>
+    </header>
+    <article>
+      <section class="split left">
+        <div class="animgrid">
+        <div class="remote">
+          <h4 class="hidden remoterepo">
+            Remote Repository
+          </h4>
+          </div>
+          <div class="local">
+            <h4 class="hidden localrepo">
+              Local Repository
+            </h4>
+          </div>
+          <div class="stage">
+            <h4 class="hidden staging">
+              Staging
+            </h4>
+          </div>
+          <div class="text">
+            <p id="gitinit" class="animcode hidden">git init</p>
+            <p id="gitinitex" class="animtext hidden">This code initiates a local repository</p>
+            <p id="connectrepo" class="animcode hidden">git remote add origin REPOSITORY_URL</p>
+            <p id="connectrepotext" class="animtext hidden">This will link your local repository to your remote repository.</p>
+            <p id="connectrepotext2" class="animtext hidden">Your repository url can be found on the main page of the recently created repository. You can create a repository at <a href="http://bitbucket.org">bitbucket.org</a>
+          </div>
+          <button id="next" class="next animbtn">
+              Start
+          </button>
+          <button id="connectrepository" class="connectrepository animbtn hidden">
+              Connect Repo
+          </button>
+          <button id="createend" class="animbtn hidden">
+            Next Step
+          </button>
+        </div>
+      </section>
+      <section class="split right">
+        <section id="create">
+        <h2 class="ctitle">Creating a Repository</h2>
+        <p class="cpar">Once installed, you will want to create a brand new repository, to do this use the command in the commandline of the folder that will contain all of the files in your project</p>
+
+        <code class="init">git init</code>
+
+        <p class="cpar2">This will create a new local repository on your system</p>
+        <p class="cpar3">Your next stage is to link your local repository to your remote repository</p>
+
+        <code class="init2">git remote add origin REPOSITORY_URL</code>
+
+        <p class="cpar4">You can create a remote repository at <a href="http://bitbucket.org">bitbucket.org</a></p>
+        <p class="checkpar">If you have a repository that has already been pushed to, you need to checkout a repository</p>
+
+        <code class="clone1">git clone link/to/repository</code>
+
+        <p class="checkpar2">If you are using a remote repository, the command will be</p>
+
+        <code class="clone2">git clone username@host:link/to/repository</code>
+      </section>
+    </section>
+    </article>
+  </body>
+</html>
