@@ -79,6 +79,9 @@ $(document).ready(function() {
     $(location).attr("href", "Log.html")
   });
 
+  $('#nexttag').click(function(ev) {
+    $(location).attr("href", "Tagging.html")
+  });
 
   $('.setuser').click(function(ev) {
   ev.preventDefault();

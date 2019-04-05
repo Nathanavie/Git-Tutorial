@@ -409,20 +409,22 @@
 .error2 { grid-area: error2; }
 .erpar3 { grid-area: erpar3; }
 .error3 { grid-area: error3; }
+#nexttag { grid-area: nextbtn; }
 
 
 #error {
 	display: grid;
-	grid-template-columns: auto;
+	grid-template-columns: auto auto auto;
 	grid-template-areas:
-    	'ertitle'
-      'erpar'
-			'error1'
-			'erpar1'
-      'erpar2'
-			'error2'
-			'erpar3'
-			'error3';
+    	'ertitle ertitle ertitle'
+			'erpar erpar erpar'
+			'error1 error1 error1'
+			'erpar1 erpar1 erpar1'
+			'erpar2 erpar2 erpar2'
+			'error2 error2 error2'
+			'erpar3 erpar3 erpar3'
+			'error3 error3 error3'
+			' . nextbtn .';
 	grid-gap: 10px;
 	padding: 10px;
 	width: 60%;
