@@ -1,0 +1,72 @@
+@keyframes commitStagingtoRemote {
+  100% {
+    margin-left: -415px;
+    margin-top: -252px;
+    opacity: 1;
+  }
+}
+@keyframes fileStagingtoRemote {
+  0% {
+    position: fixed;
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  100% {
+    margin-left: -451px;
+    margin-top: -220px;
+    opacity: 1;
+    position: fixed;
+  }
+}
+@keyframes pulledfile {
+  100% {
+    opacity: 1;
+    margin-top: 235px;
+  }
+}
+@keyframes mergefile {
+  100% {
+    margin-top: -239px;
+    opacity: 1;
+  }
+}
+@keyframes greyback {
+  100% {
+    background-color: rgba(128, 128, 128, 0.5);
+  }
+}
+@keyframes redback {
+  100% {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+}
+@keyframes localArrowToStage {
+  100% {
+    width: 250px;
+    opacity: 1;
+    margin-left: 225px;
+  }
+}
+@keyframes localToStage {
+    100% {
+      margin-top: -1px;
+      margin-left: 550px;
+      opacity: 1;
+      position: fixed;
+    }
+}
+@keyframes delbranch {
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {
+    opacity: 0;
+  }
+}
