@@ -27,6 +27,36 @@
 	border-style: solid;
 }
 /* positioning for each class in CSS Grid */
+/*CSS Grid for header */
+.logo {grid-area: logo;}
+nav {grid-area: nav;}
+
+header {
+	display: grid;
+	grid-template-columns: 5% auto;
+	grid-template-areas:
+		'logo nav';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 100vw;
+	position: relative;
+  top: 0;
+  height: 5%;
+  background: #000000;
+}
+/*CSS Grid to order page */
+#left {grid-area: anim;}
+#right {grid-area: text;}
+.pagegrid {
+	display: grid;
+	grid-template-columns: 75% 25%;
+	grid-template-areas:
+	'anim text';
+	grid-gap: 10px;
+	padding: 10px;
+	width: 100vw;
+}
+
 /*CSS Grid intro container*/
 .title { grid-area: title;}
 .intro1 { grid-area: para1;}
@@ -99,6 +129,7 @@
 	margin: 0 auto;
 }
 /* CSS Grid for Animations before Branches */
+.title {grid-area: title;}
 .next {grid-area: next;}
 .createfile {grid-area: next;}
 .connectrepository {grid-area: next;}
@@ -115,8 +146,11 @@
 
 .animgrid {
 	display: grid;
-	grid-template-columns: 500px 250px 250px;
+	grid-template-columns: 50% 25% 25%;
+	grid-template-rows: 5% 5% 45% 45% 0%;
 	grid-template-areas:
+		'title title title'
+		'. . .'
 		'remote remote text'
 		'local stage text'
 		'. . next';
@@ -125,6 +159,7 @@
 		height: 650px;
 }
 /* CSS Grid for Branching animations */
+#branchtitle {grid-area: next;}
 #branching {grid-area: next;}
 #branchpush {grid-area: next;}
 #mergebranch {grid-area: next;}
@@ -136,6 +171,7 @@
 	display: grid;
 	grid-template-columns: 375px 375px 250px;
 	grid-template-areas:
+		'title title title'
 		'remote remote text'
 		'local stage text'
 		'. . next';
@@ -145,7 +181,6 @@
 }
 
 /*CSS Grid create container*/
-.ctitle { grid-area: ctitle; }
 .cpar { grid-area: cpar; }
 .cpar2 { grid-area: cpar2; }
 .init { grid-area: init; }
@@ -158,7 +193,6 @@
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
-    	'ctitle'
       'cpar'
       'init'
 			'cpar2'
@@ -176,7 +210,6 @@
 }
 
 /*CSS Grid create container*/
-.usertitle { grid-area: usertitle; }
 .setuserpar { grid-area: userpar1; }
 .config1 { grid-area: config1; }
 .config2 { grid-area: config2; }
@@ -186,7 +219,6 @@
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
-    	'usertitle'
       'userpar1'
       'config1'
 			'config2'
@@ -198,7 +230,6 @@
 }
 
 /*CSS Grid Add and Commit container*/
-.actitle { grid-area: actitle; }
 .acpar { grid-area: acpar; }
 .acpar1 { grid-area: acpar1; }
 .add1 { grid-area: add1; }
@@ -211,7 +242,6 @@
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
-    	'actitle'
       'acpar'
 			'acpar1'
       'add1'
@@ -226,7 +256,6 @@
 	animation: fadeIn 1s forwards;
 }
 /*CSS Grid Pushing container*/
-.pushtitle { grid-area: pushtitle; }
 .pushpar { grid-area: pushpar; }
 .pushpar1 { grid-area: pushpar1; }
 .push1 { grid-area: push1; }
@@ -239,7 +268,6 @@
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
-    	'pushtitle'
       'pushpar'
 			'push1'
       'pushpar1'
@@ -255,7 +283,6 @@
 }
 
 /*CSS Grid Pushing container*/
-.pulltitle { grid-area: pulltitle; }
 .pullpar { grid-area: pullpar; }
 .pullpar1 { grid-area: pullpar1; }
 .pull1 { grid-area: pull1; }
@@ -265,7 +292,6 @@
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
-    	'pulltitle'
       'pullpar'
 			'pullpar1'
 			'pull1'
@@ -278,7 +304,6 @@
 }
 
 /*CSS Grid Branches container*/
-.brtitle { grid-area:brtitle; }
 .brpar { grid-area: brpar; }
 .brpar1 { grid-area: brpar1; }
 .brpar2 { grid-area: brpar2; }
@@ -294,7 +319,6 @@
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
-    	'brtitle'
       'brpar'
 			'brpar1'
       'brpar2'
@@ -311,7 +335,6 @@
 	margin: 0 auto;
 }
 /*CSS Grid Update and Merge container*/
-.uptitle { grid-area: uptitle; }
 .uppar { grid-area: uppar; }
 .merge1 { grid-area: merge1; }
 .uppar1 { grid-area: uppar1; }
@@ -326,7 +349,6 @@
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
-    	'uptitle'
       'uppar'
 			'merge1'
 			'uppar1'
@@ -343,7 +365,6 @@
 	animation: 1s forwards;
 }
 /*CSS Grid Tagging container*/
-.tagtitle { grid-area: tagtitle; }
 .tagpar { grid-area: tagpar; }
 .tag1 { grid-area: tag1; }
 .tagpar1 { grid-area: tagpar1; }
@@ -354,7 +375,6 @@
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
-    	'tagtitle'
       'tagpar'
 			'tag1'
 			'tagpar1'
@@ -365,7 +385,6 @@
 	margin: 0 auto;
 }
 /*CSS Grid log container*/
-.logtitle { grid-area: logtitle; }
 .logpar { grid-area: logpar; }
 .log1 { grid-area: log1; }
 .logpar1 { grid-area: logpar1; }
@@ -383,7 +402,6 @@
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
-    	'logtitle'
       'logpar'
 			'log1'
 			'logpar1'
@@ -401,7 +419,6 @@
 	margin: 0 auto;
 }
 /*CSS Grid error container*/
-.ertitle { grid-area: ertitle; }
 .erpar { grid-area: erpar; }
 .error1 { grid-area: error1; }
 .erpar1 { grid-area: erpar1; }
@@ -416,7 +433,6 @@
 	display: grid;
 	grid-template-columns: auto auto auto;
 	grid-template-areas:
-    	'ertitle ertitle ertitle'
 			'erpar erpar erpar'
 			'error1 error1 error1'
 			'erpar1 erpar1 erpar1'
@@ -430,7 +446,7 @@
 	width: 60%;
 	margin: 0 auto;
 }
-.grid {
+/* .grid {
 	display: grid;
 	grid-template-columns: 33.3% 33.3% 33.3%;
 	grid-template-areas:
@@ -443,4 +459,4 @@
 	padding: 10px;
 	width: 60%;
 	margin: 0 auto;
-}
+} */
