@@ -150,7 +150,7 @@ header {
 	grid-template-rows: 5% 5% 45% 45% 0%;
 	grid-template-areas:
 		'title title title'
-		'. . .'
+		'title title title'
 		'remote remote text'
 		'local stage text'
 		'. . next';
@@ -169,8 +169,10 @@ header {
 
 .branchanim {
 	display: grid;
-	grid-template-columns: 375px 375px 250px;
+	grid-template-columns: 50% 25% 25%;
+	grid-template-rows: 5% 5% 45% 45% 0%;
 	grid-template-areas:
+		'title title title'
 		'title title title'
 		'remote remote text'
 		'local stage text'
