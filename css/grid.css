@@ -365,6 +365,7 @@ header {
 	animation: 1s forwards;
 }
 /*CSS Grid Tagging container*/
+.tagtitle {grid-area: tagtitle;}
 .tagpar { grid-area: tagpar; }
 .tag1 { grid-area: tag1; }
 .tagpar1 { grid-area: tagpar1; }
@@ -375,6 +376,7 @@ header {
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
+			'tagtitle'
       'tagpar'
 			'tag1'
 			'tagpar1'
@@ -385,6 +387,7 @@ header {
 	margin: 0 auto;
 }
 /*CSS Grid log container*/
+.logtitle {grid-area: logtitle;}
 .logpar { grid-area: logpar; }
 .log1 { grid-area: log1; }
 .logpar1 { grid-area: logpar1; }
@@ -402,6 +405,7 @@ header {
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-areas:
+			'logtitle'
       'logpar'
 			'log1'
 			'logpar1'
@@ -419,6 +423,7 @@ header {
 	margin: 0 auto;
 }
 /*CSS Grid error container*/
+.ertitle {grid-area: ertitle;}
 .erpar { grid-area: erpar; }
 .error1 { grid-area: error1; }
 .erpar1 { grid-area: erpar1; }
@@ -433,6 +438,7 @@ header {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	grid-template-areas:
+			'ertitle ertitle ertitle'
 			'erpar erpar erpar'
 			'error1 error1 error1'
 			'erpar1 erpar1 erpar1'
