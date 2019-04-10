@@ -38,7 +38,8 @@
       </nav> -->
     </header>
     <article>
-      <section class="split left">
+      <section class="pagegrid">
+      <section id="left">
         <div class="animgrid">
           <h1 class="title">Pushing your commits</h1>
         <div class="remote">
@@ -74,23 +75,24 @@
           </button>
         </div>
       </section>
-      <section class="split right">
+      <section id="right">
           <section id="pushcommit">
-        <p class="pushpar">Once a commit has been completed, it is good practice to push these changes from the Head to the remote repository, to do this run the command</p>
+            <p class="pushpar">Once a commit has been completed, it is good practice to push these changes from the Head to the remote repository, to do this run the command</p>
 
-        <code class="push1">git push origin master</code>
+            <code class="push1">git push origin master</code>
 
-        <p class="pushpar1">the branch is defined by the final word in this command, so ensure that if you are uploading to a different branch than master you choose the correct one in this command, for example if you are on the branch Feature1 the command would look</p>
+            <p class="pushpar1">the branch is defined by the final word in this command, so ensure that if you are uploading to a different branch than master you choose the correct one in this command, for example if you are on the branch Feature1 the command would look</p>
 
-        <code class="push2">git push origin Feature1</code>
+            <code class="push2">git push origin Feature1</code>
 
-        <p class="pushpar2">If the repository is not connected to a remote repository yet, you will need to add this using</p>
+            <p class="pushpar2">If the repository is not connected to a remote repository yet, you will need to add this using</p>
 
-        <code class="push3">git remote add origin "link to server"</code>
+            <code class="push3">git remote add origin "link to server"</code>
 
-        <p class="pushpar3">This will then allow changes to be pushed from the Head tree to the remote repository</p>
+            <p class="pushpar3">This will then allow changes to be pushed from the Head tree to the remote repository</p>
+          </section>
+        </section>
       </section>
-    </section>
     </article>
   </body>
 </html>
