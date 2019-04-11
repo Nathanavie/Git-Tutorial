@@ -41,7 +41,7 @@ header {
 	width: 100%;
 	position: fixed;
   top: 0;
-  height: 5%;
+	z-index: 1;
   background: #000000;
 }
 /*CSS Grid to order page */
@@ -155,8 +155,9 @@ header {
 		'local stage text'
 		'. . next';
 		margin-bottom: -120px;
-		width: 1000px;
-		height: 650px;
+		width: 60em;
+		height: 30em;
+		position: static;
 }
 /* CSS Grid for Branching animations */
 #branchtitle {grid-area: next;}
@@ -178,8 +179,8 @@ header {
 		'local stage text'
 		'. . next';
 		margin-bottom: -120px;
-		width: 1000px;
-		height: 650px;
+		width: 70em;
+		height: 40em;
 }
 
 /*CSS Grid create container*/
@@ -207,6 +208,7 @@ header {
 			'clone2';
 	padding: 10px;
 	width: 60%;
+	height: 100%;
 	margin: 0 auto;
 	animation: fadeIn 1s forwards;
 }
