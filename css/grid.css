@@ -39,13 +39,13 @@ header {
 	grid-gap: 10px;
 	padding: 10px;
 	width: 100%;
-	position: fixed;
+	position: relative;
   top: 0;
-	z-index: 1;
+	z-index: 2;
   background: #000000;
 }
 /*CSS Grid to order page */
-#left {grid-area: anim;}
+/* #left {grid-area: anim;}
 #right {grid-area: text;}
 .pagegrid {
 	display: grid;
@@ -54,7 +54,7 @@ header {
 	'anim text';
 	width: 100vw;
 	height: 100vh;
-}
+} */
 
 /*CSS Grid intro container*/
 .title { grid-area: title;}
@@ -178,8 +178,8 @@ header {
 		'local stage text'
 		'. . next';
 		margin-bottom: -120px;
-		width: 70em;
-		height: 40em;
+		width: 60em;
+		height: 30em;
 }
 
 /*CSS Grid create container*/
@@ -207,7 +207,6 @@ header {
 			'clone2';
 	padding: 10px;
 	width: 60%;
-	height: 100%;
 	margin: 0 auto;
 	animation: fadeIn 1s forwards;
 }
