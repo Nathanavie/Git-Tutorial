@@ -78,18 +78,6 @@ nav {
   background: #000000;
   overflow: hidden;
 }
-.sidenav {
-  height: 100%;
-  width: 0px;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  background: #000000;
-  overflow: hidden;
-  padding-top: 60px;
-  transition: 0.5s;
-}
 nav a {
   font-family: 'Roboto', sans-serif;
   float: left;
@@ -108,11 +96,14 @@ nav a {
 .sidenav #close {
   position: absolute;
   top: 0;
-  right: 10%;
-  font-size: 24pt;
+  right: 0;
+  font-size: 50pt;
   padding-left: 32px;
   color: #FFFFFF;
   cursor: pointer;
+  background: none;
+  width: 0;
+  margin: 0 1em 0 0;
 }
 #open {
   cursor: pointer;
@@ -123,8 +114,10 @@ nav a {
  #closednav:hover {
    width: 70px;
    cursor: pointer;
-   transition: width 0.2s ease;
  }
+#closednav {
+  overflow: visible;
+}
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;

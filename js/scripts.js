@@ -6,15 +6,15 @@ $(document).ready(function() {
   });
 
   $('#open').on('click', function(event) {
-    $('#sidenav').css("width", "250px");
+    $('.sidenav').css("width", "100vw");
   });
 
   $('#closednav').on('click', function(event) {
-    $('#sidenav').css("width", "250px");
+    $('.sidenav').css("width", "100vw");
   });
 
   $('#close').on('click', function(event) {
-    $('#sidenav').css("width", "0px");
+    $('.sidenav').css("width", "0px");
   });
 
   $('article').on('click', function(event) {
