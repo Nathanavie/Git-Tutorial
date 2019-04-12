@@ -26,6 +26,8 @@
 	grid-area: text;
 	border-style: solid;
 }
+
+@media only screen and (min-width: 1300px) {
 /* positioning for each class in CSS Grid */
 /*CSS Grid for header */
 .logo {grid-area: logo;}
@@ -76,24 +78,24 @@ header {
 }
 
 /*CSS Grid setup container*/
-.but1 { grid-area: but1; }
-.but2 { grid-area: but2; }
-.but3 { grid-area: but3; }
-.settitle { grid-area: settitle; }
-.setpar { grid-area: setpar; }
-#letsgo { grid-area: next; }
+.but1 { grid-area: but1; } /* .but1 class given area but1 */
+.but2 { grid-area: but2; } /* .but2 class given area but2 */
+.but3 { grid-area: but3; }  /* .but3 class given area but3 */
+.settitle { grid-area: settitle; }  /* .settitle class given area settitle */
+.setpar { grid-area: setpar; } /* .setpar class given area setpar */
+#letsgo { grid-area: next; }  /* #letsgo ID given area next */
 #setup {
-	display: grid;
-	grid-template-columns: auto auto auto;
+	display: grid;  /* this sets the grid*/
+	grid-template-columns: auto auto auto;  /* This sets THREE auto sized columns in the grid*/
 	grid-template-areas:
-	'settitle settitle settitle'
-	'setpar setpar setpar'
-	'but1 but2 but3'
-	'. next .';
-	grid-gap: 10px;
-	padding: 10px;
-	width: 60%;
-	margin: 0 auto;
+	'settitle settitle settitle'  /* this is the first row of the grid, with 1 area spanning over 3*/
+	'setpar setpar setpar'  /* this is the second row of grid, with 1 area spanning over 3*/
+	'but1 but2 but3'  /* this is the third row of the grid, with 3 buttons in a row*/
+	'. next .';  /* this is the fourth row of the grid, with a gap in the first and third column*/
+	grid-gap: 10px;  /* this sets a gap between each part of the grid*/
+	padding: 10px;  /* simple padding on the grid*/
+	width: 60%;  /* this grid is set to 60% width of the page*/
+	margin: 0 auto;  /* centre the grid*/
 }
 
 /*CSS Grid workflow container*/
@@ -453,6 +455,7 @@ header {
 	padding: 10px;
 	width: 60%;
 	margin: 0 auto;
+}
 }
 /* .grid {
 	display: grid;
