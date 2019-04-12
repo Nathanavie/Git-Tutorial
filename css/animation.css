@@ -44,13 +44,12 @@
   100% {
     width: 16em;
     opacity: 1;
-    margin-left: 10%;
+    margin-left: 12em;
   }
 }
 @keyframes localToStage {
     100% {
-      margin-top: -1px;
-      margin-left: 550px;
+      margin-left: 35em;
       opacity: 1;
       position: fixed;
     }
