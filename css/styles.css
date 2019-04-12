@@ -380,7 +380,7 @@ code {
   opacity: 0;
 }
 .commitbubble {
-  width: 50px;
+  width: 3em;
   position: fixed;
 }
 .localrepo {
