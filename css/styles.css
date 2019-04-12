@@ -26,25 +26,6 @@ header img:hover {
   transform: rotate3d(1, 1, 0, 50deg) rotateY(360deg);
   filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
 }
-/* .split {
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  overflow-x: hidden;
-  padding-top: 20px;
-  margin-bottom: 2em;
-}
-.left {
-  width: 75%;
-  left: 0;
-}
-
-.right {
-  width: 25%;
-  right: 0;
-  background-color: #D4D4D4;
-  margin-bottom: 2em;
-} */
 .split {
   height: 100%;
   top: 0;
@@ -61,11 +42,11 @@ header img:hover {
 }
 .right {
   position: fixed;
-  margin-top: 70px;
+  margin-top: 4em;
   right:0;
   width: 25%;
   margin-left: 0px;
-  background: #D4D4D4;
+  background: #E9FFFF;
   transition: margin-left 0.5s;
 }
 .lastcode {
@@ -139,16 +120,6 @@ nav a {
   font-size: 35pt;
   color: #FFFFFF;
 }
- /* nav {
-   height: 100%;
-   width: 65px;
-   position: fixed;
-   top: 0;
-   left: 0;
-   background-color: #000000;
-   z-index: 1;
-   transition: width 0.2s ease;
- } */
  #closednav:hover {
    width: 70px;
    cursor: pointer;
@@ -162,13 +133,6 @@ nav a {
     font-size: 18pt;
   }
 }
-/* nav a {
-  text-align: center;
-  background: #000000;
-  text-decoration: none;
-  padding: 25px;
-  float: left;
-} */
 nav a:hover {
   background: #808080;
   transition: background-color 0.5s ease-out;
@@ -217,7 +181,7 @@ div {
   margin-left: 40em;
 }
 #workflow img {
-  width: 150px;
+  width: 10em;
 }
 #workflow h4 {
   text-align: center;
@@ -251,13 +215,13 @@ div {
   animation: fadeIn 1s 6s forwards;
 }
 #workdir {
-  margin: 20px auto;
+  margin: 1em auto;
 }
 .workflowicons {
   margin: 0 auto;
 }
 .workflowarrow{
-  margin: 40px auto;
+  margin: 2em auto;
 }
 #nextlog {
   margin-top: 0;
@@ -266,7 +230,7 @@ div {
   margin-top: 0;
 }
 code {
-  padding: 10px;
+  padding: 1em;
   background-color: #4f5054;
   color: #bcd1ff;
   font-family: 'Source Code Pro', monospace;
@@ -281,7 +245,7 @@ code {
 }
 .animtext {
   color: #FFFFFF;
-  margin: 0px 20px 0px 20px;
+  margin: 0 1em 0 1em;
   opacity: 0;
   animation: 1s 1s forwards;
 }
@@ -337,9 +301,9 @@ code {
 }
 #masterarrow {
   position: fixed;
-  width: 75px;
-  margin-left: 160px;
-  margin-top: 50px;
+  width: 5em;
+  margin-left: 10em;
+  margin-top: 5em;
 }
 #commiticon {
   margin-left: 6em;
@@ -417,12 +381,13 @@ code {
   animation: 2s forwards;
 }
 .animbtn {
-  height: 50px;
+  background-color: #4F8F5B;
+  height: 2em;
   padding: 0;
-  margin-top: -50px;
+  margin: -2.5em auto 0 0.5em;
   text-align: center;
   z-index: 1;
-  width: 225px;
+  width: 10.5em;
 }
 button {
   background-color: #000000;
