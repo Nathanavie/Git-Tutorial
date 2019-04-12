@@ -146,7 +146,7 @@ header {
 .animgrid {
 	display: grid;
 	grid-template-columns: 50% 25% 25%;
-	grid-template-rows: 5% 5% 45% 45% 0%;
+	grid-template-rows: 6% 5% 45% 45% 0%;
 	grid-template-areas:
 		'title title title'
 		'title title title'
