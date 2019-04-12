@@ -358,17 +358,22 @@ code {
   animation: 1s forwards;
 }
 #pulledremote {
-  animation: 1s 1.5s forwards;
+  animation: 1s 1s forwards;
+  opacity: 0;
+}
+#remotereposvg {
+  animation: fadeIn 1s 0.5s forwards;
+  opacity: 0;
 }
 #remotefile {
-  width: 100px;
+  width: 6em;
   position: fixed;
-  margin-left: 50px;
-  margin-top: 7px;
+  margin-left: 3.5em;
+  margin-top: 0.9em;
 }
 #remotecommit {
-  margin-left: 85px;
-  margin-top: -25px;
+  margin-left: 5em;
+  margin-top: -1em;
 }
 #branch2file {
   margin-left: 20px;
@@ -391,9 +396,9 @@ code {
 }
 .remotereposvg {
   position: fixed;
-  width: 100px;
-  margin-top: 7px;
-  margin-left: 170px;
+  width: 6em;
+  margin-top: 0.9em;
+  margin-left: 10em;
 }
 .localreposvg {
   width: 6em;
