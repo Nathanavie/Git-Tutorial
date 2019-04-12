@@ -350,9 +350,9 @@ code {
 }
 #stagingarrow {
   transform: rotate(200deg);
-  width: 400px;
-  margin-left: -350px;
-  margin-top: -90px;
+  width: 30em;
+  margin-left: -22em;
+  margin-top: -5em;;
   position: fixed;
   opacity: 0;
   animation: 1s forwards;
