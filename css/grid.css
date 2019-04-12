@@ -46,10 +46,10 @@
   display: block;
   transition: 0.3s;
 	float:none;
-}
-footer span a {
-	margin-right: 1em;
-}
+	}
+	footer span a {
+		margin-right: 1em;
+	}
 	/* positioning for each class in CSS Grid */
 	/*CSS Grid for header */
 	header img {
@@ -488,7 +488,7 @@ footer span a {
 @media only screen and (min-width: 1300px) {
 /* positioning for each class in CSS Grid */
 /*CSS Grid for header */
-#closednav {
+.hide {
 	display: none;
 }
 .logo {grid-area: logo;}
