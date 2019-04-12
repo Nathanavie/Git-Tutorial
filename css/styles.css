@@ -208,13 +208,13 @@ div {
 }
 #start {
   position: fixed;
-  margin-top: -20px;
-  margin-left: 20px;
+  margin-top: -1em;
+  margin-left: 1em;
 }
 #end {
   position: fixed;
-  margin-top: -20px;
-  margin-left: 700px;
+  margin-top: -1em;
+  margin-left: 40em;
 }
 #workflow img {
   width: 150px;
@@ -307,32 +307,32 @@ code {
 }
 #branch1arrow {
   position: fixed;
-  width: 90px;
+  width: 4.5em;
   transform: rotate(90deg);
-  margin-left: 55px;
-  margin-top: 182px;
+  margin-left: 4em;
+  margin-top: 11em;
   animation: 1s forwards;
 }
 #branch1file {
-  margin-top: 7px;
-  margin-left: 50px;
+  margin-top: 2em;
+  margin-left: 4em;
   animation: 1s forwards;
 }
 #branchedit1 {
-  margin-left: 240px;
-  margin-top: -15px;
-  animation: 1s forwards;
-}
-#mergedfile1{
-  margin-top: -19px;
-  margin-left: 240px;
+  margin-left: 16em;
+  margin-top: 0;
   animation: 1s forwards;
 }
 #b1arrow {
   position: fixed;
-  width: 73px;
-  margin-top: 50px;
-  margin-left: 160px;
+  width: 5em;
+  margin-top: 4em;
+  margin-left: 11em;
+  animation: 1s forwards;
+}
+#mergedfile1{
+  margin-top: 0em;
+  margin-left: 16em;
   animation: 1s forwards;
 }
 #masterarrow {
