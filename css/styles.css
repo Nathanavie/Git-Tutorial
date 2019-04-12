@@ -374,11 +374,13 @@ code {
   margin-top: -1em;
 }
 #branch2file {
-  margin-left: 20px;
+  margin-left: 1em;
+  margin-top: 0em;
   animation: 1s forwards;
 }
 #brokenfile {
-  margin-left: 20px;
+  margin-left: 1em;
+  margin-top: 0em;
   animation: 1s forwards;
   opacity: 0;
 }
