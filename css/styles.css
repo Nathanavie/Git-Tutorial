@@ -302,7 +302,7 @@ code {
   opacity: 0;
 }
 #staging {
-  width: 100px;
+  width: 6em;
   position: fixed;
   margin-left: 5em;
   animation: 1s forwards;

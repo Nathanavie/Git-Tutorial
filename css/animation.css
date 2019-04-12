@@ -6,14 +6,9 @@
   }
 }
 @keyframes fileStagingtoRemote {
-  0% {
-    position: fixed;
-    margin-left: 50px;
-    margin-top: 0px;
-  }
   100% {
-    margin-left: -451px;
-    margin-top: -220px;
+    margin-left: -28em;
+    margin-top: -13em;
     opacity: 1;
     position: fixed;
   }
