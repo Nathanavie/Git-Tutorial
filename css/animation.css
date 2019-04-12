@@ -42,9 +42,9 @@
 }
 @keyframes localArrowToStage {
   100% {
-    width: 250px;
+    width: 16em;
     opacity: 1;
-    margin-left: 225px;
+    margin-left: 10%;
   }
 }
 @keyframes localToStage {

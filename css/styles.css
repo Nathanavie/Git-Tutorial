@@ -190,8 +190,8 @@ h3 {
 }
 h4 {
   font-size: 16pt;
-  margin-top: 0;
-  margin-left: 5px;
+  margin-top: 1%;
+  margin-left: 1%;
   font-family: 'Roboto', sans-serif;
 }
 h5 {
@@ -292,10 +292,10 @@ code {
 }
 #localarrow {
   position: fixed;
-  margin-top: 67px;
-  margin-left: -200px;
+  margin-top: 2%;
+  margin-left: 5%;
   animation: 1s forwards;
-  width: 100px;
+  width: 6em;
   opacity: 0;
 }
 #staging {
@@ -393,10 +393,9 @@ code {
   margin-left: 170px;
 }
 .localreposvg {
-  width: 100px;
-  margin-top: -10px;
-  margin-bottom: -130px;
-  margin-left: 50px;
+  width: 6em;
+  margin-top: -1%;
+  margin-left: 2%;
   animation: 1s forwards;
   position: fixed;
 }
