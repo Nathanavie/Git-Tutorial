@@ -74,17 +74,6 @@
 		z-index: 2;
 	  background: #000000;
 	}
-	/*CSS Grid to order page */
-	/* #left {grid-area: anim;}
-	#right {grid-area: text;}
-	.pagegrid {
-		display: grid;
-		grid-template-columns: 75% 25%;
-		grid-template-areas:
-		'anim text';
-		width: 100vw;
-		height: 100vh;
-	} */
 
 	/*CSS Grid intro container*/
 	.title { grid-area: title;}
@@ -114,16 +103,18 @@
 	#letsgo { grid-area: next; }  /* #letsgo ID given area next */
 	#setup {
 		display: grid;  /* this sets the grid*/
-		grid-template-columns: auto auto auto;  /* This sets THREE auto sized columns in the grid*/
+		grid-template-columns: auto;  /* This sets THREE auto sized columns in the grid*/
 		grid-template-areas:
-		'settitle settitle settitle'  /* this is the first row of the grid, with 1 area spanning over 3*/
-		'setpar setpar setpar'  /* this is the second row of grid, with 1 area spanning over 3*/
-		'but1 but2 but3'  /* this is the third row of the grid, with 3 buttons in a row*/
-		'. next .';  /* this is the fourth row of the grid, with a gap in the first and third column*/
+		'settitle'  /* this is the first row of the grid, with 1 area spanning over 3*/
+		'setpar'  /* this is the second row of grid, with 1 area spanning over 3*/
+		'but1'
+		'but2'
+		'but3'  /* this is the third row of the grid, with 3 buttons in a row*/
+		'next';  /* this is the fourth row of the grid, with a gap in the first and third column*/
 		grid-gap: 10px;  /* this sets a gap between each part of the grid*/
 		padding: 10px;  /* simple padding on the grid*/
 		width: 60%;  /* this grid is set to 60% width of the page*/
-		margin: 0 auto;  /* centre the grid*/
+		margin: 0 auto 2em auto;  /* centre the grid*/
 	}
 
 	/*CSS Grid workflow container*/
