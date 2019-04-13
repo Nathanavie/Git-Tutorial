@@ -22,8 +22,8 @@
 	border-left-style: solid;
 }
 .text {
-	background-color: #000000;
 	grid-area: text;
+	background-color: #000000;
 	border-style: solid;
 }
 @media only screen and (max-width: 1300px) {
@@ -482,7 +482,7 @@
 .hide {
 	display: none;
 }
-.logo {grid-area: logo;}
+header img {grid-area: logo;}
 nav {grid-area: nav;}
 
 header {
