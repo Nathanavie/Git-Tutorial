@@ -484,6 +484,9 @@
 }
 header img {grid-area: logo;}
 nav {grid-area: nav;}
+.sidenav {
+	width: 100vw !important;
+}
 
 header {
 	display: grid;
