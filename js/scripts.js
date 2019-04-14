@@ -6,11 +6,11 @@ $(document).ready(function() {
   });
 
   $('#open').on('click', function(event) {
-    $('.sidenav').css("width", "100vw");
+    $('.sidenav').css("width", "100%");
   });
 
   $('#closednav').on('click', function(event) {
-    $('.sidenav').css("width", "100vw");
+    $('.sidenav').css("width", "100%");
   });
 
   $('#close').on('click', function(event) {
