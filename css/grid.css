@@ -39,6 +39,9 @@
 		margin-top: 0;
 	}
 
+	.split {
+		overflow: visible;
+	}
 	.sidenav {
 	  height: 100%;
 	  width: 0px;
