@@ -28,10 +28,14 @@
 }
 @media only screen and (max-width: 1300px) {
 	.left {
-		display: none;
+		width: 100vw;
+		height: 35%;
+		border: none;
+		margin-top: 6em;
 	}
 	.right {
 		width: 100vw;
+		top: 35%;
 	}
 
 	.sidenav {
@@ -406,20 +410,19 @@
 	.tag1 { grid-area: tag1; }
 	.tagpar1 { grid-area: tagpar1; }
 	.tagpar2 { grid-area: tagpar2; }
-	#nextlog {
-		display: none;
-	}
+	#nextlog {grid-area: nextbtn}
 
 
 	#tag {
 		display: grid;
-		grid-template-columns: auto;
+		grid-template-columns: auto auto auto;
 		grid-template-areas:
-				'tagtitle'
-	      'tagpar'
-				'tag1'
-				'tagpar1'
-	      'tagpar2';
+				'tagtitle tagtitle tagtitle'
+	      'tagpar tagpar tagpar'
+				'tag1 tag1 tag1'
+				'tagpar1 tagpar1 tagpar1'
+	      'tagpar2 tagpar2 tagpar2'
+				'. nextbtn .';
 		grid-gap: 10px;
 		padding: 10px;
 		width: 60%;
@@ -470,9 +473,7 @@
 	.error2 { grid-area: error2; }
 	.erpar3 { grid-area: erpar3; }
 	.error3 { grid-area: error3; }
-	#nexttag {
-		display: none;
-	}
+	#nexttag {grid-area: nextbtn	}
 
 
 	#error {
