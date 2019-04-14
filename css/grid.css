@@ -26,7 +26,7 @@
 	background-color: #000000;
 	border-style: solid;
 }
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1024px) {
 	.left {
 		width: 100vw;
 		height: 35%;
@@ -34,8 +34,9 @@
 		margin-top: 6em;
 	}
 	.right {
-		width: 100vw;
-		top: 35%;
+		width: 100%;
+		top: 50%;
+		margin-top: 0;
 	}
 
 	.sidenav {
@@ -66,7 +67,7 @@
 	header img {
 		grid-area: logo;
 		height: 4em;
-		margin: 0 auto;
+		margin: 0 auto 0 45%;
 	}
 	nav {
 		grid-area: nav;
@@ -495,7 +496,7 @@
 		margin: 0 auto 2em auto;
 	}
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1025px) {
 	/* positioning for each class in CSS Grid */
 	/*CSS Grid for header */
 	.hide {
