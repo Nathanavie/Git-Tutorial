@@ -1,10 +1,6 @@
 //Function to start when the web page is loaded
 $(document).ready(function() {
-  $('#home').on('click', function(event) {
-    event.preventDefault();
-      location.reload();
-  });
-
+  //code for opening and closing sidenav.
   $('#open').on('click', function(event) {
     $('.sidenav').css("width", "100%");
   });
@@ -17,32 +13,13 @@ $(document).ready(function() {
     $('.sidenav').css("width", "0px");
   });
 
-  $('article').on('click', function(event) {
-    $('#sidenav').css("width", "0px");
-  });
-
-  $('.start').click(function(ev) {
-    ev.preventDefault();
-    $('section').addClass("hidden");
-    $('#workflow').removeClass("hidden");
-  });
-
+  //code to start first animation, reloading it to ensure the animation does not bug
   $('.coding').click(function(ev) {
     ev.preventDefault();
     $.fn.hideAnimation();
     $.fn.startanimation();
   });
-
-  $('.next').click(function(ev) {
-    ev.preventDefault();
-    $.fn.gitInit();
-  });
-
-  $('.connectrepository').click(function(ev) {
-    ev.preventDefault();
-    $.fn.connectRepo();
-  });
-
+  //enabling buttons to be used as a link throughout all animations.
   $('#letsgo').click(function(ev) {
     $(location).attr("href", "Workflow.html")
   });
@@ -82,62 +59,73 @@ $(document).ready(function() {
   $('#nexttag').click(function(ev) {
     $(location).attr("href", "Tagging.html")
   });
-
+  //Listener calling git init function
+  $('.next').click(function(ev) {
+    ev.preventDefault();
+    $.fn.gitInit();
+  });
+  //Listener calling connectrepo function
+  $('.connectrepository').click(function(ev) {
+    ev.preventDefault();
+    $.fn.connectRepo();
+  });
+  //listener calling setuser function
   $('.setuser').click(function(ev) {
   ev.preventDefault();
   $.fn.setUser();
   });
-
+  //listener calling createfile function
   $('.createfile').click(function(ev) {
     ev.preventDefault();
     $.fn.createFile();
   });
-
+  //listener calling addfile function
   $('.addfile').click(function(ev) {
     ev.preventDefault();
     $.fn.addFile();
   });
-
+  //listener calling commit function
   $('.commitfile').click(function(ev) {
     ev.preventDefault();
     $.fn.commitFile();
   });
-
+  //listener calling push function
   $('.pushfile').click(function(ev) {
     ev.preventDefault();
     $.fn.pushFile();
   });
-
+  //listener calling pull function
   $('.pullfile').click(function(ev) {
     ev.preventDefault();
     $.fn.pullFile();
   });
-
+  //listener calling createbranch function
   $('.branchesbtn').click(function(ev) {
     ev.preventDefault();
     $.fn.createBranch1();
   });
-
+  //listener calling pushbranch function
   $('.branchpush').click(function(ev) {
     ev.preventDefault();
     $.fn.branchPush();
   });
-
+  //listener calling mergebranch function
   $('#mergebranch').click(function(ev) {
     ev.preventDefault();
     $.fn.mergeBranch();
   });
-
+  //listener calling branch2 function
   $('#addbranch2').click(function(ev) {
     ev.preventDefault();
     $.fn.branch2();
   });
-
+  //listener calling delbranch function
   $('#delbranch').click(function(ev) {
     ev.preventDefault();
     $.fn.delbranch();
   });
 
+  //functions to be called.
   $.fn.hideAnimation = function() {
     $('.animgrid').find('h4').addClass("hidden");
     $('.animgrid').find('img').addClass("hidden");
