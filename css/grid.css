@@ -563,7 +563,7 @@
 		grid-gap: 10px;  /* this sets a gap between each part of the grid*/
 		padding: 10px;  /* simple padding on the grid*/
 		width: 60%;  /* this grid is set to 60% width of the page*/
-		margin: 0 auto;  /* centre the grid*/
+		margin: 0 auto 4em auto;  /* centre the grid*/
 	}
 
 	/*CSS Grid workflow container*/
