@@ -1,4 +1,3 @@
-/*CSS Document */
 .hidden {
 	display: none !important
 }
@@ -26,6 +25,7 @@
 	background-color: #000000;
 	border-style: solid;
 }
+/* Mobile view CSS Grids */
 @media only screen and (max-width: 1024px) {
 	.left {
 		width: 100vw;
@@ -55,12 +55,12 @@
 	  transition: 0.5s;
 	}
 	.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  display: block;
-  transition: 0.3s;
-	float:none;
+  	padding: 8px 8px 8px 32px;
+  	text-decoration: none;
+  	font-size: 25px;
+  	display: block;
+  	transition: 0.3s;
+		float:none;
 	}
 	footer span a {
 		margin-right: 1em;
@@ -499,9 +499,9 @@
 		margin: 0 auto 2em auto;
 	}
 }
+/* Any device with a width above 1024 will load this grid */
 @media only screen and (min-width: 1025px) {
 	/* positioning for each class in CSS Grid */
-	/*CSS Grid for header */
 	.hide {
 		display: none;
 	}
@@ -511,6 +511,7 @@
 		width: 100vw !important;
 	}
 
+	/*CSS Grid for header */
 	header {
 		display: grid;
 		grid-template-columns: 5% auto;
@@ -524,17 +525,6 @@
 		z-index: 2;
 	  background: #000000;
 	}
-	/*CSS Grid to order page */
-	/* #left {grid-area: anim;}
-	#right {grid-area: text;}
-	.pagegrid {
-		display: grid;
-		grid-template-columns: 75% 25%;
-		grid-template-areas:
-		'anim text';
-		width: 100vw;
-		height: 100vh;
-	} */
 
 	/*CSS Grid intro container*/
 	.title { grid-area: title;}
@@ -935,18 +925,4 @@
 		margin: 0 auto;
 	}
 	}
-	/* .grid {
-		display: grid;
-		grid-template-columns: 33.3% 33.3% 33.3%;
-		grid-template-areas:
-			'title title title'
-			'par1 par1 par1'
-			'but1 but2 but3'
-			'tree1 tree2 tree3'
-			'par1inf '
-		grid-gap: 10px;
-		padding: 10px;
-		width: 60%;
-		margin: 0 auto;
-	} */
 }

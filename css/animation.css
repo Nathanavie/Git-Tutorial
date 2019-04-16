@@ -1,3 +1,4 @@
+/* animation for moving the commit bubble from staging area to remote area */
 @keyframes commitStagingtoRemote {
   100% {
     margin-left: -27em;
@@ -5,6 +6,7 @@
     opacity: 1;
   }
 }
+/* animation for moving file svg from staging area to remote area */
 @keyframes fileStagingtoRemote {
   100% {
     margin-left: -28em;
@@ -13,28 +15,33 @@
     position: fixed;
   }
 }
+/* animation for pulling file from remote repo */
 @keyframes pulledfile {
   100% {
     opacity: 1;
     margin-top: 13.35em;
   }
 }
+/* animation for merging a branch */
 @keyframes mergefile {
   100% {
     margin-top: -12.5em;
     opacity: 1;
   }
 }
+/* animation to create a fade into grey background */
 @keyframes greyback {
   100% {
     background-color: rgba(128, 128, 128, 0.5);
   }
 }
+/* animation to create a fade into red background */
 @keyframes redback {
   100% {
     background-color: rgba(255, 0, 0, 0.5);
   }
 }
+/* animation to create arrow pointing from local repo to staging area */
 @keyframes localArrowToStage {
   100% {
     width: 16em;
@@ -42,6 +49,7 @@
     margin-left: 12em;
   }
 }
+/* animation to move file from local repo to staging area */
 @keyframes localToStage {
     100% {
       margin-left: 35em;
@@ -49,18 +57,179 @@
       position: fixed;
     }
 }
+/* animation on deleting branch */
 @keyframes delbranch {
   100% {
     opacity: 0.3;
   }
 }
+/* animation to gradually fade in element */
 @keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
+/* animation to fade an element out gradually */
 @keyframes fadeOut {
   0% {opacity: 1;}
   100% {
     opacity: 0;
   }
+}
+/* animations to fade in each element on workflow page in order */
+.WF-anim1 {
+  animation: fadeIn 1s forwards;
+  opacity: 0;
+}
+.WF-anim2 {
+  opacity: 0;
+  animation: fadeIn 1s 1s forwards;
+}
+.WF-anim3 {
+  opacity: 0;
+  animation: fadeIn 1s 2s forwards;
+}
+.WF-anim4 {
+  opacity: 0;
+  animation: fadeIn 1s 3s forwards;
+}
+.WF-anim5 {
+  opacity: 0;
+  animation: fadeIn 1s 4s forwards;
+}
+.WF-anim6 {
+  opacity: 0;
+  animation: fadeIn 1s 5s forwards;
+}
+.WF-anim7 {
+  opacity: 0;
+  animation: fadeIn 1s 6s forwards;
+}
+/* setting animations on elements to trigger animations above. */
+.staging {
+  animation: 1s forwards;
+}
+#localarrow {
+  position: fixed;
+  margin-top: 2%;
+  margin-left: 5%;
+  animation: 1s forwards;
+  width: 6em;
+  opacity: 0;
+}
+#staging {
+  width: 6em;
+  position: fixed;
+  margin-left: 5em;
+  animation: 1s forwards;
+}
+#branch1arrow {
+  position: fixed;
+  width: 4.5em;
+  transform: rotate(90deg);
+  margin-left: 4em;
+  margin-top: 11em;
+  animation: 1s forwards;
+}
+#branch1file {
+  margin-top: 2em;
+  margin-left: 4em;
+  animation: 1s forwards;
+}
+#branchedit1 {
+  margin-left: 16em;
+  margin-top: 0;
+  animation: 1s forwards;
+}
+#b1arrow {
+  position: fixed;
+  width: 5em;
+  margin-top: 4em;
+  margin-left: 11em;
+  animation: 1s forwards;
+}
+#mergedfile1{
+  margin-top: 0em;
+  margin-left: 16em;
+  animation: 1s forwards;
+}
+#masterarrow {
+  position: fixed;
+  width: 5em;
+  margin-left: 10em;
+  margin-top: 5em;
+}
+#commiticon {
+  margin-left: 6em;
+  margin-top: -2em;
+  animation: 1s forwards;
+}
+#stagingarrow {
+  transform: rotate(200deg);
+  width: 30em;
+  margin-left: -22em;
+  margin-top: -5em;;
+  position: fixed;
+  opacity: 0;
+  animation: 1s forwards;
+}
+#pulledremote {
+  animation: 1s 1s forwards;
+  opacity: 0;
+}
+#remotereposvg {
+  animation: fadeIn 1s 0.5s forwards;
+  opacity: 0;
+}
+#remotefile {
+  width: 6em;
+  position: fixed;
+  margin-left: 3.5em;
+  margin-top: 0.9em;
+}
+#remotecommit {
+  margin-left: 5em;
+  margin-top: -1em;
+}
+#branch2file {
+  margin-left: 1em;
+  margin-top: 0em;
+  animation: 1s forwards;
+}
+#brokenfile {
+  margin-left: 1em;
+  margin-top: 0em;
+  animation: 1s forwards;
+  opacity: 0;
+}
+.localrepo {
+  animation: 2s forwards;
+}
+.remoterepo {
+  animation: 2s forwards;
+}
+.profileicon {
+  height: 16pt;
+  animation: 2s forwards;
+}
+.localreposvg {
+  width: 6em;
+  margin-left: 2%;
+  animation: 1s forwards;
+  position: fixed;
+}
+.local {
+  animation: 1s forwards;
+}
+.stage {
+  animation: 1s 1.5s forwards;
+}
+/* animation on logo hover */
+header img {
+  height: 100%;
+  transition: all 0.3s ease;
+  transition: transform 1s ease;
+}
+header img:hover {
+  transform: rotate3d(1, 1, 0, 50deg) rotateY(360deg);
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
 }

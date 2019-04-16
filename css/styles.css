@@ -1,3 +1,4 @@
+/* style on body to stop all margins appearing on border. */
 body {
   margin: 0;
   margin-top: 0;
@@ -5,27 +6,21 @@ body {
   overflow-x: hidden;
   height: 100%;
 }
+/* HTML style to have any auto scrolling smooth */
 html {
   margin: 0;
   padding:0;
   scroll-behavior: smooth;
   height: 100%
 }
+/* h1 styles in each animation grid have no top margin */
 .animgrid h1 {
   margin-top: 0;
 }
 .branchanim h1 {
   margin-top: 0;
 }
-header img {
-  height: 100%;
-  transition: all 0.3s ease;
-  transition: transform 1s ease;
-}
-header img:hover {
-  transform: rotate3d(1, 1, 0, 50deg) rotateY(360deg);
-  filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
-}
+/* split styles */
 .split {
   height: 100%;
   top: 0;
@@ -52,6 +47,7 @@ aside {
 .lastcode {
   margin-bottom: 10em;
 }
+/* footer styles */
 footer {
   left: 0;
   bottom: 0;
@@ -72,6 +68,7 @@ footer span a {
   color: #FFFFFF;
   margin-right: 5em;
 }
+/* navigation styles */
 nav {
   width: 100%;
   top: 0;
@@ -90,9 +87,15 @@ nav a {
   cursor: pointer;
   transition: background-color 0.5s ease-out;
 }
+nav a:hover {
+  background: #808080;
+  transition: background-color 0.5s ease-out;
+}
+/* active page nav style */
 .active {
   background-color: #808080;
 }
+/* sidenav styles */
 .sidenav #close {
   position: absolute;
   top: 0;
@@ -111,10 +114,10 @@ nav a {
   font-size: 35pt;
   color: #FFFFFF;
 }
- #closednav:hover {
+#closednav:hover {
    width: 70px;
    cursor: pointer;
- }
+}
 #closednav {
   overflow: visible;
 }
@@ -126,10 +129,7 @@ nav a {
     font-size: 18pt;
   }
 }
-nav a:hover {
-  background: #808080;
-  transition: background-color 0.5s ease-out;
-}
+/* basic heading and paragraph styles */
 h1 {
   font-size: 32pt;
   font-family: 'Roboto', sans-serif;
@@ -138,7 +138,7 @@ h1 {
 h2 {
   font-size: 24pt;
   font-family: 'Roboto', sans-serif;
-  }
+}
 h3 {
   font-size: 18pt;
   font-family: 'Roboto', sans-serif;
@@ -158,11 +158,13 @@ p {
   font-family: 'Raleway', sans-serif;
   line-height: 1.5;
 }
+/* styles for animation layouts */
 div {
   margin: 0 auto;
   width: 100%;
   height: 100%;
 }
+/* styles for start and end icons in branches grid */
 #start {
   position: fixed;
   margin-top: -1em;
@@ -173,39 +175,12 @@ div {
   margin-top: -1em;
   margin-left: 40em;
 }
+/* workflow page styles */
 #workflow img {
   width: 10em;
 }
 #workflow h4 {
   text-align: center;
-}
-.WF-anim1 {
-  animation: fadeIn 1s forwards;
-  opacity: 0;
-}
-.WF-anim2 {
-  opacity: 0;
-  animation: fadeIn 1s 1s forwards;
-}
-.WF-anim3 {
-  opacity: 0;
-  animation: fadeIn 1s 2s forwards;
-}
-.WF-anim4 {
-  opacity: 0;
-  animation: fadeIn 1s 3s forwards;
-}
-.WF-anim5 {
-  opacity: 0;
-  animation: fadeIn 1s 4s forwards;
-}
-.WF-anim6 {
-  opacity: 0;
-  animation: fadeIn 1s 5s forwards;
-}
-.WF-anim7 {
-  opacity: 0;
-  animation: fadeIn 1s 6s forwards;
 }
 #workdir {
   margin: 1em auto;
@@ -216,12 +191,14 @@ div {
 .workflowarrow{
   margin: 2em auto;
 }
+/* button specific styles for last two pages */
 #nextlog {
   margin-top: 0;
 }
 #nexttag {
   margin-top: 0;
 }
+/* code block styles */
 code {
   padding: 1em;
   background-color: #4f5054;
@@ -236,6 +213,7 @@ code {
   background-color: #4f5054;
   color: #bcd1ff;
 }
+/* styles for explanation text in grid */
 .animtext {
   color: #FFFFFF;
   margin: 0 1em 0 1em;
@@ -245,133 +223,16 @@ code {
 .animtext a {
   color: #FFFFFF;
 }
-.staging {
-  animation: 1s forwards;
-}
-#localarrow {
-  position: fixed;
-  margin-top: 2%;
-  margin-left: 5%;
-  animation: 1s forwards;
-  width: 6em;
-  opacity: 0;
-}
-#staging {
-  width: 6em;
-  position: fixed;
-  margin-left: 5em;
-  animation: 1s forwards;
-}
-#branch1arrow {
-  position: fixed;
-  width: 4.5em;
-  transform: rotate(90deg);
-  margin-left: 4em;
-  margin-top: 11em;
-  animation: 1s forwards;
-}
-#branch1file {
-  margin-top: 2em;
-  margin-left: 4em;
-  animation: 1s forwards;
-}
-#branchedit1 {
-  margin-left: 16em;
-  margin-top: 0;
-  animation: 1s forwards;
-}
-#b1arrow {
-  position: fixed;
-  width: 5em;
-  margin-top: 4em;
-  margin-left: 11em;
-  animation: 1s forwards;
-}
-#mergedfile1{
-  margin-top: 0em;
-  margin-left: 16em;
-  animation: 1s forwards;
-}
-#masterarrow {
-  position: fixed;
-  width: 5em;
-  margin-left: 10em;
-  margin-top: 5em;
-}
-#commiticon {
-  margin-left: 6em;
-  margin-top: -2em;
-  animation: 1s forwards;
-}
-#stagingarrow {
-  transform: rotate(200deg);
-  width: 30em;
-  margin-left: -22em;
-  margin-top: -5em;;
-  position: fixed;
-  opacity: 0;
-  animation: 1s forwards;
-}
-#pulledremote {
-  animation: 1s 1s forwards;
-  opacity: 0;
-}
-#remotereposvg {
-  animation: fadeIn 1s 0.5s forwards;
-  opacity: 0;
-}
-#remotefile {
-  width: 6em;
-  position: fixed;
-  margin-left: 3.5em;
-  margin-top: 0.9em;
-}
-#remotecommit {
-  margin-left: 5em;
-  margin-top: -1em;
-}
-#branch2file {
-  margin-left: 1em;
-  margin-top: 0em;
-  animation: 1s forwards;
-}
-#brokenfile {
-  margin-left: 1em;
-  margin-top: 0em;
-  animation: 1s forwards;
-  opacity: 0;
-}
+/* styles for svgs used in animations */
 .commitbubble {
   width: 3em;
   position: fixed;
-}
-.localrepo {
-  animation: 2s forwards;
-}
-.remoterepo {
-  animation: 2s forwards;
 }
 .remotereposvg {
   position: fixed;
   width: 6em;
   margin-top: 0.9em;
   margin-left: 10em;
-}
-.localreposvg {
-  width: 6em;
-  margin-left: 2%;
-  animation: 1s forwards;
-  position: fixed;
-}
-.local {
-  animation: 1s forwards;
-}
-.stage {
-  animation: 1s 1.5s forwards;
-}
-.profileicon {
-  height: 16pt;
-  animation: 2s forwards;
 }
 .animbtn {
   background-color: #4F8F5B;
@@ -382,6 +243,7 @@ code {
   z-index: 1;
   width: 10.5em;
 }
+/* button styles */
 button {
   background-color: #000000;
   color: #FFFFFF;
@@ -397,11 +259,6 @@ button a {
   text-decoration: none;
   color: #FFFFFF;
 }
-/* @keyframes button {
-  0% {background-color: #000000;}
-  50% {background-color: red; left: 50%;}
-  100% {background-color: red;}
-} */
 button:hover {
   background-color: #808080;
   transition: background-color 0.5s ease-out;
