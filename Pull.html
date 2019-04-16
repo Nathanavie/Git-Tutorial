@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Character Set -->
     <meta charset="utf-8">
+    <!-- Page Title -->
     <title>Pulling a Repository</title>
+    <!-- Link to fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <!-- Link to CSS Stylesheets -->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/grid.css" type="text/css">
     <link rel="stylesheet" href="css/animation.css" type="text/css">
+    <!-- Link to JS files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <script src="js/scripts.js"></script>
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
@@ -18,8 +24,10 @@
   </head>
   <body>
     <header>
+      <!-- Logo -->
       <img src="img/SVG/N-Git-logo.svg" alt="Logo">
       <nav class="sidenav">
+        <!-- Top Nav for large devices, Hidden sidenav for mobile view -->
         <aside class="hide" id="close">&#10006;</aside>
         <a href="index.html">Home</a>
         <a href="Workflow.html">Workflow</a>
@@ -33,60 +41,66 @@
         <a href="Tagging.html">Tagging</a>
         <a href="Log.html">Logging</a>
       </nav>
+      <!-- open button for side nav -->
       <nav class="hide" id="closednav">
          <span id="open">&#9776;</span>
       </nav>
     </header>
+    <!-- animation side of page -->
     <article class="split left">
-        <div class="animgrid">
-          <h1 class="title">Pulling from a remote repository</h1>
+      <div class="animgrid">
+        <!-- Title of animation -->
+        <h1 class="title">Pulling from a remote repository</h1>
+        <!-- Remote repository part of animation -->
         <div class="remote">
           <h4 class="remoterepo">
             Remote Repository
             <img class="profileicon" src="img/SVG/prof-icon.svg" alt="profile icon">
           </h4>
-            <img class="commitbubble" id="remotecommit" src="img/SVG/bubble.svg" alt="commit message bubble">
-            <img class="remotereposvg" id="remotefile" src="img/SVG/file.svg" alt="file in remote repository">
-            <img class="remotereposvg" id="remotereposvg" src="img/SVG/greenfile.svg" alt="file in remote repository">
-            <img class="remotereposvg" id="pulledremote" src="img/SVG/greenfile.svg" alt="file in remote repository">
-          </div>
-          <div class="local">
-            <h4 class="localrepo">
-              Local Repository
-              <img class="profileicon" src="img/SVG/prof-icon.svg" alt="profile icon">
-            </h4>
-            <img class="localreposvg" id="localreposvg" src="img/SVG/file.svg" alt="file in local repository">
-          </div>
-          <div class="stage">
-            <h4 class="staging">
-              Staging
-            </h4>
-          </div>
-          <div class="text">
-            <p id="pulltext" class="animcode hidden">git pull</p>
-            <p id="pullex" class="animtext hidden">This fetches all remote changes and merges them into your Directory, meaning that your local repository is now upto date!</p>
-          </div>
-          <button id="pullfile" class="pullfile animbtn">
-              Pull
-          </button>
-          <button id="pullend" class="branchesbtn animbtn hidden">
-              Next Step
-          </button>
-        </div>
-      </article>
-      <aside class="split right">
-        <section id="gitpull">
-          <p class="pullpar">If you are working on a different computer, or someone else has updated the remote repository, you need to be able to retrieve the latest commits that are available</p>
-
-          <p class="pullpar1">To update your local repository to the latest commit, in your Working Directory use the command</p>
-
-          <code class="pull1">git pull</code>
-
-          <p class="pullpar2">this fetches all remote changes and merges them into your Directory.</p>
-        </section>
-      </aside>
-    <footer>
-      <p>Created by <i>Nathan Atherton</i> <span><a href="http://Twitter.com/NathanAvie">Contact Me</a></span></p>
-    </footer>
+          <img class="commitbubble" id="remotecommit" src="img/SVG/bubble.svg" alt="commit message bubble">
+          <img class="remotereposvg" id="remotefile" src="img/SVG/file.svg" alt="file in remote repository">
+          <img class="remotereposvg" id="remotereposvg" src="img/SVG/greenfile.svg" alt="file in remote repository">
+          <img class="remotereposvg" id="pulledremote" src="img/SVG/greenfile.svg" alt="file in remote repository">
+      </div>
+      <!-- Local repository part of animation -->
+      <div class="local">
+        <h4 class="localrepo">
+          Local Repository
+          <img class="profileicon" src="img/SVG/prof-icon.svg" alt="profile icon">
+        </h4>
+        <img class="localreposvg" id="localreposvg" src="img/SVG/file.svg" alt="file in local repository">
+      </div>
+      <!-- Staging area of animation -->
+      <div class="stage">
+        <h4 class="staging">
+          Staging
+        </h4>
+      </div>
+      <!-- Text at side of animation -->
+      <div class="text">
+        <p id="pulltext" class="animcode hidden">git pull</p>
+        <p id="pullex" class="animtext hidden">This fetches all remote changes and merges them into your Directory, meaning that your local repository is now upto date!</p>
+      </div>
+      <!-- Buttons to progress animation -->
+      <button id="pullfile" class="pullfile animbtn">
+          Pull
+      </button>
+      <button id="pullend" class="branchesbtn animbtn hidden">
+          Next Step
+      </button>
+    </div>
+  </article>
+  <!-- Detailed text next to animation grid -->
+  <aside class="split right">
+    <section id="gitpull">
+      <p class="pullpar">If you are working on a different computer, or someone else has updated the remote repository, you need to be able to retrieve the latest commits that are available</p>
+      <p class="pullpar1">To update your local repository to the latest commit, in your Working Directory use the command</p>
+      <code class="pull1">git pull</code>
+      <p class="pullpar2">this fetches all remote changes and merges them into your Directory.</p>
+    </section>
+  </aside>
+  <footer>
+    <p>Created by <i>Nathan Atherton</i> <span><a href="https://nathanatherton.com">Contact Me</a></span></p>
+  </footer>
   </body>
 </html>

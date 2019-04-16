@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- character set -->
     <meta charset="utf-8">
+    <!-- page title -->
     <title>Adding and Committing Changes</title>
+    <!-- linking fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <!-- Linking style sheets -->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/grid.css" type="text/css">
     <link rel="stylesheet" href="css/animation.css" type="text/css">
+    <!-- linking JS files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+    <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <!-- Here's a reminder to drink some water and stand up and stretch ^‿^ -->
   </head>
   <body>
     <header>
+      <!-- logo -->
       <img src="img/SVG/N-Git-logo.svg" alt="Logo">
+      <!-- Top nav for large view with hidden side nav for mobile view -->
       <nav class="sidenav">
         <aside class="hide" id="close">&#10006;</aside>
         <a href="index.html">Home</a>
@@ -33,75 +42,78 @@
         <a href="Tagging.html">Tagging</a>
         <a href="Log.html">Logging</a>
       </nav>
+      <!-- open button for sidenav -->
       <nav class="hide" id="closednav">
          <span id="open">&#9776;</span>
        </nav>
     </header>
+    <!-- article for animation grid -->
     <article class="split left">
-        <div class="animgrid">
-          <h1 class="title">Adding and Committing files</h1>
+      <!-- animation grid -->
+      <div class="animgrid">
+        <!-- Title of animation -->
+        <h1 class="title">Adding and Committing files</h1>
+        <!-- remote repository part of animation -->
         <div class="remote">
           <h4 class="remoterepo">
             Remote Repository
             <img class="profileicon" src="img/SVG/prof-icon.svg" alt="profile icon">
           </h4>
-          </div>
-          <div class="local">
-            <h4 class="localrepo">
-              Local Repository
-              <img class="profileicon" src="img/SVG/prof-icon.svg" alt="profile icon">
-            </h4>
-            <img class="localreposvg hidden" id="localreposvg" src="img/SVG/file.svg" alt="file in local repository"><img class="localreposvg hidden" id="localtostaging" src="img/SVG/file.svg" alt="file moved to staging area">
-            <img class="hidden" id="localarrow" src="img/SVG/arrow.svg" alt="arrow from local to staging area">
-          </div>
-          <div class="stage">
-            <h4 class="hidden staging">
-              Staging
-            </h4>
-            <img class="commitbubble hidden" id="commiticon" src="img/SVG/bubble.svg" alt="commit message bubble">
-          </div>
-          <div class="text">
-            <p id="createfiletext" class="animcode hidden">Create File</p>
-            <p id="createfileex" class="animtext hidden">Create the file that will be used within your project.</p>
-            <p id="addfiletext" class="animcode hidden">git add .</p>
-            <p id="addfileex" class="animtext hidden">This will add all modified and new files into the staging area.</p>
-            <p id="committext" class="animcode hidden">git commit -m "changed feature-x in file-x"</p>
-            <p id="commitex" class="animtext hidden">This will add a message to your staged file.</p>
-          </div>
-          <button id="createfile" class="createfile animbtn">
-              Create File
-          </button>
-          <button id="addfile" class="addfile animbtn hidden">
-              Add File
-          </button>
-          <button id="commitfile" class="commitfile animbtn hidden">
-              Commit
-          </button>
-          <button id="addcommitend" class="animbtn hidden">
-              Next Step
-          </button>
         </div>
-      </article>
-      <aside class="split right">
-        <section id="addcommit">
-
+        <!-- locla repo part of animation -->
+        <div class="local">
+          <h4 class="localrepo">
+            Local Repository
+            <img class="profileicon" src="img/SVG/prof-icon.svg" alt="profile icon">
+          </h4>
+          <img class="localreposvg hidden" id="localreposvg" src="img/SVG/file.svg" alt="file in local repository"><img class="localreposvg hidden" id="localtostaging" src="img/SVG/file.svg" alt="file moved to staging area">
+          <img class="hidden" id="localarrow" src="img/SVG/arrow.svg" alt="arrow from local to staging area">
+        </div>
+        <!-- staging area of animation -->
+        <div class="stage">
+          <h4 class="hidden staging">
+            Staging
+          </h4>
+          <img class="commitbubble hidden" id="commiticon" src="img/SVG/bubble.svg" alt="commit message bubble">
+        </div>
+        <!-- text at the side of animation -->
+        <div class="text">
+          <p id="createfiletext" class="animcode hidden">Create File</p>
+          <p id="createfileex" class="animtext hidden">Create the file that will be used within your project.</p>
+          <p id="addfiletext" class="animcode hidden">git add .</p>
+          <p id="addfileex" class="animtext hidden">This will add all modified and new files into the staging area.</p>
+          <p id="committext" class="animcode hidden">git commit -m "changed feature-x in file-x"</p>
+          <p id="commitex" class="animtext hidden">This will add a message to your staged file.</p>
+        </div>
+        <!-- buttons for progressing through animation -->
+        <button id="createfile" class="createfile animbtn">
+            Create File
+        </button>
+        <button id="addfile" class="addfile animbtn hidden">
+            Add File
+        </button>
+        <button id="commitfile" class="commitfile animbtn hidden">
+            Commit
+        </button>
+        <button id="addcommitend" class="animbtn hidden">
+            Next Step
+        </button>
+      </div>
+    </article>
+    <!-- Detailed text at side of page -->
+    <aside class="split right">
+      <section id="addcommit">
         <p class="acpar">The next thing you will need have an understand of is how to add and commit files</p>
-
         <p class="acpar1">This means that you propose a change by adding it to the Index tree from the Working Directory tree, to do this use the command</p>
-
         <code class="add1">git add 'filename' to add a specific file</code>
-
         <code class="add2">git add . to add all changes</code>
-
         <p class="acpar2">This is the first step in a basic git workflow, the next step is to commit these changes to the Head tree. To do this use</p>
-
         <code class="commit1">git commit -m "commit message"</code>
-
         <p class="acpar3 lastcode">A good commit message is no longer than 72 characters long, but includes all changes that are being committed.</p>
       </section>
     </aside>
     <footer>
-      <p>Created by <i>Nathan Atherton</i> <span><a href="http://Twitter.com/NathanAvie">Contact Me</a></span></p>
+      <p>Created by <i>Nathan Atherton</i> <span><a href="https://nathanatherton.com">Contact Me</a></span></p>
     </footer>
   </body>
 </html>

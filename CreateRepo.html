@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- character set -->
     <meta charset="utf-8">
+    <!-- Page title -->
     <title>Creating a Repository</title>
+    <!-- linking fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <!-- Link to CSS Stylesheets -->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/grid.css" type="text/css">
     <link rel="stylesheet" href="css/animation.css" type="text/css">
+    <!-- Link to JS files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <script src="js/scripts.js"></script>
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
@@ -18,7 +24,9 @@
   </head>
   <body>
     <header>
+      <!-- Logo -->
       <img src="img/SVG/N-Git-logo.svg" alt="Logo">
+      <!-- Top nav for large devices, hidden side nav for mobile view -->
       <nav class="sidenav">
         <aside class="hide" id="close">&#10006;</aside>
         <a href="index.html">Home</a>
@@ -33,69 +41,70 @@
         <a href="Tagging.html">Tagging</a>
         <a href="Log.html">Logging</a>
       </nav>
+      <!-- open button for sidenav -->
       <nav class="hide" id="closednav">
        <span id="open">&#9776;</span>
      </nav>
     </header>
+    <!-- Article for animation -->
     <article class="split left">
-          <div class="animgrid">
-            <h1 class="title">Creating a Repository</h1>
-            <div class="remote">
-              <h4 class="hidden remoterepo">
-                Remote Repository
-              </h4>
-            </div>
-            <div class="local">
-              <h4 class="hidden localrepo">
-                  Local Repository
-              </h4>
-            </div>
-            <div class="stage">
-              <h4 class="hidden staging">
-                  Staging
-              </h4>
-            </div>
-            <div class="text">
-              <p id="gitinit" class="animcode hidden">git init</p>
-              <p id="gitinitex" class="animtext hidden">This code initiates a local repository</p>
-              <p id="connectrepo" class="animcode hidden">git remote add origin REPOSITORY_URL</p>
-              <p id="connectrepotext" class="animtext hidden">This will link your local repository to your remote repository.</p>
-              <p id="connectrepotext2" class="animtext hidden">Your repository url can be found on the main page of the recently created repository. You can create a repository at <a target="_blank" href="http://bitbucket.org">bitbucket.org</a>
-            </div>
-            <button id="next" class="next animbtn">
-                Start
-            </button>
-            <button id="connectrepository" class="connectrepository animbtn hidden">
-                Connect Repo
-            </button>
-            <button id="createend" class="animbtn hidden">
-              Next Step
-            </button>
-          </div>
-        </article>
-        <aside class="split right">
-          <section id="create">
-            <p class="cpar">Once installed, you will want to create a brand new repository, to do this use the command in the commandline of the folder that will contain all of the files in your project</p>
-
-            <code class="init">git init</code>
-
-            <p class="cpar2">This will create a new local repository on your system</p>
-            <p class="cpar3">Your next stage is to link your local repository to your remote repository</p>
-
-            <code class="init2">git remote add origin REPOSITORY_URL</code>
-
-            <p class="cpar4">You can create a remote repository at <a target="_blank" href="http://bitbucket.org">Bitbucket.org</a> or <a href="Github.com" target="_blank">Github.com</a></p>
-            <p class="checkpar">If you have a repository that has already been pushed to, you need to checkout a repository</p>
-
-            <code class="clone1">git clone link/to/repository</code>
-
-            <p class="checkpar2">If you are using a remote repository, the command will be</p>
-
-            <code class="clone2 lastcode">git clone username@host:link/to/repository</code>
-          </section>
-        </aside>
+      <div class="animgrid">
+        <!-- Title of animation -->
+        <h1 class="title">Creating a Repository</h1>
+        <!-- Remote repo part of animation -->
+        <div class="remote">
+          <h4 class="hidden remoterepo">
+            Remote Repository
+          </h4>
+        </div>
+        <!-- Local repo part of animation -->
+        <div class="local">
+          <h4 class="hidden localrepo">
+              Local Repository
+          </h4>
+        </div>
+        <!-- Staging area of animation -->
+        <div class="stage">
+          <h4 class="hidden staging">
+              Staging
+          </h4>
+        </div>
+        <!-- Text at side of animation -->
+        <div class="text">
+          <p id="gitinit" class="animcode hidden">git init</p>
+          <p id="gitinitex" class="animtext hidden">This code initiates a local repository</p>
+          <p id="connectrepo" class="animcode hidden">git remote add origin REPOSITORY_URL</p>
+          <p id="connectrepotext" class="animtext hidden">This will link your local repository to your remote repository.</p>
+          <p id="connectrepotext2" class="animtext hidden">Your repository url can be found on the main page of the recently created repository. You can create a repository at <a target="_blank" href="http://bitbucket.org">bitbucket.org</a>
+        </div>
+        <!-- Buttons to progress through animation -->
+        <button id="next" class="next animbtn">
+            Start
+        </button>
+        <button id="connectrepository" class="connectrepository animbtn hidden">
+            Connect Repo
+        </button>
+        <button id="createend" class="animbtn hidden">
+          Next Step
+        </button>
+      </div>
+    </article>
+    <!-- Detailed text at side of animation grid. -->
+    <aside class="split right">
+      <section id="create">
+        <p class="cpar">Once installed, you will want to create a brand new repository, to do this use the command in the commandline of the folder that will contain all of the files in your project</p>
+        <code class="init">git init</code>
+        <p class="cpar2">This will create a new local repository on your system</p>
+        <p class="cpar3">Your next stage is to link your local repository to your remote repository</p>
+        <code class="init2">git remote add origin REPOSITORY_URL</code>
+        <p class="cpar4">You can create a remote repository at <a target="_blank" href="http://bitbucket.org">Bitbucket.org</a> or <a href="Github.com" target="_blank">Github.com</a></p>
+        <p class="checkpar">If you have a repository that has already been pushed to, you need to checkout a repository</p>
+        <code class="clone1">git clone link/to/repository</code>
+        <p class="checkpar2">If you are using a remote repository, the command will be</p>
+        <code class="clone2 lastcode">git clone username@host:link/to/repository</code>
+      </section>
+    </aside>
     <footer>
-      <p>Created by <i>Nathan Atherton</i> <span><a href="http://Twitter.com/NathanAvie">Contact Me</a></span></p>
-    </footer>
+<p>Created by <i>Nathan Atherton</i> <span><a href="https://nathanatherton.com">Contact Me</a></span></p>    </footer>
   </body>
 </html>
