@@ -20,6 +20,18 @@ $(document).ready(function() {
     $.fn.startanimation();
   });
   //enabling buttons to be used as a link throughout all animations.
+  $('.but1').click(function(ev) {
+    window.open("https://gitforwindows.org/");
+  });
+
+  $('.but2').click(function(ev) {
+    window.open("https://git-scm.com/book/en/v2/Getting-Started-Installing-Git");
+  });
+
+  $('.but3').click(function(ev) {
+    window.open("https://git-scm.com/download/mac");
+  });
+
   $('#letsgo').click(function(ev) {
     $(location).attr("href", "Workflow.html")
   });
