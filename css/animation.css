@@ -225,7 +225,7 @@
 }
 /* animation on logo hover */
 header img {
-  height: 100%;
+  height: 4em;
   transition: all 0.3s ease;
   transition: transform 1s ease;
 }
